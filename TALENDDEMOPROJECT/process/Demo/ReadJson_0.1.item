@@ -174,12 +174,18 @@
       <elementValue elementRef="QUERY" value="&quot;/destination_field&quot;"/>
       <elementValue elementRef="NODECHECK" value="false"/>
       <elementValue elementRef="ISARRAY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Exclude"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
     </elementParameter>
     <elementParameter field="TABLE" name="MAPPING_4_JSONPATH">
       <elementValue elementRef="SCHEMA_COLUMN" value="SourceField"/>
       <elementValue elementRef="QUERY" value="&quot;source_fields.source_field&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="DestinationField"/>
       <elementValue elementRef="QUERY" value="&quot;destination_field&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Exclude"/>
+      <elementValue elementRef="QUERY" value="&quot;exclude&quot;"/>
     </elementParameter>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
@@ -191,10 +197,12 @@
     <metadata connector="FLOW" name="tExtractJSONFields_1">
       <column comment="" key="false" length="-1" name="SourceField" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="DestinationField" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Exclude" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="-1" name="SourceField" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="DestinationField" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Exclude" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorJSONField" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -228,6 +236,7 @@
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row2" sizeState="INTERMEDIATE">
         <mapperTableEntries name="SourceField" nullable="true" type="id_String"/>
         <mapperTableEntries name="DestinationField" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Exclude" nullable="true" type="id_String"/>
       </inputTables>
     </nodeData>
   </node>
@@ -270,6 +279,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="SourceField"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Exclude"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
@@ -283,13 +295,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b7b25059-8ee8-4e25-9990-80f04f67bb21"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>E/O/diuYV9o91JfKz5cLlHLu1ymGxRB8lgGgHRgfUAuR25OoTkc46Et+eAbVk8ehiW0LwcsupHhG
-Y+9fECmPfA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_da27ec67-26f5-432e-b428-f4fe1d24d3a8"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZinolZOqv6TIFNqnESTWCNOJcy7MxfFmapyScBqpRpwuBCKJl8A0KRJNft9nVdewjB5eXVKlm0HS
-5S59qd0Flg==</DigestValue></Reference></SignedInfo><SignatureValue>sPD8jRSSQe3MgwE0EW0JyJxGJ1nRfanWmQHk5B3qYd8XQyIzUw3HHOZqsVoS1wiQemIKOAPqrLWN
-yjX2mIlyIe2d2hjFGwQT5WkzUebPvqM09MyX2mmh0COtBtFK/yA6zBpztH7YP2W02Gm0l4YKLp2B
-FqKZL9ikyZ9dtKwPG/AXUB13LEJguO7WuJ1M5cV3/qjLb8cm7BSwR4gmoijVEq9puttODhShB76k
-xJzl8xgNAucq9aWDL56IUrU+Z5wnPkJ5CIZENLl46u3o1b/6jOWER/FCYA7uSKHEuNOXM3AvOLjp
-hmLy1xXII27TZVsEog+hXhAEK6oxQEoUcUC5tQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_05ed0495-6837-48f3-bd18-9697cb8c1c73"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NUeaHdIoexxI5D27FKpGdWNbS42slB9U1EOofs8BEFX+oReo0ew3YpcxTYYMHlHRonoJVs5Rs5Ix
+TXuyVb/JwA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_63231fc4-0376-40f0-81e7-3df2a71fa129"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SPp8hzVirGcnqcQjGCzXZXsh/+xBjSTToxWPjcrci/VcmniYtIesodcSJgL44/fmyn+Ln5jJz4RL
+7EVGUhwdjQ==</DigestValue></Reference></SignedInfo><SignatureValue>AeuC25Osiwlm60TyguCj183sNm+4UDi97H2pPbwWxn+KvlE1tPqPxl6bPA4EsMm8RuqNDdimXYaN
+P0hWLr8e/zk1KogeMRZLGykQaqxlirVMjGDkydcXcr9Bkg4w7ToUawEXBCGD+3t66bn8KdFlC4xs
+7lIxF6TSXHqPnxFYbczPcK3tnxq0D9U76NMYTTMh1+TE1SiDcNSA/MRCBf29noodCKgUmaMiyC2p
+WIPbvJjRieynYH9Tyxc5oDo6hTLAI7+xkwPucMCFXdO9rwIcnB2pN2olF7rtVQLeCSPq4Bb3qFYi
+kOYupJLKsoyZjtAQnQyauGlQMU1nHSe9PmBHrA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -313,4 +325,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_da27ec67-26f5-432e-b428-f4fe1d24d3a8" Target="#_b7b25059-8ee8-4e25-9990-80f04f67bb21"><Timestamp>2019-05-14 18:50:04</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_63231fc4-0376-40f0-81e7-3df2a71fa129" Target="#_05ed0495-6837-48f3-bd18-9697cb8c1c73"><Timestamp>2019-05-14 18:50:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
