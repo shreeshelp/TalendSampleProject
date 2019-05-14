@@ -44,27 +44,12 @@
   <dependencies>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>antlr-runtime-3.5.2</artifactId>
+      <artifactId>accessors-smart-1.1</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
-      <groupId>commons-beanutils</groupId>
-      <artifactId>commons-beanutils</artifactId>
-      <version>1.8.3</version>
-    </dependency>
-    <dependency>
-      <groupId>commons-collections</groupId>
-      <artifactId>commons-collections</artifactId>
-      <version>3.2.2</version>
-    </dependency>
-    <dependency>
-      <groupId>commons-lang</groupId>
-      <artifactId>commons-lang</artifactId>
-      <version>2.6</version>
-    </dependency>
-    <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>commons-logging-1.1.1</artifactId>
+      <artifactId>antlr-runtime-3.5.2</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
@@ -74,18 +59,13 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>ezmorph-1.0.6</artifactId>
+      <artifactId>json-path-2.1.0</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>jaxen-1.1.1</artifactId>
+      <artifactId>json-smart-2.2.1</artifactId>
       <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>net.sf.json-lib</groupId>
-      <artifactId>json-lib</artifactId>
-      <version>2.4.1-talend</version>
     </dependency>
     <dependency>
       <groupId>log4j</groupId>
@@ -99,7 +79,12 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>staxon-1.2</artifactId>
+      <artifactId>slf4j-api-1.7.5</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>slf4j-log4j12-1.7.5</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
@@ -110,11 +95,6 @@
     <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>talendcsv</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>xom-1.2.7</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
