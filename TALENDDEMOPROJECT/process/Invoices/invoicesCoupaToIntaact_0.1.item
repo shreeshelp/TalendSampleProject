@@ -411,13 +411,9 @@
               <children expression="&quot;05/15/2019&quot;" name="WHENPOSTED" type="id_String" xpath="CreatBillsOnIntaact.body:/create/APBILL/WHENPOSTED" xsi:type="TalendXMLMap:OutputTreeNode"/>
               <children expression="row5.supplier_number" incomingConnections="//@node.5/@nodeData/@connections.0" name="VENDORID" type="id_Integer" xpath="CreatBillsOnIntaact.body:/create/APBILL/VENDORID" xsi:type="TalendXMLMap:OutputTreeNode"/>
               <children expression="&quot;TestTalend1234&quot;" name="RECORDID" type="id_Integer" xpath="CreatBillsOnIntaact.body:/create/APBILL/RECORDID" xsi:type="TalendXMLMap:OutputTreeNode"/>
-              <children name="DOCNUMBER" type="id_String" xpath="CreatBillsOnIntaact.body:/create/APBILL/DOCNUMBER" xsi:type="TalendXMLMap:OutputTreeNode"/>
               <children expression="row5.invoice_lines_description" incomingConnections="//@node.5/@nodeData/@connections.2" name="DESCRIPTION" type="id_String" xpath="CreatBillsOnIntaact.body:/create/APBILL/DESCRIPTION" xsi:type="TalendXMLMap:OutputTreeNode"/>
               <children expression="&quot;Net30&quot;" name="TERMNAME" type="id_String" xpath="CreatBillsOnIntaact.body:/create/APBILL/TERMNAME" xsi:type="TalendXMLMap:OutputTreeNode"/>
-              <children name="SUPDOCID" type="id_String" xpath="CreatBillsOnIntaact.body:/create/APBILL/SUPDOCID" xsi:type="TalendXMLMap:OutputTreeNode"/>
               <children expression="&quot;null&quot;" name="WHENDUE" type="id_String" xpath="CreatBillsOnIntaact.body:/create/APBILL/WHENDUE" xsi:type="TalendXMLMap:OutputTreeNode"/>
-              <children name="PAYMENTPRIORITY" type="id_String" xpath="CreatBillsOnIntaact.body:/create/APBILL/PAYMENTPRIORITY" xsi:type="TalendXMLMap:OutputTreeNode"/>
-              <children name="ONHOLD" type="id_Boolean" xpath="CreatBillsOnIntaact.body:/create/APBILL/ONHOLD" xsi:type="TalendXMLMap:OutputTreeNode"/>
               <children expression="row5.currency_code" incomingConnections="//@node.5/@nodeData/@connections.4" name="CURRENCY" type="id_String" xpath="CreatBillsOnIntaact.body:/create/APBILL/CURRENCY" xsi:type="TalendXMLMap:OutputTreeNode"/>
               <children expression="row5.currency_code" incomingConnections="//@node.5/@nodeData/@connections.3" name="BASECURR" type="id_String" xpath="CreatBillsOnIntaact.body:/create/APBILL/BASECURR" xsi:type="TalendXMLMap:OutputTreeNode"/>
               <children loop="true" main="true" name="APBILLITEMS" type="id_String" xpath="CreatBillsOnIntaact.body:/create/APBILL/APBILLITEMS" xsi:type="TalendXMLMap:OutputTreeNode">
@@ -439,15 +435,15 @@
       </outputTrees>
       <varTables name="Var"/>
       <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.1" target="//@node.5/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.2" target="//@node.5/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.14" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.3" target="//@node.5/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.5" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.6" target="//@node.5/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.12" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.6" target="//@node.5/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.11" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.8" target="//@node.5/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.13/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.3" target="//@node.5/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.13/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.1" target="//@node.5/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.13/@children.0/@children.5" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.12" target="//@node.5/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.15" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.11" target="//@node.5/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.13/@children.0/@children.6" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.2" target="//@node.5/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.10" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.3" target="//@node.5/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.4" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.6" target="//@node.5/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.8" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.6" target="//@node.5/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.7" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.8" target="//@node.5/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.9/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.3" target="//@node.5/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.9/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.1" target="//@node.5/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.9/@children.0/@children.5" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.12" target="//@node.5/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.11" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.11" target="//@node.5/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.9/@children.0/@children.6" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="192">
@@ -893,13 +889,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8315241e-0064-483d-8361-e4ec3032ecde"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>QUgM+hQeAVNoKcghnmJ0hE7Vwan6EhPQJYN/kjR2QCTZdB7qOWiN12R87RyFRJiKWmSin/PC6nmF
-pqySGl/9eg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_80ddacea-32df-4d0b-8380-9e69764ab0a0"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VWeER3b81gBHJNpojSf6qu3v3pZZeo/yUC94CRFfn4abhPaE1sBcuC1xuAOYsVs0vipupJ87/Uun
-pAW1ke71Eg==</DigestValue></Reference></SignedInfo><SignatureValue>s95P5ENeLW+aMZ+clz+VQXsTO6fynB1WG5Vv8RI+oLMn9MWRM+ThCS50g6NMOO7nHqpSFC4og6PA
-rl3itqTILwpeKj4fKeH228igf9idjfuNyDCyKqQdjWD/BeJcDA6mSkmTyg3Gc+VYyLa0Pa1qkwP8
-Nm0Bs2u8fCak/cYSEuapHYRTr3uqdHlU6cJFYJ22Y/ulDFJVsAYi9MQbnl0TI6llaUKU7U5LLWb0
-//UULlo2iofRWrpEosW5za/5SwtogUBl3rnpyFjuBFLTY8BOLkGvz3rUqY34HH5se3WOo/daUz3j
-E9us57bd46AKOZLYYQlOoUwmldRzyH+BKJtoCw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_aa2ca129-8492-45e5-995e-d90ec0cd0ac4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sUCU3l/96B2kKbbE1jr1dk3BQy4ly3N3crTz5Tw6bU4PPqzMuIdsf9z11CKw+Hfl+GTFmABcMRcX
+RyLC+Dff5w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4729c313-78d9-4578-be51-77098197aaa5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TciyM/GChoJ1uaN9lO9rlMfe9XqGgxgNbsczkR/8ErOsDAaeim9UY5R8cfvzDCeEgZdoEmX110ei
+63qRgUbsNA==</DigestValue></Reference></SignedInfo><SignatureValue>ZAWGhb7Zgsk3CbinosYridBPCzSp1K6aXvHu5ueOoPspkU6ieYvmX7vy+8GeSEHJf5CiiyCdzeUX
+AdNGVSX7k9szfnbgPcn8ZnF/SOi1vrUAhxRCBeAIBZJ4BjLe2iBMM/y3x3hvtRlM3HbYHBB2KTHi
+JpokA8mqRYtg+8TkvUTQGzWiq5aNLz8OUNZ0LF634ZhnUCqzYExUmbAtHoYiCpdKtaQ1svJ5oH/S
+0DW3qu71Xx5U4ipsjG/eTZTJdFjRRYtYJMcEGE9lLwx/QFLO/BfFK5nJSrjzvBcXsUscHF0N3Wkt
+aD1ji/unB7Tj1ZfWzlzAtuVyR1Hi3GuzM/8BEQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -923,4 +919,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_80ddacea-32df-4d0b-8380-9e69764ab0a0" Target="#_8315241e-0064-483d-8361-e4ec3032ecde"><Timestamp>2019-05-15 17:51:00</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4729c313-78d9-4578-be51-77098197aaa5" Target="#_aa2ca129-8492-45e5-995e-d90ec0cd0ac4"><Timestamp>2019-05-15 17:56:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
