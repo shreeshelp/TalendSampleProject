@@ -488,20 +488,7 @@
     <elementParameter field="CLOSED_LIST" name="METHOD" value="POST"/>
     <elementParameter field="CLOSED_LIST" name="CONTENT_TYPE" value="application/xml"/>
     <elementParameter field="CLOSED_LIST" name="ACCEPT_TYPE" value="*/*"/>
-    <elementParameter field="TABLE" name="QUERY">
-      <elementValue elementRef="NAME" value="&quot;company_id&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;BluvaultMPP-DEV&quot;"/>
-      <elementValue elementRef="NAME" value="&quot;variable_key&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;variable_value&quot;"/>
-      <elementValue elementRef="NAME" value="&quot;temp_session_endpoint&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;https://api.intacct.com/ia/xml/xmlgw.phtml&quot;"/>
-      <elementValue elementRef="NAME" value="&quot;temp_session_id&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;sHCWtfSiQ5BA8yedPk-OlaTmkEHzJw..&quot;"/>
-      <elementValue elementRef="NAME" value="&quot;sender_id&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;BluvaultMPP&quot;"/>
-      <elementValue elementRef="NAME" value="&quot;sender_password&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;Bluvault!2018&quot;"/>
-    </elementParameter>
+    <elementParameter field="TABLE" name="QUERY"/>
     <elementParameter field="CHECK" name="SERVICE_LOCATOR" value="false"/>
     <elementParameter field="TEXT" name="SERVICE_NAMESPACE" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SERVICE_NAME" show="false" value="&quot;&quot;"/>
@@ -680,14 +667,90 @@
       <column defaultValue="" key="false" length="0" name="ResponseContent" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTClient_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;https://api.intacct.com/ia/xml/xmlgw.phtml&quot;"/>
+    <elementParameter field="TEXT" name="PATH" value="&quot;/post&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="METHOD" value="POST"/>
+    <elementParameter field="CLOSED_LIST" name="CONTENT_TYPE" value="application/xml"/>
+    <elementParameter field="CLOSED_LIST" name="ACCEPT_TYPE" value="*/*"/>
+    <elementParameter field="TABLE" name="QUERY">
+      <elementValue elementRef="NAME" value="&quot;company_id&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;BluvaultMPP-DEV&quot;"/>
+      <elementValue elementRef="NAME" value="&quot;variable_key&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;variable_value&quot;"/>
+      <elementValue elementRef="NAME" value="&quot;temp_session_endpoint&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;https://api.intacct.com/ia/xml/xmlgw.phtml&quot;"/>
+      <elementValue elementRef="NAME" value="&quot;temp_session_id&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;sHCWtfSiQ5BA8yedPk-OlaTmkEHzJw..&quot;"/>
+      <elementValue elementRef="NAME" value="&quot;sender_id&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;BluvaultMPP&quot;"/>
+      <elementValue elementRef="NAME" value="&quot;sender_password&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;Bluvault!2018&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="SERVICE_LOCATOR" value="false"/>
+    <elementParameter field="TEXT" name="SERVICE_NAMESPACE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="SERVICE_ACTIVITY_MONITOR" value="false"/>
+    <elementParameter field="CHECK" name="NEED_AUTH" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" value="BASIC"/>
+    <elementParameter field="TEXT" name="AUTH_USERNAME" value="&quot;xml_gateway_coupa&quot;"/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="JoOegpqj+rOXftJTJoBBcIJVbVQYlIzx"/>
+    <elementParameter field="TEXT" name="AUTH_BEARER_TOKEN" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="NEED_AUTHORIZATION" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROLE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_BUSINESS_CORRELATION" value="false"/>
+    <elementParameter field="TEXT" name="CORRELATION_VALUE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CHECK_SERVER_IDENTITY" value="true"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="LOG_MESSAGES" value="true"/>
+    <elementParameter field="CHECK" name="FOLLOW_REDIRECTS" value="false"/>
+    <elementParameter field="CHECK" name="REDIRECT_NON_SAME_HOST" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_WEBCLIENT_OPERATION_REPORTING" value="true"/>
+    <elementParameter field="CHECK" name="CONVERT_RESPONSE_TO_DOM" show="false" value="true"/>
+    <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" show="false" value="false"/>
+    <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" value="false"/>
+    <elementParameter field="TABLE" name="HEADERS">
+      <elementValue elementRef="NAME" value="&quot;Content-Type&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;application/xml&quot;"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="SERVICE_LOCATOR_CUSTOM_PROPERTIES" show="false"/>
+    <elementParameter field="TABLE" name="SERVICE_ACTIVITY_MONITOR_CUSTOM_PROPERTIES" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_CHUNKED_ENCODING" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_TIMEOUT" value="30"/>
+    <elementParameter field="LABEL" name="CONNECTION_TIMEOUT_DESC" value="(Studio Only, See Doc for Runtime)"/>
+    <elementParameter field="TEXT" name="RECEIVE_TIMEOUT" value="60"/>
+    <elementParameter field="LABEL" name="RECEIVE_TIMEOUT_DESC" value="(Studio Only, See Doc for Runtime)"/>
+    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
+    <elementParameter field="TEXT" name="PROXY_HOST" show="false" value="&quot;61.163.92.4&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_PORT" show="false" value="8080"/>
+    <elementParameter field="TEXT" name="PROXY_USERNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="0RMsyjmybrE="/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRESTClient_2">
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="4048" name="string" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="RESPONSE" name="RESPONSE">
+      <column defaultValue="" key="false" length="0" name="statusCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="4048" name="string" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FAULT" name="FAULT">
+      <column defaultValue="" key="false" length="0" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tREST_1" offsetLabelX="0" offsetLabelY="0" source="tREST_1" target="tFileInputDelimited_1">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
+  </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tREST_1" offsetLabelX="0" offsetLabelY="0" source="tREST_1" target="tExtractJSONFields_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tREST_1" offsetLabelX="0" offsetLabelY="0" source="tREST_1" target="tFileInputDelimited_1">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tExtractJSONFields_1" offsetLabelX="0" offsetLabelY="0" source="tExtractJSONFields_1" target="tFileOutputDelimited_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -744,13 +807,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_90712d23-af4a-488e-b495-cd6e7ff8f5ef"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>N5WBGU0W0cHL61bIiRJfwI+xKxdFu0tMow6+COY5Jg1xNgs5j9NZYZ4eyUqfcsyta+sE/1lkmmmj
-2EYt9sK9Lg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2af77d9e-534e-4125-a1b8-f6e2e368f309"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>9yyxDhHg9AvHP+RN3wV8AchQm2yhkAfMgjyAeTL2dpW7f6Ny6rEZCw1O9g9rA/yXcGPmtm2PFWDx
-mA2lxAEWyQ==</DigestValue></Reference></SignedInfo><SignatureValue>tDLP9y4MLNbmR7KbHgzd23yQsg/S6qYhvjH/Ce2C2b0ulOeJ6pZBGXehx6d6JXfGPzFMWXevvm76
-/+E6Dw9sIHcKVZouKy+cXoNeUwTPb9VKPalYzgM7gfSkLJskTZzO+YFtxClGaaWk8QhEXRfUftOj
-Tr+iRQE5DsyyiybhfIy2+EV8MfGSppQaOqKny+Ty7fBCEpgYY2QVEnUFJ00ZSUT8RceenNeiD/n1
-dljHBv5HFluNdfg7Z4bovjTOJe6cQGV3fcT48X03eTaH2Z0jmikfUDx/Z/V35xpAv/jy72bPqMYS
-xvDqaHzcnWZ3grGXJlgGWvbRj0SRsyzQ1fMGjQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTClient_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_03b75933-a35e-4272-8c74-3e2eb98a756d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>4aJFBjnjXtDVMYvbnIbwQxUH/IfGB9oRzEWel0JEH7e4er9CaL8BsqPXc6ReDMRlJFrkEAZ0bv2p
+WOq5mvi8/A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_dd2777c1-f13e-4e71-8b88-80e6b90a674a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>wfJTU1NyuoYy8SlLmMp9yd93b2ZrSsPBL8DbTf1Ft2+5Z80mHoLeiA8ov43wSQJ3wBvDAnpKVePy
+krKrC0F6/A==</DigestValue></Reference></SignedInfo><SignatureValue>0M0Omo73rf/cugZP6vc7rp0NKYoAMMsdTdY+D9LMGmjgldMY7q4ERnONUP2EB9+7jdVUPLk6S1Ld
+EBu64BJC0TyUsu70QnoM6Kpnf1yRtTXSzfl+e4kuTxDxal5rQ6GiCm2k04TntBdGFXzFj7qS3ouv
+XI8NgmDwkno3OUGUlivdPYd72szurPivuysgr35LgmsvOjQm7XhUbk9V2loknEdrbMabw08rJzdB
+zPS264DyqSM0QLpXzbRPo79tif+C0wqBD80N+8uS171SbYrzPcbrtQmSw0ZbYDliABmKip5Y/5Ji
+3WMTTiKbaHrrKPnF3IcJOH5quYJwnVTe+93AGw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -774,4 +842,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2af77d9e-534e-4125-a1b8-f6e2e368f309" Target="#_90712d23-af4a-488e-b495-cd6e7ff8f5ef"><Timestamp>2019-05-15 11:50:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_dd2777c1-f13e-4e71-8b88-80e6b90a674a" Target="#_03b75933-a35e-4272-8c74-3e2eb98a756d"><Timestamp>2019-05-15 12:58:17</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
