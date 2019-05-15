@@ -493,28 +493,15 @@
     <elementParameter field="CLOSED_LIST" name="METHOD" value="POST"/>
     <elementParameter field="CLOSED_LIST" name="CONTENT_TYPE" value="application/xml"/>
     <elementParameter field="CLOSED_LIST" name="ACCEPT_TYPE" value="*/*"/>
-    <elementParameter field="TABLE" name="QUERY">
-      <elementValue elementRef="NAME" value="&quot;company_id&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;BluvaultMPP-DEV&quot;"/>
-      <elementValue elementRef="NAME" value="&quot;user_id&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;xml_gateway_coupa&quot;"/>
-      <elementValue elementRef="NAME" value="&quot;user_password&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;1Ygjc8L0L&amp;amp;x&quot;"/>
-      <elementValue elementRef="NAME" value="&quot;variable_key&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;variable_value&quot;"/>
-      <elementValue elementRef="NAME" value="&quot;temp_session_endpoint&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;https://api.intacct.com/ia/xml/xmlgw.phtml&quot;"/>
-      <elementValue elementRef="NAME" value="&quot;temp_session_id&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;sHCWtfSiQ5BA8yedPk-OlaTmkEHzJw..&quot;"/>
-    </elementParameter>
+    <elementParameter field="TABLE" name="QUERY"/>
     <elementParameter field="CHECK" name="SERVICE_LOCATOR" value="false"/>
     <elementParameter field="TEXT" name="SERVICE_NAMESPACE" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SERVICE_NAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="SERVICE_ACTIVITY_MONITOR" value="false"/>
-    <elementParameter field="CHECK" name="NEED_AUTH" value="true"/>
-    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" value="BASIC"/>
-    <elementParameter field="TEXT" name="AUTH_USERNAME" value="&quot;xml_gateway_coupa&quot;"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="OX1SZm+M/WPbRQPbqf8qr1qtRKdkHdKQ"/>
+    <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" show="false" value="BASIC"/>
+    <elementParameter field="TEXT" name="AUTH_USERNAME" show="false" value="&quot;xml_gateway_coupa&quot;"/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="OX1SZm+M/WPbRQPbqf8qr1qtRKdkHdKQ"/>
     <elementParameter field="TEXT" name="AUTH_BEARER_TOKEN" show="false" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="NEED_AUTHORIZATION" show="false" value="false"/>
     <elementParameter field="TEXT" name="ROLE" show="false" value="&quot;&quot;"/>
@@ -530,14 +517,7 @@
     <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" show="false" value="false"/>
     <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" show="false" value="true"/>
     <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" value="false"/>
-    <elementParameter field="TABLE" name="HEADERS">
-      <elementValue elementRef="NAME" value="&quot;sender_id&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;BluvaultMPP&quot;"/>
-      <elementValue elementRef="NAME" value="&quot;sender_password&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;Bluvault!2018&quot;"/>
-      <elementValue elementRef="NAME" value="&quot;company_id&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;BluvaultMPP-DEV&quot;"/>
-    </elementParameter>
+    <elementParameter field="TABLE" name="HEADERS"/>
     <elementParameter field="TABLE" name="SERVICE_LOCATOR_CUSTOM_PROPERTIES" show="false"/>
     <elementParameter field="TABLE" name="SERVICE_ACTIVITY_MONITOR_CUSTOM_PROPERTIES" show="false"/>
     <elementParameter field="CHECK" name="DISABLE_CHUNKED_ENCODING" value="false"/>
@@ -622,13 +602,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_69131745-b67a-4a73-a6b1-b8d187bf20b3"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rhrSSA8qWjvb0GVoZo0z/BoYkxNRHrZrtF77upVAA9IbPGD0R2GxnDjHu+CEzqZs2BjKyIQuLTuv
-HcddCSOySQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_dd9f36d1-6bab-4b2f-b7ff-86ce1135d545"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lkn0W0VaOfC7YNPGb0CkJfQyBBNKg5b5nsVV8vUGg6CQ+rCq0q5xgEatK/9CBZfu2iifSvAdH0S1
-bzo7Z0aLKA==</DigestValue></Reference></SignedInfo><SignatureValue>2q2EIjOPqyjF298lFY3mObUcN5yfrOqIfd+sEqBU+AMGY3bzdx8aCITQr+0ZeIlOd+pS6kuuD/kE
-obJH/YBn2POQkpS47BT4jW+FgC5lrHdyB6MtSo9zy337UrkBKvbX5C28/AGZ8JAmyFlvilOuXpsm
-+CkA50bOtDeILU37kZtP6hxPlI3KKndEv18YzQ0QmXQatmYFFOa+oQ9fiKPiRr+YFVU14aekCaQE
-6Ok4nXOqyG/xT9hmGVJypBJ6Kkl3EERcxCZTaIcMkW0Q2/4QvR2H91Fi/+WZqiCvpYxzS/ikP3A8
-mfsbD5q8w4wEYvLMxOVMhoTX+8FErMUaE1r61Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ec466288-c1a0-4d69-a3d0-8bf988f1797a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>MJZBQAnB/0Zjr7kfwwihaEA+/vQEtOFG8c3s7VMTb9Z2NiXPVcJHfI3ZbaZkV+5CtZpzqIya9mZC
+/IKVXCi6Xw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a61f0961-2ab9-4d2f-9c0c-3d2cfc6e2436"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0+niv4RzQHaiglharv24nsCbJwJScdcCO6GYW2bAIpsDaomQaoeDWpaZUqlBxqG1xb8w/tzsb3dj
+XGjmtOhBZQ==</DigestValue></Reference></SignedInfo><SignatureValue>1mD5HWGXZz/6sYQ2Sn34Nji7lb+q60uBMdh7YVB1msNdB+I147cqqXmH/4/D67NbAwnw9Ryz3FdY
+R/+2r/VnaFKnf7YQ86TMwJqUw7Yc4ihPIbdboUjwm6Tka9aro9Wx0hC3cFKTbGa8INKNgrP9eu1a
+qQ4Ca9Mh4ZS/3plHGJIdc9sKq/bNz4aNV9ws94iNlBCAA1mz/IGdlotg3CCNQBsATy0+4z2W6vI0
+BZmMdoYNsukpk9uV+/2/YnfRMxz5DFlPfwNyltb39TrjOWD2VWeiMTmmskDUBPLryn5ASAi1oXcW
+yVkEE2DW83xtZ96UryEJMdULmib4UnQjg+xprA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -652,4 +632,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_dd9f36d1-6bab-4b2f-b7ff-86ce1135d545" Target="#_69131745-b67a-4a73-a6b1-b8d187bf20b3"><Timestamp>2019-05-15 08:50:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a61f0961-2ab9-4d2f-9c0c-3d2cfc6e2436" Target="#_ec466288-c1a0-4d69-a3d0-8bf988f1797a"><Timestamp>2019-05-15 08:51:35</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
