@@ -392,17 +392,17 @@
       <column comment="" key="false" length="-1" name="custom_fields_gl_posting_date" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="currency_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_account_segment_4" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="invoice_lines_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_invoice_lines_account_segment_3" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_account_segment_2" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_custom_fields_project_code_external_ref_num" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="payment_term_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="account_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="invoice_lines_tax_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="invoice_lines_shipping_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="invoice_lines_handling_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="invoice_lines_misc_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_tax_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_shipping_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_handling_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_misc_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="-1" name="invoice_number" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -413,17 +413,17 @@
       <column comment="" key="false" length="-1" name="custom_fields_gl_posting_date" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="currency_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_account_segment_4" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="invoice_lines_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_invoice_lines_account_segment_3" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_account_segment_2" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_custom_fields_project_code_external_ref_num" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="payment_term_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="account_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="invoice_lines_tax_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="invoice_lines_shipping_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="invoice_lines_handling_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="invoice_lines_misc_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_tax_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_shipping_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_handling_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_misc_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorJSONField" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -512,16 +512,16 @@
       <column comment="" key="false" length="-1" name="custom_fields_gl_posting_date" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="currency_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_account_segment_4" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="invoice_lines_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_invoice_lines_account_segment_3" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_account_segment_2" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_custom_fields_project_code_external_ref_num" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="payment_term_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="invoice_lines_tax_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="invoice_lines_shipping_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="invoice_lines_handling_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="invoice_lines_misc_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_tax_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_shipping_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_handling_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_misc_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="544" posY="192">
@@ -543,16 +543,16 @@
         <nodes name="custom_fields_gl_posting_date" outgoingConnections="//@node.7/@nodeData/@connections.4" type="id_String" xpath="row16/custom_fields_gl_posting_date"/>
         <nodes name="currency_code" outgoingConnections="//@node.7/@nodeData/@connections.7 //@node.7/@nodeData/@connections.8" type="id_String" xpath="row16/currency_code"/>
         <nodes name="invoice_lines_account_segment_4" type="id_String" xpath="row16/invoice_lines_account_segment_4"/>
-        <nodes name="invoice_lines_total" outgoingConnections="//@node.7/@nodeData/@connections.10" type="id_String" xpath="row16/invoice_lines_total"/>
+        <nodes name="invoice_lines_total" outgoingConnections="//@node.7/@nodeData/@connections.10" type="id_Integer" xpath="row16/invoice_lines_total"/>
         <nodes name="invoice_lines_invoice_lines_account_segment_3" type="id_String" xpath="row16/invoice_lines_invoice_lines_account_segment_3"/>
         <nodes name="invoice_lines_account_segment_2" type="id_String" xpath="row16/invoice_lines_account_segment_2"/>
         <nodes name="invoice_lines_custom_fields_project_code_external_ref_num" type="id_String" xpath="row16/invoice_lines_custom_fields_project_code_external_ref_num"/>
         <nodes name="id" outgoingConnections="//@node.7/@nodeData/@connections.2" type="id_String" xpath="row16/id"/>
         <nodes name="payment_term_code" outgoingConnections="//@node.7/@nodeData/@connections.6" type="id_String" xpath="row16/payment_term_code"/>
-        <nodes name="invoice_lines_tax_distribution_total" outgoingConnections="//@node.7/@nodeData/@connections.11" type="id_String" xpath="row16/invoice_lines_tax_distribution_total"/>
-        <nodes name="invoice_lines_shipping_distribution_total" outgoingConnections="//@node.7/@nodeData/@connections.12" type="id_String" xpath="row16/invoice_lines_shipping_distribution_total"/>
-        <nodes name="invoice_lines_handling_distribution_total" outgoingConnections="//@node.7/@nodeData/@connections.13" type="id_String" xpath="row16/invoice_lines_handling_distribution_total"/>
-        <nodes name="invoice_lines_misc_distribution_total" outgoingConnections="//@node.7/@nodeData/@connections.14" type="id_String" xpath="row16/invoice_lines_misc_distribution_total"/>
+        <nodes name="invoice_lines_tax_distribution_total" outgoingConnections="//@node.7/@nodeData/@connections.11" type="id_Integer" xpath="row16/invoice_lines_tax_distribution_total"/>
+        <nodes name="invoice_lines_shipping_distribution_total" outgoingConnections="//@node.7/@nodeData/@connections.12" type="id_Integer" xpath="row16/invoice_lines_shipping_distribution_total"/>
+        <nodes name="invoice_lines_handling_distribution_total" outgoingConnections="//@node.7/@nodeData/@connections.13" type="id_Integer" xpath="row16/invoice_lines_handling_distribution_total"/>
+        <nodes name="invoice_lines_misc_distribution_total" outgoingConnections="//@node.7/@nodeData/@connections.14" type="id_Integer" xpath="row16/invoice_lines_misc_distribution_total"/>
       </inputTrees>
       <outputTrees name="copyOfCreateBill">
         <nodes expression="" name="body" pattern="" type="id_Document" xpath="copyOfCreateBill/body">
@@ -602,7 +602,7 @@
         </nodes>
       </outputTrees>
       <varTables name="Var">
-        <nodes expression="Integer.valueOf( row16.invoice_lines_total)+&#13;&#10;Integer.valueOf( row16.invoice_lines_tax_distribution_total)+&#13;&#10;Integer.valueOf(row16.invoice_lines_shipping_distribution_total)+&#13;&#10;Integer.valueOf(row16.invoice_lines_handling_distribution_total)+&#13;&#10;Integer.valueOf(row16.invoice_lines_misc_distribution_total) " incomingConnections="//@node.7/@nodeData/@connections.10 //@node.7/@nodeData/@connections.11 //@node.7/@nodeData/@connections.12 //@node.7/@nodeData/@connections.13 //@node.7/@nodeData/@connections.14" name="Var1" outgoingConnections="//@node.7/@nodeData/@connections.15" type="id_String"/>
+        <nodes expression="row16.invoice_lines_total+&#13;&#10; row16.invoice_lines_tax_distribution_total+&#13;&#10;row16.invoice_lines_shipping_distribution_total+&#13;&#10;row16.invoice_lines_handling_distribution_total+&#13;&#10;row16.invoice_lines_misc_distribution_total " incomingConnections="//@node.7/@nodeData/@connections.10 //@node.7/@nodeData/@connections.11 //@node.7/@nodeData/@connections.12 //@node.7/@nodeData/@connections.13 //@node.7/@nodeData/@connections.14" name="Var1" outgoingConnections="//@node.7/@nodeData/@connections.15" type="id_String"/>
       </varTables>
       <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.3" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.3" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.8/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
@@ -959,13 +959,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2e98fabe-2e7e-4ab6-b248-fb092d393c54"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>i7KQLXyuaGWycVdMZ8PF3WYa12IVte3x/XTS6CqcSrttV0THV0wIa+WCh6OVJFHiShtIrkFY5ypR
-Nm/oGnDBPQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e7b858de-f1e4-4e98-8fff-d3e1243220a8"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>9GOwwoIN1J779Vj7nm35esegTEaAuC6guaZsp+74JVkmjtQGz4yDAVqsYsdpD03kuNB/p5EZqGDl
-mUqRnbr31A==</DigestValue></Reference></SignedInfo><SignatureValue>twu5tXLxnUagMhRlw9GiQClURUuFjYE4tKvZILDlzuNKVRnFdIyCOozK2FsRG3D8q8xjunQDrZy+
-esOB6R9Q1hgs+z69qT5mKuS+3wP29MGPHhCNG7SzTg0bKkgINaxC7mBtX0hLo5ZZH/irXg/x4L6t
-N/MCZZDGw0R/JPJNwng665lxsBNtLxCQokCoo9+CizKxTfuQLFsJEz8QF2Dkh5r63pTAeezXccVi
-m76N/+XgS5um1x4jHpGA33nxpuQkRrXTayp6J2vkra4XNdkbAS56ubYMkOBeuAg4PY+fu1HoGJzt
-5lCzsPn2PIPJbxeagEuk//BKmgWXswrkkMkoEA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_735c9dd1-72f2-4e5a-b610-b88b19f14394"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>MUbJNmrYNbl5JQXAHPlqovcVe2Z3FfnKGi4clAqklJrTBMiRLzQkkoaBovonqXOwPZnN02x3P9B5
+RCBIZbzWnQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_205b31f1-7d90-464c-8c67-a96c67d84f3c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VT7VINBhmtJ2rElOB31eShVaDpVGojvv2AhOT4pg73vb4kQ/9bjA7ebJKOlDfOeWf5qTo+bvYfLD
+8JpuFJCo9A==</DigestValue></Reference></SignedInfo><SignatureValue>inAifiZ9IF/0q6lKFAI2WEYzhgY+I8Q7Ftx2mMComJTqg3ZATaKIdsjeESIboezFultziq13++Lx
+yuhnpV+uCP1b2PDLT+pq3DlrmsEN67sji8SU2palDtnCqUTHF3vcZ6elU5Lw2VViXG+rREGmo4tB
+Wr1eO7Timm1IowB0C0EcMVVrGCCcQR83Tn2X8Bs/aTKr63QJ7QMLEBBASk0IUnkXnyekbLQ0TxiY
+bZEbIGIAmOKkNxIuy1s9RKcfCz+8cDftOqzXBhrhPuhegZ36NtlkEF0YkpWtMj/En8ZIXCo6n2G4
+SV1/5aDJwPxPIljUEiXSb36sYCQkPiBGN0uGcg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -989,4 +989,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e7b858de-f1e4-4e98-8fff-d3e1243220a8" Target="#_2e98fabe-2e7e-4ab6-b248-fb092d393c54"><Timestamp>2019-05-16 17:30:46</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_205b31f1-7d90-464c-8c67-a96c67d84f3c" Target="#_735c9dd1-72f2-4e5a-b610-b88b19f14394"><Timestamp>2019-05-16 17:33:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
