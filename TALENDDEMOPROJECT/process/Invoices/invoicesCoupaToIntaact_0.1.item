@@ -315,6 +315,10 @@
       <elementValue elementRef="QUERY" value="&quot;../payment-term/code&quot;"/>
       <elementValue elementRef="NODECHECK" value="false"/>
       <elementValue elementRef="ISARRAY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="account_code"/>
+      <elementValue elementRef="QUERY" value="&quot;account/code&quot;"/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
     </elementParameter>
     <elementParameter field="TABLE" name="MAPPING_4_JSONPATH" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="invoice_number"/>
@@ -345,6 +349,8 @@
       <elementValue elementRef="QUERY" value="&quot;$.id&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="payment_term_code"/>
       <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="account_code"/>
+      <elementValue elementRef="QUERY" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
@@ -368,6 +374,7 @@
       <column comment="" key="false" length="-1" name="invoice_lines_custom_fields_project_code_external_ref_num" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="payment_term_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="account_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="-1" name="invoice_number" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -384,6 +391,7 @@
       <column comment="" key="false" length="-1" name="invoice_lines_custom_fields_project_code_external_ref_num" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="payment_term_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="account_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorJSONField" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -436,8 +444,8 @@
                   <children expression="&quot;d800e6d1-f6fb-433d-bb23-e86a167d5ede&quot;" name="controlid" nodeType="ATTRIBUT" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/@controlid" xsi:type="TalendXMLMap:OutputTreeNode"/>
                   <children main="true" name="create" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create" xsi:type="TalendXMLMap:OutputTreeNode">
                     <children expression="" group="true" main="true" name="APBILL" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL" xsi:type="TalendXMLMap:OutputTreeNode">
-                      <children expression=" row16.invoice_date" incomingConnections="//@node.5/@nodeData/@connections.4" name="WHENCREATED" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/WHENCREATED" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                      <children expression="row16.custom_fields_gl_posting_date" incomingConnections="//@node.5/@nodeData/@connections.5" name="WHENPOSTED" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/WHENPOSTED" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression="routines.DateFormate.dateFomate(row16.invoice_date) " incomingConnections="//@node.5/@nodeData/@connections.4" name="WHENCREATED" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/WHENCREATED" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression="routines.DateFormate.dateFomate(row16.custom_fields_gl_posting_date) " incomingConnections="//@node.5/@nodeData/@connections.5" name="WHENPOSTED" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/WHENPOSTED" xsi:type="TalendXMLMap:OutputTreeNode"/>
                       <children expression="row16.supplier_number" incomingConnections="//@node.5/@nodeData/@connections.6" name="VENDORID" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/VENDORID" xsi:type="TalendXMLMap:OutputTreeNode"/>
                       <children aggregate="true" expression=" row16.invoice_number" incomingConnections="//@node.5/@nodeData/@connections.0" name="RECORDID" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/RECORDID" xsi:type="TalendXMLMap:OutputTreeNode"/>
                       <children expression="row16.invoice_lines_description" incomingConnections="//@node.5/@nodeData/@connections.7" name="DESCRIPTION" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/DESCRIPTION" xsi:type="TalendXMLMap:OutputTreeNode"/>
@@ -449,7 +457,7 @@
                           <children expression="&quot;5000.01&quot;" name="ACCOUNTNO" type="id_Float" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/ACCOUNTNO" xsi:type="TalendXMLMap:OutputTreeNode"/>
                           <children expression="row16.invoice_lines_total" incomingConnections="//@node.5/@nodeData/@connections.3" name="TRX_AMOUNT" type="id_Float" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/TRX_AMOUNT" xsi:type="TalendXMLMap:OutputTreeNode"/>
                           <children expression="row16.invoice_lines_description" incomingConnections="//@node.5/@nodeData/@connections.1" name="ENTRYDESCRIPTION" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/ENTRYDESCRIPTION" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                          <children expression="&quot;E100&quot;" name="LOCATIONID" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/LOCATIONID" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                          <children expression="&quot;E100&quot;&#13;&#10;.substring(0, s.indexOf(&quot;-&quot;)) " name="LOCATIONID" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/LOCATIONID" xsi:type="TalendXMLMap:OutputTreeNode"/>
                           <children expression="&quot;AU10500&quot;" name="DEPARTMENTID" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/DEPARTMENTID" xsi:type="TalendXMLMap:OutputTreeNode"/>
                           <children name="VENDORID" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/VENDORID" xsi:type="TalendXMLMap:OutputTreeNode"/>
                           <children expression="&quot;null&quot;" name="PROJECTID" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/PROJECTID" xsi:type="TalendXMLMap:OutputTreeNode"/>
@@ -1279,6 +1287,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="payment_term_code"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="account_code"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
@@ -1411,13 +1422,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c4887cf6-7ed5-41b8-9965-2917047d9862"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>x56OvW+rK8AaJG/rWerk3kmCey6XD0tSMLhnVuJSt3sRJKHpe9JztqaYIPiPp85tsNNOQsfLx5Fr
-1N07BDgzwQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_63e66fb9-e2ce-4147-95ea-c7872317ac32"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>L9fUSspH1Li3BXsTROBApqZrFeIQCGWk6szOkGplHsicR25H8gwTD8Kul6GnqtAuniojMflrVQQc
-PyvGPGrS6A==</DigestValue></Reference></SignedInfo><SignatureValue>V5hOk1adtKH7BsMIILPLJ0sMZZHcyuwxzcfJ0XfTYWoVJUXKlCBSrH6kR0512y2IXEPnQVgTzv5f
-jz03TusL9GBmzQ2zdw5LjVham+iQmswKsP08zScQ/KnsYMl9aAOLU3OBOgh+3SZykgR+XuZpIOwb
-2hHp9pvgUptadXqkK6X6zuKvHOhy4FTkK0ZV/KmSXTrfFcg9ut61njh6dLz25JMAs90S7YsXqUyh
-lqd/yk/ab3Pa4imPs95TcaimvqnZXLNbLTcgHrmgWD+ZT1Sj67PwqYuAI1HYan6Aoe6OsNPvxHmt
-CvSozg5t2hAaDFkk3Dh98JecXpx7E8oMXz7MKg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7b14208c-60d2-4763-8038-b002e27432a8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1PI7Io9M+Zp6Zz91PhLRZcPtfaNOr5xt3IyJfOLpwi66b9RBTosJNWlN55qDJRWJJrbnyogbQfqx
+dwVD9FlA+A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b9bdf7c3-177c-4c5d-8f63-6c4ea1825257"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>REn8tXulhgkKI6vd7efmWI3iDEMwc++9VTEKWDodTdT2dV+dfpWHjpc0rBcofNssXqe4IQHMr4PQ
+pHGfnZjIew==</DigestValue></Reference></SignedInfo><SignatureValue>t1TnF/qW1GcFnah6C8npGPi+I7mV30bMFsBSvECCCYrOvBk/Wbcgo019Cu7gvCCnCbWIjkGJZ3wG
+1KwKY7Oxe96jpMoRVAJYBkUTx7+X6rlQOPRLk9nTfKzXAr0C3AQW080le9VFFz4B4jQt7B5CSSxn
+4U9jM2tISlYOBXi5N31eEC1OsPbqTjKGgP2Faje1D3hIoiaTcT+RqGVjiHtBih2fB5Ua30Jgcgyr
+ArZ/Gdu6cZ9Iwt/V2QcbarwyCsJuyo5r4SUe13Ahbuv7VQZVFgSBUiwA6lRVDqOKVqAf+CLjjkrm
+sXHhpVPLoVQIcHICC/fTMnaSk5x/Tqm8/y94Og==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1441,4 +1452,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_63e66fb9-e2ce-4147-95ea-c7872317ac32" Target="#_c4887cf6-7ed5-41b8-9965-2917047d9862"><Timestamp>2019-05-16 14:52:53</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b9bdf7c3-177c-4c5d-8f63-6c4ea1825257" Target="#_7b14208c-60d2-4763-8038-b002e27432a8"><Timestamp>2019-05-16 14:59:08</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
