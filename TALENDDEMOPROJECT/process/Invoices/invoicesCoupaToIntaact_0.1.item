@@ -525,106 +525,39 @@
       <column comment="" key="false" length="-1" name="invoice_lines_misc_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="544" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_4"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
-    <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
+  <node componentName="tDenormalize" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDenormalize_1"/>
+    <elementParameter field="TABLE" name="DENORMALIZE_COLUMNS">
+      <elementValue elementRef="INPUT_COLUMN" value="LineDescriptionforHeader"/>
+      <elementValue elementRef="DELIMITER" value="&quot;;&quot;"/>
+      <elementValue elementRef="MERGE" value="true"/>
+    </elementParameter>
+    <elementParameter field="LABEL" name="NOTE" value=""/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="CreateBill" name="copyOfCreateBill">
-      <column comment="" key="false" length="-1" name="body" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
+    <metadata connector="FLOW" name="tDenormalize_1">
+      <column comment="" key="false" length="-1" name="invoice_number" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="supplier_number" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="supplier_name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_description" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_date" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="custom_fields_gl_posting_date" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="currency_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_account_segment_4" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_invoice_lines_account_segment_3" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_account_segment_2" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_custom_fields_project_code_external_ref_num" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="payment_term_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_tax_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_shipping_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_handling_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_misc_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LineDescriptionforHeader" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
-    <nodeData xsi:type="TalendXMLMap:XmlMapData">
-      <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row16">
-        <nodes name="invoice_number" outgoingConnections="//@node.7/@nodeData/@connections.0" type="id_String" xpath="row16/invoice_number"/>
-        <nodes name="supplier_number" outgoingConnections="//@node.7/@nodeData/@connections.5 //@node.7/@nodeData/@connections.9" type="id_String" xpath="row16/supplier_number"/>
-        <nodes name="supplier_name" type="id_String" xpath="row16/supplier_name"/>
-        <nodes name="invoice_lines_description" outgoingConnections="//@node.7/@nodeData/@connections.1" type="id_String" xpath="row16/invoice_lines_description"/>
-        <nodes name="invoice_date" outgoingConnections="//@node.7/@nodeData/@connections.3" type="id_String" xpath="row16/invoice_date"/>
-        <nodes name="custom_fields_gl_posting_date" outgoingConnections="//@node.7/@nodeData/@connections.4" type="id_String" xpath="row16/custom_fields_gl_posting_date"/>
-        <nodes name="currency_code" outgoingConnections="//@node.7/@nodeData/@connections.7 //@node.7/@nodeData/@connections.8" type="id_String" xpath="row16/currency_code"/>
-        <nodes name="invoice_lines_account_segment_4" type="id_String" xpath="row16/invoice_lines_account_segment_4"/>
-        <nodes name="invoice_lines_total" outgoingConnections="//@node.7/@nodeData/@connections.10" type="id_String" xpath="row16/invoice_lines_total"/>
-        <nodes name="invoice_lines_invoice_lines_account_segment_3" type="id_String" xpath="row16/invoice_lines_invoice_lines_account_segment_3"/>
-        <nodes name="invoice_lines_account_segment_2" type="id_String" xpath="row16/invoice_lines_account_segment_2"/>
-        <nodes name="invoice_lines_custom_fields_project_code_external_ref_num" type="id_String" xpath="row16/invoice_lines_custom_fields_project_code_external_ref_num"/>
-        <nodes name="id" outgoingConnections="//@node.7/@nodeData/@connections.2" type="id_String" xpath="row16/id"/>
-        <nodes name="payment_term_code" outgoingConnections="//@node.7/@nodeData/@connections.6" type="id_String" xpath="row16/payment_term_code"/>
-        <nodes name="invoice_lines_tax_distribution_total" outgoingConnections="//@node.7/@nodeData/@connections.11" type="id_String" xpath="row16/invoice_lines_tax_distribution_total"/>
-        <nodes name="invoice_lines_shipping_distribution_total" outgoingConnections="//@node.7/@nodeData/@connections.12" type="id_String" xpath="row16/invoice_lines_shipping_distribution_total"/>
-        <nodes name="invoice_lines_handling_distribution_total" outgoingConnections="//@node.7/@nodeData/@connections.13" type="id_String" xpath="row16/invoice_lines_handling_distribution_total"/>
-        <nodes name="invoice_lines_misc_distribution_total" outgoingConnections="//@node.7/@nodeData/@connections.14" type="id_String" xpath="row16/invoice_lines_misc_distribution_total"/>
-      </inputTrees>
-      <outputTrees name="copyOfCreateBill">
-        <nodes expression="" name="body" pattern="" type="id_Document" xpath="copyOfCreateBill/body">
-          <children main="true" name="request" type="id_String" xpath="copyOfCreateBill.body:/request" xsi:type="TalendXMLMap:OutputTreeNode">
-            <children name="control" type="id_String" xpath="copyOfCreateBill.body:/request/control" xsi:type="TalendXMLMap:OutputTreeNode">
-              <children expression="&quot;BluvaultMPP&quot; " name="senderid" type="id_String" xpath="copyOfCreateBill.body:/request/control/senderid" xsi:type="TalendXMLMap:OutputTreeNode"/>
-              <children expression="&quot;Bluvault!2018&quot;" name="password" type="id_String" xpath="copyOfCreateBill.body:/request/control/password" xsi:type="TalendXMLMap:OutputTreeNode"/>
-              <children expression="System.currentTimeMillis() / 1000L" name="controlid" type="id_String" xpath="copyOfCreateBill.body:/request/control/controlid" xsi:type="TalendXMLMap:OutputTreeNode"/>
-              <children expression="&quot;false&quot;" name="uniqueid" type="id_Boolean" xpath="copyOfCreateBill.body:/request/control/uniqueid" xsi:type="TalendXMLMap:OutputTreeNode"/>
-              <children expression="&quot;3.0&quot;" name="dtdversion" type="id_Float" xpath="copyOfCreateBill.body:/request/control/dtdversion" xsi:type="TalendXMLMap:OutputTreeNode"/>
-              <children expression="&quot;false&quot;" name="includewhitespace" type="id_Boolean" xpath="copyOfCreateBill.body:/request/control/includewhitespace" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            </children>
-            <children main="true" name="operation" type="id_String" xpath="copyOfCreateBill.body:/request/operation" xsi:type="TalendXMLMap:OutputTreeNode">
-              <children name="authentication" type="id_String" xpath="copyOfCreateBill.body:/request/operation/authentication" xsi:type="TalendXMLMap:OutputTreeNode">
-                <children expression="&quot;0Srcn6iu7LVBVleUdnXcdKhJtUBWVw..&quot; " name="sessionid" type="id_String" xpath="copyOfCreateBill.body:/request/operation/authentication/sessionid" xsi:type="TalendXMLMap:OutputTreeNode"/>
-              </children>
-              <children main="true" name="content" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content" xsi:type="TalendXMLMap:OutputTreeNode">
-                <children main="true" name="function" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function" xsi:type="TalendXMLMap:OutputTreeNode">
-                  <children expression="routines.Generate_UUID.generateUUID() " name="controlid" nodeType="ATTRIBUT" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/@controlid" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                  <children main="true" name="create" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create" xsi:type="TalendXMLMap:OutputTreeNode">
-                    <children expression="" group="true" main="true" name="APBILL" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL" xsi:type="TalendXMLMap:OutputTreeNode">
-                      <children expression="routines.DateFormate.dateFomate(row16.invoice_date) " incomingConnections="//@node.7/@nodeData/@connections.3" name="WHENCREATED" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/WHENCREATED" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                      <children expression="routines.DateFormate.dateFomate(row16.custom_fields_gl_posting_date) " incomingConnections="//@node.7/@nodeData/@connections.4" name="WHENPOSTED" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/WHENPOSTED" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                      <children expression="row16.supplier_number" incomingConnections="//@node.7/@nodeData/@connections.5" name="VENDORID" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/VENDORID" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                      <children aggregate="true" expression=" row16.invoice_number" incomingConnections="//@node.7/@nodeData/@connections.0" name="RECORDID" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/RECORDID" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                      <children expression="&quot;InvoiceDescription&quot;" name="DESCRIPTION" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/DESCRIPTION" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                      <children expression="row16.payment_term_code.substring(0,1)+row16.payment_term_code.substring(1,row16.payment_term_code.length()).toLowerCase() " incomingConnections="//@node.7/@nodeData/@connections.6" name="TERMNAME" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/TERMNAME" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                      <children expression="row16.currency_code" incomingConnections="//@node.7/@nodeData/@connections.7" name="CURRENCY" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/CURRENCY" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                      <children expression="row16.currency_code" incomingConnections="//@node.7/@nodeData/@connections.8" name="BASECURR" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/BASECURR" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                      <children group="true" main="true" name="APBILLITEMS" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS" xsi:type="TalendXMLMap:OutputTreeNode">
-                        <children expression="" loop="true" main="true" name="APBILLITEM" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM" xsi:type="TalendXMLMap:OutputTreeNode">
-                          <children expression="context.AccountNo" name="ACCOUNTNO" type="id_Float" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/ACCOUNTNO" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                          <children expression="String.valueOf(Var.Var1) " incomingConnections="//@node.7/@nodeData/@connections.15" name="TRX_AMOUNT" type="id_Float" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/TRX_AMOUNT" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                          <children expression="row16.invoice_lines_description" incomingConnections="//@node.7/@nodeData/@connections.1" name="ENTRYDESCRIPTION" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/ENTRYDESCRIPTION" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                          <children expression="context.locationId " name="LOCATIONID" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/LOCATIONID" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                          <children expression="context.DepartmentId" name="DEPARTMENTID" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/DEPARTMENTID" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                          <children expression=" row16.supplier_number" incomingConnections="//@node.7/@nodeData/@connections.9" name="VENDORID" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/VENDORID" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                        </children>
-                      </children>
-                      <children expression="row16.id" incomingConnections="//@node.7/@nodeData/@connections.2" name="COUPA_ID" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/COUPA_ID" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                    </children>
-                  </children>
-                </children>
-              </children>
-            </children>
-          </children>
-        </nodes>
-      </outputTrees>
-      <varTables name="Var">
-        <nodes expression="Double.valueOf(row16.invoice_lines_total)+&#13;&#10;Double.valueOf(row16.invoice_lines_tax_distribution_total)+&#13;&#10;Double.valueOf(row16.invoice_lines_shipping_distribution_total)+&#13;&#10;Double.valueOf(row16.invoice_lines_handling_distribution_total)+&#13;&#10;Double.valueOf(row16.invoice_lines_misc_distribution_total) " incomingConnections="//@node.7/@nodeData/@connections.10 //@node.7/@nodeData/@connections.11 //@node.7/@nodeData/@connections.12 //@node.7/@nodeData/@connections.13 //@node.7/@nodeData/@connections.14" name="Var1" outgoingConnections="//@node.7/@nodeData/@connections.15" type="id_Double"/>
-      </varTables>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.3" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.3" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.8/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.12" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.9" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.4" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.0" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.5" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.1" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.13" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.5" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.6" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.6" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.6" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.7" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.1" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.8/@children.0/@children.5" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.8" target="//@node.7/@nodeData/@varTables.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.14" target="//@node.7/@nodeData/@varTables.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.15" target="//@node.7/@nodeData/@varTables.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.16" target="//@node.7/@nodeData/@varTables.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.17" target="//@node.7/@nodeData/@varTables.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@varTables.0/@nodes.0" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.8/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
-    </nodeData>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_7"/>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_3"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -637,132 +570,68 @@
     <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
     <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="body"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="invoice_number"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="supplier_number"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="supplier_name"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="invoice_lines_description"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="invoice_date"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="custom_fields_gl_posting_date"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="currency_code"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="invoice_lines_account_segment_4"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="invoice_lines_total"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="invoice_lines_invoice_lines_account_segment_3"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="invoice_lines_account_segment_2"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="invoice_lines_custom_fields_project_code_external_ref_num"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="payment_term_code"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="invoice_lines_tax_distribution_total"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="invoice_lines_shipping_distribution_total"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="invoice_lines_handling_distribution_total"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="invoice_lines_misc_distribution_total"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LineDescriptionforHeader"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="CreateBill" name="tLogRow_7">
-      <column comment="" key="false" length="-1" name="body" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="-13" offsetLabelY="0" posX="800" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTClient_1"/>
-    <elementParameter field="TEXT" name="URL" value="&quot;https://api.intacct.com/ia/xml/xmlgw.phtml&quot;"/>
-    <elementParameter field="TEXT" name="PATH" value="&quot;/post&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="METHOD" value="POST"/>
-    <elementParameter field="CLOSED_LIST" name="CONTENT_TYPE" value="application/xml"/>
-    <elementParameter field="CLOSED_LIST" name="ACCEPT_TYPE" value="*/*"/>
-    <elementParameter field="TABLE" name="QUERY"/>
-    <elementParameter field="CHECK" name="SERVICE_LOCATOR" value="false"/>
-    <elementParameter field="TEXT" name="SERVICE_NAMESPACE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="SERVICE_NAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="SERVICE_ACTIVITY_MONITOR" value="false"/>
-    <elementParameter field="CHECK" name="NEED_AUTH" value="true"/>
-    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" value="BASIC"/>
-    <elementParameter field="TEXT" name="AUTH_USERNAME" value="&quot;xml_gateway_coupa&quot;"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="JoOegpqj+rOXftJTJoBBcIJVbVQYlIzx"/>
-    <elementParameter field="TEXT" name="AUTH_BEARER_TOKEN" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="NEED_AUTHORIZATION" show="false" value="false"/>
-    <elementParameter field="TEXT" name="ROLE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="USE_BUSINESS_CORRELATION" value="false"/>
-    <elementParameter field="TEXT" name="CORRELATION_VALUE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="CHECK_SERVER_IDENTITY" value="true"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
-    <elementParameter field="CHECK" name="LOG_MESSAGES" value="true"/>
-    <elementParameter field="CHECK" name="FOLLOW_REDIRECTS" value="false"/>
-    <elementParameter field="CHECK" name="REDIRECT_NON_SAME_HOST" show="false" value="false"/>
-    <elementParameter field="CHECK" name="ENABLE_WEBCLIENT_OPERATION_REPORTING" value="true"/>
-    <elementParameter field="CHECK" name="CONVERT_RESPONSE_TO_DOM" show="false" value="true"/>
-    <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" show="false" value="false"/>
-    <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" value="false"/>
-    <elementParameter field="TABLE" name="HEADERS">
-      <elementValue elementRef="NAME" value="&quot;Content-Type&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;application/xml&quot;"/>
-    </elementParameter>
-    <elementParameter field="TABLE" name="SERVICE_LOCATOR_CUSTOM_PROPERTIES" show="false"/>
-    <elementParameter field="TABLE" name="SERVICE_ACTIVITY_MONITOR_CUSTOM_PROPERTIES" show="false"/>
-    <elementParameter field="CHECK" name="DISABLE_CHUNKED_ENCODING" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_TIMEOUT" value="30"/>
-    <elementParameter field="LABEL" name="CONNECTION_TIMEOUT_DESC" value="(Studio Only, See Doc for Runtime)"/>
-    <elementParameter field="TEXT" name="RECEIVE_TIMEOUT" value="60"/>
-    <elementParameter field="LABEL" name="RECEIVE_TIMEOUT_DESC" value="(Studio Only, See Doc for Runtime)"/>
-    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
-    <elementParameter field="TEXT" name="PROXY_HOST" show="false" value="&quot;61.163.92.4&quot;"/>
-    <elementParameter field="TEXT" name="PROXY_PORT" show="false" value="8080"/>
-    <elementParameter field="TEXT" name="PROXY_USERNAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="0RMsyjmybrE="/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="CreatBillsOnIntaact" name="tRESTClient_1">
-      <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="RESPONSE" name="RESPONSE">
-      <column defaultValue="" key="false" length="0" name="statusCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
-      <column key="false" length="4048" name="string" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="FAULT" name="FAULT">
-      <column defaultValue="" key="false" length="0" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column key="false" length="1024" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="992" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
-    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
-    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
-    <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="statusCode"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="body"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="string"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tLogRow_1">
-      <column defaultValue="" key="false" length="0" name="statusCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="4048" name="string" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="992" posY="288">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_4"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
-    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
-    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
-    <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="errorCode"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="errorMessage"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tLogRow_4">
-      <column defaultValue="" key="false" length="0" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    <metadata connector="FLOW" name="tLogRow_3">
+      <column comment="" key="false" length="-1" name="invoice_number" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="supplier_number" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="supplier_name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_description" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_date" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="custom_fields_gl_posting_date" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="currency_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_account_segment_4" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_invoice_lines_account_segment_3" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_account_segment_2" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_custom_fields_project_code_external_ref_num" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="payment_term_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_tax_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_shipping_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_handling_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_lines_misc_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LineDescriptionforHeader" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="0">
@@ -869,6 +738,216 @@
       <column defaultValue="" key="false" length="0" name="ERROR_CODE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="832" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_4"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="CreateBill" name="copyOfCreateBill">
+      <column comment="" key="false" length="-1" name="body" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendXMLMap:XmlMapData">
+      <outputTrees name="copyOfCreateBill">
+        <nodes expression="" name="body" pattern="" type="id_Document" xpath="copyOfCreateBill/body">
+          <children main="true" name="request" type="id_String" xpath="copyOfCreateBill.body:/request" xsi:type="TalendXMLMap:OutputTreeNode">
+            <children name="control" type="id_String" xpath="copyOfCreateBill.body:/request/control" xsi:type="TalendXMLMap:OutputTreeNode">
+              <children expression="&quot;BluvaultMPP&quot; " name="senderid" type="id_String" xpath="copyOfCreateBill.body:/request/control/senderid" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="&quot;Bluvault!2018&quot;" name="password" type="id_String" xpath="copyOfCreateBill.body:/request/control/password" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="System.currentTimeMillis() / 1000L" name="controlid" type="id_String" xpath="copyOfCreateBill.body:/request/control/controlid" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="&quot;false&quot;" name="uniqueid" type="id_Boolean" xpath="copyOfCreateBill.body:/request/control/uniqueid" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="&quot;3.0&quot;" name="dtdversion" type="id_Float" xpath="copyOfCreateBill.body:/request/control/dtdversion" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="&quot;false&quot;" name="includewhitespace" type="id_Boolean" xpath="copyOfCreateBill.body:/request/control/includewhitespace" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            </children>
+            <children main="true" name="operation" type="id_String" xpath="copyOfCreateBill.body:/request/operation" xsi:type="TalendXMLMap:OutputTreeNode">
+              <children name="authentication" type="id_String" xpath="copyOfCreateBill.body:/request/operation/authentication" xsi:type="TalendXMLMap:OutputTreeNode">
+                <children expression="&quot;0Srcn6iu7LVBVleUdnXcdKhJtUBWVw..&quot; " name="sessionid" type="id_String" xpath="copyOfCreateBill.body:/request/operation/authentication/sessionid" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              </children>
+              <children main="true" name="content" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content" xsi:type="TalendXMLMap:OutputTreeNode">
+                <children main="true" name="function" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function" xsi:type="TalendXMLMap:OutputTreeNode">
+                  <children expression="routines.Generate_UUID.generateUUID() " name="controlid" nodeType="ATTRIBUT" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/@controlid" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children main="true" name="create" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create" xsi:type="TalendXMLMap:OutputTreeNode">
+                    <children expression="" group="true" main="true" name="APBILL" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL" xsi:type="TalendXMLMap:OutputTreeNode">
+                      <children expression="routines.DateFormate.dateFomate(row16.invoice_date) " name="WHENCREATED" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/WHENCREATED" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression="routines.DateFormate.dateFomate(row16.custom_fields_gl_posting_date) " name="WHENPOSTED" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/WHENPOSTED" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression="row16.supplier_number" name="VENDORID" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/VENDORID" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children aggregate="true" expression=" row16.invoice_number" name="RECORDID" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/RECORDID" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression="&quot;InvoiceDescription&quot;" name="DESCRIPTION" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/DESCRIPTION" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression="row16.payment_term_code.substring(0,1)+row16.payment_term_code.substring(1,row16.payment_term_code.length()).toLowerCase() " name="TERMNAME" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/TERMNAME" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression="row16.currency_code" name="CURRENCY" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/CURRENCY" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression="row16.currency_code" name="BASECURR" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/BASECURR" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children group="true" main="true" name="APBILLITEMS" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS" xsi:type="TalendXMLMap:OutputTreeNode">
+                        <children expression="" loop="true" main="true" name="APBILLITEM" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM" xsi:type="TalendXMLMap:OutputTreeNode">
+                          <children expression="context.AccountNo" name="ACCOUNTNO" type="id_Float" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/ACCOUNTNO" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                          <children expression="String.valueOf(Var.Var1) " incomingConnections="//@node.12/@nodeData/@connections.0" name="TRX_AMOUNT" type="id_Float" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/TRX_AMOUNT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                          <children expression="row16.invoice_lines_description" name="ENTRYDESCRIPTION" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/ENTRYDESCRIPTION" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                          <children expression="context.locationId " name="LOCATIONID" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/LOCATIONID" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                          <children expression="context.DepartmentId" name="DEPARTMENTID" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/DEPARTMENTID" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                          <children expression=" row16.supplier_number" name="VENDORID" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/VENDORID" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                        </children>
+                      </children>
+                      <children expression="row16.id" name="COUPA_ID" type="id_String" xpath="copyOfCreateBill.body:/request/operation/content/function/create/APBILL/COUPA_ID" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    </children>
+                  </children>
+                </children>
+              </children>
+            </children>
+          </children>
+        </nodes>
+      </outputTrees>
+      <varTables name="Var">
+        <nodes expression="Double.valueOf(row16.invoice_lines_total)+&#13;&#10;Double.valueOf(row16.invoice_lines_tax_distribution_total)+&#13;&#10;Double.valueOf(row16.invoice_lines_shipping_distribution_total)+&#13;&#10;Double.valueOf(row16.invoice_lines_handling_distribution_total)+&#13;&#10;Double.valueOf(row16.invoice_lines_misc_distribution_total) " name="Var1" outgoingConnections="//@node.12/@nodeData/@connections.0" type="id_Double"/>
+      </varTables>
+      <connections source="//@node.12/@nodeData/@varTables.0/@nodes.0" target="//@node.12/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.8/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
+    </nodeData>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_7"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="body"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="CreateBill" name="tLogRow_7">
+      <column comment="" key="false" length="-1" name="body" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="-13" offsetLabelY="0" posX="1088" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTClient_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;https://api.intacct.com/ia/xml/xmlgw.phtml&quot;"/>
+    <elementParameter field="TEXT" name="PATH" value="&quot;/post&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="METHOD" value="POST"/>
+    <elementParameter field="CLOSED_LIST" name="CONTENT_TYPE" value="application/xml"/>
+    <elementParameter field="CLOSED_LIST" name="ACCEPT_TYPE" value="*/*"/>
+    <elementParameter field="TABLE" name="QUERY"/>
+    <elementParameter field="CHECK" name="SERVICE_LOCATOR" value="false"/>
+    <elementParameter field="TEXT" name="SERVICE_NAMESPACE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="SERVICE_ACTIVITY_MONITOR" value="false"/>
+    <elementParameter field="CHECK" name="NEED_AUTH" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" value="BASIC"/>
+    <elementParameter field="TEXT" name="AUTH_USERNAME" value="&quot;xml_gateway_coupa&quot;"/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="JoOegpqj+rOXftJTJoBBcIJVbVQYlIzx"/>
+    <elementParameter field="TEXT" name="AUTH_BEARER_TOKEN" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="NEED_AUTHORIZATION" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROLE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_BUSINESS_CORRELATION" value="false"/>
+    <elementParameter field="TEXT" name="CORRELATION_VALUE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CHECK_SERVER_IDENTITY" value="true"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="LOG_MESSAGES" value="true"/>
+    <elementParameter field="CHECK" name="FOLLOW_REDIRECTS" value="false"/>
+    <elementParameter field="CHECK" name="REDIRECT_NON_SAME_HOST" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_WEBCLIENT_OPERATION_REPORTING" value="true"/>
+    <elementParameter field="CHECK" name="CONVERT_RESPONSE_TO_DOM" show="false" value="true"/>
+    <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" show="false" value="false"/>
+    <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" value="false"/>
+    <elementParameter field="TABLE" name="HEADERS">
+      <elementValue elementRef="NAME" value="&quot;Content-Type&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;application/xml&quot;"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="SERVICE_LOCATOR_CUSTOM_PROPERTIES" show="false"/>
+    <elementParameter field="TABLE" name="SERVICE_ACTIVITY_MONITOR_CUSTOM_PROPERTIES" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_CHUNKED_ENCODING" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_TIMEOUT" value="30"/>
+    <elementParameter field="LABEL" name="CONNECTION_TIMEOUT_DESC" value="(Studio Only, See Doc for Runtime)"/>
+    <elementParameter field="TEXT" name="RECEIVE_TIMEOUT" value="60"/>
+    <elementParameter field="LABEL" name="RECEIVE_TIMEOUT_DESC" value="(Studio Only, See Doc for Runtime)"/>
+    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
+    <elementParameter field="TEXT" name="PROXY_HOST" show="false" value="&quot;61.163.92.4&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_PORT" show="false" value="8080"/>
+    <elementParameter field="TEXT" name="PROXY_USERNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="0RMsyjmybrE="/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="CreatBillsOnIntaact" name="tRESTClient_1">
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="RESPONSE" name="RESPONSE">
+      <column defaultValue="" key="false" length="0" name="statusCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+      <column key="false" length="4048" name="string" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FAULT" name="FAULT">
+      <column defaultValue="" key="false" length="0" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column key="false" length="1024" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="statusCode"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="body"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="string"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_1">
+      <column defaultValue="" key="false" length="0" name="statusCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="4048" name="string" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_4"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="errorCode"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="errorMessage"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_4">
+      <column defaultValue="" key="false" length="0" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tREST_1" offsetLabelX="0" offsetLabelY="0" source="tREST_1" target="tExtractJSONFields_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
@@ -906,7 +985,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row14"/>
   </connection>
-  <connection connectorName="FLOW" label="row16" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tXMLMap_4">
+  <connection connectorName="FLOW" label="row16" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tDenormalize_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="payment_term_code"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -930,8 +1009,18 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row16"/>
   </connection>
+  <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tDenormalize_1" offsetLabelX="0" offsetLabelY="0" source="tDenormalize_1" target="tLogRow_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row7"/>
+  </connection>
+  <connection connectorName="FLOW" label="CreateBill" lineStyle="0" metaname="CreateBill" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_1" target="tLogRow_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="CreateBill"/>
+  </connection>
   <connection connectorName="FLOW" label="copyOfCreateBill" lineStyle="0" metaname="copyOfCreateBill" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_4" target="tLogRow_7">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfCreateBill"/>
   </connection>
   <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tLogRow_7" offsetLabelX="0" offsetLabelY="0" source="tLogRow_7" target="tRESTClient_1">
@@ -941,20 +1030,18 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
   </connection>
   <connection connectorName="FAULT" label="row8" lineStyle="0" metaname="FAULT" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tRESTClient_1" target="tLogRow_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row8"/>
   </connection>
   <connection connectorName="RESPONSE" label="row6" lineStyle="0" metaname="RESPONSE" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tRESTClient_1" target="tLogRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
-  </connection>
-  <connection connectorName="FLOW" label="CreateBill" lineStyle="0" metaname="CreateBill" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_1" target="tLogRow_2">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="CreateBill"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
   </connection>
   <note opaque="true" posX="672" posY="0" sizeHeight="97" sizeWidth="353" text="Fetch the json for invoices from coupa and store into &#13;&#10;local system.">
     <elementParameter field="RADIO" name="NOTETXT_LEFT" value="true"/>
@@ -984,13 +1071,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_388e31d2-c808-4e60-a079-beb53be9148a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>P1A02xY84tmFa18SVXCUUae5tjD3Rm/P4xNrIdKjQKz+gwvnyy6nWvbWY/faf8h+8sQJR9smZjrZ
-2co0xG+jRA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_dbbe9f4e-b52d-4407-9bfa-e64a741227f2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Ii7oVKLhzMJm6g+dJ2bZqxMbrvBkxDwhWSivAFyZ3qIdxUrHka2GYrabb1pgv67M29/isG+RNUEp
-T39tADMo5g==</DigestValue></Reference></SignedInfo><SignatureValue>BQGD/KtCUWWRBvVGt/9l1lB4FBIe7UbbgZAcDsjC0MBUDAqbXhFmmM1lpOFiZT2Q3FTMqVCfxZUS
-aMySIeQJ076fz1MvLjXxz9k8GyXIXJ2CSM5uZldZAdfXWmL3tVVdA4OAmQuLc7h0t/LAEYj74HKz
-QBn8K7+MvNC2xb0wEp4c+Tkv5mnoD9Iv+P4MPeSk1kE9qLK7tM3UcPVmEhOnWeq1Epvwtif0AEfz
-5zm1Rgawb8DsW4bQCYYUz/MedsyptUZDCKcoq4xmen+Es8QPH4r2VMOB1sagkl+eBp88Rt/kL/N6
-6VHj+nlB8wzGOQlne1k31AimQkeBqGTF1aDlOA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_4"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_805f2c92-9b01-48f0-b104-3ca56c683d27"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Wk1hZMu833J87w3gT2Pyq6fcwdxgCAIuvAteO81IqJyYa+JWNVHIRW30kT+qRm/AkoXa4D1sNNn7
+aAa47d930w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5a4c28ed-0efd-46e1-8a82-b7737f07974d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0nwZKPDd4JjGicKWTs3+bz01stJCMb+5L4LmDFNaGm8DaEP9/TLHhsA0iLnrlHrB1c3CFU7/VqCo
+cYMAYj9WqQ==</DigestValue></Reference></SignedInfo><SignatureValue>MrYJ50TV9/SMdEBuerHlz0DhAQ8Z63QWaLCm18i2hIPu6+8/4nq0fiepT+hmbFj16Cua74+HJb+V
+7vy+j0vnrZV5FlaPfxaUTP8pb3ukTXoNFDsVL78Yb6mkXodatTfESdElnrm/QI38jlQXPOEkqqqO
+ve7DM1Y7anb+TEG6gCVTGY8XYDEVDEELbGZx39U7M+HPeoz+5SWrZaX3mPYuolx51ad+pB7AtAOe
+nkU03bK4Ofa2UrWf0XcYr3vtOh5pdCPzwuH0qXSNaAGszq4+o15cmx5f/TRITrJ9W1TcxxsOzwXE
+5yryWxGi1fphbDWomkNiwO0S+6OItaVWB7Bxwg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1014,4 +1106,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_dbbe9f4e-b52d-4407-9bfa-e64a741227f2" Target="#_388e31d2-c808-4e60-a079-beb53be9148a"><Timestamp>2019-05-16 18:27:06</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5a4c28ed-0efd-46e1-8a82-b7737f07974d" Target="#_805f2c92-9b01-48f0-b104-3ca56c683d27"><Timestamp>2019-05-16 18:32:03</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
