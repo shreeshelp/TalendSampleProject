@@ -796,13 +796,12 @@
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row13">
         <nodes filterOutGoingConnections="//@node.13/@nodeData/@connections.0" name="result_status" type="id_String" xpath="row13/result_status"/>
-        <nodes name="Session_id" type="id_String" xpath="row13/Session_id"/>
       </inputTrees>
       <outputTrees activateExpressionFilter="true" expressionFilter="row13.result_status.equals(&quot;success&quot;)" filterIncomingConnections="//@node.13/@nodeData/@connections.0" name="updateStatusOnCoupa">
         <nodes expression="" name="body" pattern="" type="id_Document" xpath="updateStatusOnCoupa/body">
           <children loop="true" main="true" name="invoice-header" type="id_String" xpath="updateStatusOnCoupa.body:/invoice-header" xsi:type="TalendXMLMap:OutputTreeNode">
             <children name="exported" type="id_Boolean" xpath="updateStatusOnCoupa.body:/invoice-header/exported" xsi:type="TalendXMLMap:OutputTreeNode">
-              <children name="type" nodeType="ATTRIBUT" type="id_String" xpath="updateStatusOnCoupa.body:/invoice-header/exported/@type" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="&quot;true&quot;" name="type" nodeType="ATTRIBUT" type="id_String" xpath="updateStatusOnCoupa.body:/invoice-header/exported/@type" xsi:type="TalendXMLMap:OutputTreeNode"/>
             </children>
           </children>
         </nodes>
@@ -811,13 +810,13 @@
       <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.0" target="//@node.13/@nodeData/@outputTrees.0" xsi:type="TalendXMLMap:FilterConnection"/>
     </nodeData>
   </node>
-  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1536" posY="96">
+  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1536" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTClient_4"/>
-    <elementParameter field="TEXT" name="URL" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;https://freshworks-test.coupahost.com/api/invoices/&quot;"/>
     <elementParameter field="TEXT" name="PATH" value="&quot;&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="METHOD" value="GET"/>
-    <elementParameter field="CLOSED_LIST" name="CONTENT_TYPE" show="false" value="application/xml"/>
-    <elementParameter field="CLOSED_LIST" name="ACCEPT_TYPE" value="application/xml"/>
+    <elementParameter field="CLOSED_LIST" name="METHOD" value="PUT"/>
+    <elementParameter field="CLOSED_LIST" name="CONTENT_TYPE" value="application/xml"/>
+    <elementParameter field="CLOSED_LIST" name="ACCEPT_TYPE" value="*/*"/>
     <elementParameter field="TABLE" name="QUERY"/>
     <elementParameter field="CHECK" name="SERVICE_LOCATOR" value="false"/>
     <elementParameter field="TEXT" name="SERVICE_NAMESPACE" show="false" value="&quot;&quot;"/>
@@ -838,14 +837,21 @@
     <elementParameter field="CHECK" name="FOLLOW_REDIRECTS" value="false"/>
     <elementParameter field="CHECK" name="REDIRECT_NON_SAME_HOST" show="false" value="false"/>
     <elementParameter field="CHECK" name="ENABLE_WEBCLIENT_OPERATION_REPORTING" value="true"/>
-    <elementParameter field="CHECK" name="CONVERT_RESPONSE_TO_DOM" value="true"/>
+    <elementParameter field="CHECK" name="CONVERT_RESPONSE_TO_DOM" show="false" value="true"/>
     <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" show="false" value="false"/>
     <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" show="false" value="false"/>
-    <elementParameter field="TABLE" name="HEADERS"/>
+    <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" value="false"/>
+    <elementParameter field="TABLE" name="HEADERS">
+      <elementValue elementRef="NAME" value="&quot;Accept&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;application/xml&quot;"/>
+      <elementValue elementRef="NAME" value="&quot;X-COUPA-API-KEY&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;a125dd79e32b510e3f3144c315a5854c21f045fd&quot;"/>
+      <elementValue elementRef="NAME" value="&quot;Content-Type&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;text/xml&quot;"/>
+    </elementParameter>
     <elementParameter field="TABLE" name="SERVICE_LOCATOR_CUSTOM_PROPERTIES" show="false"/>
     <elementParameter field="TABLE" name="SERVICE_ACTIVITY_MONITOR_CUSTOM_PROPERTIES" show="false"/>
-    <elementParameter field="CHECK" name="DISABLE_CHUNKED_ENCODING" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_CHUNKED_ENCODING" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_TIMEOUT" value="30"/>
     <elementParameter field="LABEL" name="CONNECTION_TIMEOUT_DESC" value="(Studio Only, See Doc for Runtime)"/>
     <elementParameter field="TEXT" name="RECEIVE_TIMEOUT" value="60"/>
@@ -1159,7 +1165,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tREST" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1504" posY="192">
+  <node componentName="tREST" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1728" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tREST_2"/>
     <elementParameter field="TEXT" name="URL" value="&quot;https://freshworks-test.coupahost.com/api/invoices/220&quot;"/>
     <elementParameter field="CLOSED_LIST" name="METHOD" value="PUT"/>
@@ -1178,7 +1184,7 @@
       <column defaultValue="" key="false" length="0" name="ERROR_CODE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1696" posY="192">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1920" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_3"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -1373,13 +1379,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d97b21ed-88f9-427a-9e5e-c03ab1ad99c0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>HA82U8yMqs51k1w76/zwEN+Cra7oa3gyraddCcT/XO/ATqxpnOgnfeBU8AHJ2L7mXeiSf/kNEviz
-XVbzzKQCBg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_06df5733-0909-4ec7-847e-c13bc0125ed3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Olhgd0hzNwWkPzYe2JJJ1gDPgwctPPP8+h+/MxeNk+rw9oNMU56by78feKLoxXgakbc3Y1Z7djza
-ogWmIzBl/Q==</DigestValue></Reference></SignedInfo><SignatureValue>piBB4VH2ZftV66EeZhksKA9WslMGzEvt34Mhk2VrCStYqk9BSkKuOV1f7t/3yYHikxO5OOg+q7V4
-CY/LCIpMb6rMBIB34YN/CrXv9MP5mV2Sqj3OoEnZlZAcFfdk+mGq2/XXFK+GDJOhNfImbCD66Run
-DJOWFInQXFYod0F802td97PSr42ZuNyvmJSd775Dt0I9OiDOP8R2iveI9XWGNMJk3L5JaIVIkS9V
-kSCVgqmsggNLVvte8RTJcDZk2IdWjJxxiaLz7OL/vKCnKSV2esIMqbPgUv/1MiSxBK/ukPYKZVKL
-z0j5KdVZckN0Zqk8rc0c0W0UBasRCOmhsLlBGQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7add31fd-d5b4-46d1-a0f3-f49f62a46466"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DOdjk12Y8B6E/yCSvl3gFofeThstlYxeXGSSGmd2r0Z6OGyLg3Ti0Sg2ZZvf3gmu3SEY7VLxNpH7
+8+Rm3lxZUw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8e2e4d8c-7fd1-417f-9b70-5e95b87155b7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Q46vLZcxiaeMpeic+FyCskbKIC4cK5SPPtE4OkvPC+LqaYZcNTAMw84ncVf367IY7kHkusAQj/6B
+e5MPczwNhQ==</DigestValue></Reference></SignedInfo><SignatureValue>xAiMhOhgA0n8IsJ1TTguJwzF+S+4xje5/PtQb2oUvOfDUJMyq96EodIxNv2a8CEsh+mh8/y2LqAr
+B4jTXDFCL/tFQPN/SP+uefS+TKUvstgUbeaKR/KDNqmuKtNbyt7B03oXBpPudfoEIM+cbnoBQucY
+LnZdlb2Hmxhcbh4Y8pLUzkwavP3geJ4GnFKoK2MPMTtuwVPp1WUufGYrcuAfd0QXpw8pw3emeCZd
+1P5wD4Cj3mb25NVUUjRA5PxWz1ptGbqGBbV+ngu1Bf4BOwbtUIefzu8fdSXbun+VqVpH5vjhfi61
+FrTNM/BF5B+cuW6R1c2Ld6XrYahtGT6VUBrujQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1403,4 +1409,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_06df5733-0909-4ec7-847e-c13bc0125ed3" Target="#_d97b21ed-88f9-427a-9e5e-c03ab1ad99c0"><Timestamp>2019-05-17 06:27:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8e2e4d8c-7fd1-417f-9b70-5e95b87155b7" Target="#_7add31fd-d5b4-46d1-a0f3-f49f62a46466"><Timestamp>2019-05-17 09:19:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
