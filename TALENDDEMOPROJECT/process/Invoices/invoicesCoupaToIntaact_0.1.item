@@ -13,10 +13,12 @@
     <contextParameter comment="" name="senderPwd" prompt="senderPwd?" promptNeeded="false" type="id_Password" value="uQzdALvr3IoWQyzmiwS0Lw=="/>
     <contextParameter comment="" name="sessiongenerationapi" prompt="sessiongenerationapi?" promptNeeded="false" type="id_String" value="https://api.intacct.com/ia/xml/xmlgw.phtml"/>
     <contextParameter comment="" name="CoupaLogin" prompt="CoupaLogin?" promptNeeded="false" type="id_String" value="Guest"/>
-    <contextParameter comment="" name="CoupaPWD" prompt="CoupaPWD?" promptNeeded="false" type="id_String" value="Bluvault!2018"/>
+    <contextParameter comment="" name="CoupaPWD" prompt="CoupaPWD?" promptNeeded="false" type="id_Password" value="uQzdALvr3IoWQyzmiwS0Lw=="/>
     <contextParameter comment="" name="CompanyId" prompt="CompanyId?" promptNeeded="false" type="id_String" value="BluvaultMPP-DEV"/>
     <contextParameter comment="" name="endpointURL" prompt="endpointURL?" promptNeeded="false" type="id_String" value="https://api.intacct.com/ia/xml/xmlgw.phtml"/>
     <contextParameter comment="" name="frshworkAPIToretrivejson" prompt="frshworkAPIToretrivejson?" promptNeeded="false" type="id_String" value="&quot;https://freshworks-test.coupahost.com/api/invoices?exported=false&amp;status=approved&quot;"/>
+    <contextParameter comment="" name="intaactAPIserverUser" prompt="intaactAPIserverUser?" promptNeeded="false" type="id_String" value="xml_gateway_coupa"/>
+    <contextParameter comment="" name="intaactAPIserverPwd" prompt="intaactAPIserverPwd?" promptNeeded="false" type="id_String" value=""/>
   </context>
   <context confirmationNeeded="false" name="PROD">
     <contextParameter comment="" name="locationId" prompt="locationId?" promptNeeded="false" type="id_String" value=""/>
@@ -32,10 +34,12 @@
     <contextParameter comment="" name="senderPwd" prompt="senderPwd?" promptNeeded="false" type="id_Password" value=""/>
     <contextParameter comment="" name="sessiongenerationapi" prompt="sessiongenerationapi?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="CoupaLogin" prompt="CoupaLogin?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="CoupaPWD" prompt="CoupaPWD?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="CoupaPWD" prompt="CoupaPWD?" promptNeeded="false" type="id_Password" value=""/>
     <contextParameter comment="" name="CompanyId" prompt="CompanyId?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="endpointURL" prompt="endpointURL?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="frshworkAPIToretrivejson" prompt="frshworkAPIToretrivejson?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="intaactAPIserverUser" prompt="intaactAPIserverUser?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="intaactAPIserverPwd" prompt="intaactAPIserverPwd?" promptNeeded="false" type="id_String" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
@@ -1496,8 +1500,8 @@
         <nodes expression="" name="body" pattern="" type="id_Document" xpath="CreateIntacctInvoices/body">
           <children main="true" name="request" type="id_String" xpath="CreateIntacctInvoices.body:/request" xsi:type="TalendXMLMap:OutputTreeNode">
             <children name="control" type="id_String" xpath="CreateIntacctInvoices.body:/request/control" xsi:type="TalendXMLMap:OutputTreeNode">
-              <children expression="&quot;BluvaultMPP&quot; " name="senderid" type="id_String" xpath="CreateIntacctInvoices.body:/request/control/senderid" xsi:type="TalendXMLMap:OutputTreeNode"/>
-              <children expression="&quot;Bluvault!2018&quot;" name="password" type="id_String" xpath="CreateIntacctInvoices.body:/request/control/password" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="context.senderId" name="senderid" type="id_String" xpath="CreateIntacctInvoices.body:/request/control/senderid" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="context.senderPwd" name="password" type="id_String" xpath="CreateIntacctInvoices.body:/request/control/password" xsi:type="TalendXMLMap:OutputTreeNode"/>
               <children expression="System.currentTimeMillis() / 1000L" name="controlid" type="id_String" xpath="CreateIntacctInvoices.body:/request/control/controlid" xsi:type="TalendXMLMap:OutputTreeNode"/>
               <children expression="&quot;false&quot;" name="uniqueid" type="id_Boolean" xpath="CreateIntacctInvoices.body:/request/control/uniqueid" xsi:type="TalendXMLMap:OutputTreeNode"/>
               <children expression="&quot;3.0&quot;" name="dtdversion" type="id_Float" xpath="CreateIntacctInvoices.body:/request/control/dtdversion" xsi:type="TalendXMLMap:OutputTreeNode"/>
@@ -2261,13 +2265,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c23ec2b9-b8f6-448a-b2e2-8f8f72b6fb65"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>QbFh6Ufi7JDa4ZFgL0E4kutY7rU7O1LwIM+CPpScH6hvREdiXPVDERBRJH02z+syE+b040VOBdCw
-A8hypyelEg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_002b7373-5d6e-466e-93e0-72aa5c2e00d2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ayojt4GDDyHOjBW6j70tBZPEAg/p1QIxxvDvNl8vBT9GFGDUr6FeeuTJJkfRhG+1dyKXhPTpw20f
-cbW1biy4CA==</DigestValue></Reference></SignedInfo><SignatureValue>CwVx0MmxqUHOeHenmyisXFtMeZcp0NUkUSyP9p8HEvUa3Jwyu/SbbaCzffW1CNc8clRKozXLB+jb
-8SO3kdMh5yIZbU6WX942A9v5BQs2q3yLcmTmSudPBtJIesBmSeljbfs792Aw6pHtZlh3tYJx949I
-5Vd8bEcaRKbpb1631FkMGAZDsYNLDkaEhBDgSm+Aei5HkiWwXxKARsvIoZ/vs/hVpSciLaUfoLpk
-gQDw/j9kkzqn2ULyPyNupqd7TFeJzFm645/NbjAXSCbrIkrLzm+QCuQXXsnZ1Db6Oz1KexJIpSRI
-93/HrCu67yeI5FyrzmI3HTZy0CDRhb141PG1mA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f6d1c740-af70-4716-8fb1-994b27eaa22c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5CsXg+vyAU/kiGgfTd9+TAt8Ol13Qf/OMO1dJY3BTk81AURPZf2Pm1kcwlVmxikyb6PhGd0aaAzU
+qgHB/XD79Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6cf1df2f-e3d4-4883-8f67-54b14b2f96e9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>e+TgZMQqrlyvP9537GtZr17GLc2I2cGOO3kpbyL71DzvwONsGU7Ah11lk3W35g+/qvvvvbm2pmfn
+trWWYbHY9w==</DigestValue></Reference></SignedInfo><SignatureValue>JmnUfwly3e9p9whgJPZcwOje/vE8crCkgqrBC7gKcgCSSc560/SryShi3oq5E8moG2nhx+s6mpLD
+88LAqQDyaSp4ZKH2Jbqec9vabhUR/O3YOr88MR0uqPnNGMv+dY7v7ANh0isoqXREjIpPPuCzQ7VY
+sbtFa7x4iAPzgpdlEuZ55ZTPq2n9UXw8GfwuZo+FywjDh/RvLd6rDRYfAb7M0BOafwEetGZyzGJI
+SPb+Byq4Q51MvVzsA6WLM0RIceLJyt28mk/UG7eK+rard/ydXN4z1TV1UR1tySiMUpR/mN9MIKiN
+NmTYeo+RVAeaz52Q3Mrdp+cmVs4Pez/T3fGI5A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2291,4 +2295,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_002b7373-5d6e-466e-93e0-72aa5c2e00d2" Target="#_c23ec2b9-b8f6-448a-b2e2-8f8f72b6fb65"><Timestamp>2019-05-17 14:15:18</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6cf1df2f-e3d4-4883-8f67-54b14b2f96e9" Target="#_f6d1c740-af70-4716-8fb1-994b27eaa22c"><Timestamp>2019-05-17 14:17:54</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
