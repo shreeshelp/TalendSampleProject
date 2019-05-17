@@ -1452,33 +1452,14 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1632" posY="512">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_BBVwkHZhEemJtLhMWnywhQ-tMap_2-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
-    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1632" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_3"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#13;&#10;output_row.Coupa_ID = &#10;&#10;if(input_row.result_status.equals(&quot;success&quot;)){&#10;&#9;&#9;context.Coupa_Id = row29.COUPA_ID&#10;&#10;}&#13;&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="listOfCoupa_Id">
+    <metadata connector="FLOW" name="tJavaRow_3">
       <column comment="" key="false" length="-1" name="Coupa_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
-    <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables activateExpressionFilter="true" columnNameFilter="" expressionFilter="row30.result_status.equals(&quot;success&quot;)" name="listOfCoupa_Id" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row29.COUPA_ID" name="Coupa_ID" nullable="true" type="id_String"/>
-      </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row30" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="result_status" nullable="true" type="id_String"/>
-      </inputTables>
-    </nodeData>
   </node>
   <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1824" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashOutput_4"/>
@@ -1815,6 +1796,32 @@
       <column defaultValue="" key="false" length="3" name="code" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1632" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_BBVwkHZhEemJtLhMWnywhQ-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="listOfCoupa_Id">
+      <column comment="" key="false" length="-1" name="Coupa_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables activateExpressionFilter="true" columnNameFilter="" expressionFilter="row30.result_status.equals(&quot;success&quot;)" name="listOfCoupa_Id" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row29.COUPA_ID" name="Coupa_ID" nullable="true" type="id_String"/>
+      </outputTables>
+    </nodeData>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tREST_1" offsetLabelX="0" offsetLabelY="0" source="tREST_1" target="tExtractJSONFields_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
@@ -2034,13 +2041,13 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row7"/>
   </connection>
-  <connection connectorName="FLOW" label="row30" lineStyle="0" metaname="tExtractXMLField_2" offsetLabelX="0" offsetLabelY="0" source="tExtractXMLField_2" target="tMap_2">
+  <connection connectorName="FLOW" label="row30" lineStyle="0" metaname="tExtractXMLField_2" offsetLabelX="0" offsetLabelY="0" source="tExtractXMLField_2" target="tJavaRow_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row30"/>
   </connection>
-  <connection connectorName="FLOW" label="listOfCoupa_Id" lineStyle="0" metaname="listOfCoupa_Id" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tHashOutput_4">
+  <connection connectorName="FLOW" label="row19" lineStyle="0" metaname="tJavaRow_3" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_3" target="tHashOutput_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="listOfCoupa_Id"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row19"/>
   </connection>
   <connection connectorName="FLOW" label="row21" lineStyle="0" metaname="tHashInput_3" offsetLabelX="0" offsetLabelY="0" source="tHashInput_3" target="tUniqRow_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -2176,13 +2183,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_919082cb-eea4-4eff-a816-305684a03c46"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>/qKk3uzw60w/ZoDVaYnIPjePL2Vk4uhNvHHNqSxv0lRfuY/RYWa3vF/vwYXSKG0LTP0q0jIhpQTC
-xfSxFr3k9g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2ab5a6b2-e228-4c2a-9fc1-893c8a8a8e8b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zOWlUzkm60A2vh9zUJJ1ZGMqVGG1q4qynDDrZ/4Fsi3Jq4CSMAaW4IcbxAScpun5Wl+j9e/7YnaY
-dZlhONZTIg==</DigestValue></Reference></SignedInfo><SignatureValue>Y3kv535aBRmmEQcA4IVkG3uUT3yzuxc6sb9XEqv7wm4y8Du7LRtvqfB5US1rQzgfalo81Oedapon
-P3Qf7Ha+nk4nuHXRRXuOsCIu7NcR7VjvhlgA5wzvXwyu7Ta8GzLS4mqNvg2c9wv9LVwijGlFgk1W
-IC9Y/fGuVsxMAqaaf9MGAEPGBUFWz/PKlXGgAIHigKdJcVMmznGHPjJCf23EwvQIkvNBh67/mspm
-99dLoWqziMRp25fhlLgasXL9R97itfC/vpkguwRAm6ZufjCY5hyvTavKLWMmj5fJzt3LIfp9kpDV
-GZg+efKMhbxUlqLJhaG7P5SjZyKi/q/cELVzQA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d237fd11-755e-4b41-97e5-d3bbf6df8072"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LaXfjc8tDtLQvKnhtfHOa5goxQma7hgg8LXZyQO2cfpipeUKKckM7HwAJ1PkQQnCZTfb0mDlqXaM
+1wbaHKL+Pg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9ec9c929-4aec-42be-8265-b4f192c3864f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PY8Vor+bs3xShf9eIMkT/sKruj7ueaEsGs87YlM/JRy5rucyd4f6VhAOHjCMkOIHyLoYNIqGI5i7
+8+gwJ09jaA==</DigestValue></Reference></SignedInfo><SignatureValue>jBa65tN1FoedcaXTX3GWhZ3PLJmXLzb0ueONLMd+kWwBYeWVhkw6uUbaCiINycj9lhE9NDVZAlOo
+TScmpROqw4NW9s0QG9S20xtV4Jy6zKr0qc5Q5xz6AR3iJ30ZtDjjm0Rv6cHvPfq9RIFg7Kg+Um8d
+RYQzyYKgZ5gLyGM237cYajh9AuRw79Qp4jq9tItheao4F5lYcpfANHiO0bQD1rBAWuF5OJa/ffH/
+Lf6vwj7mJLFRIfzVHhJIHwYmWWVPsLbAg1dq4SYnKEkoWHVLkY/uMc3HDVZvAvK3mw/Zfb6QEOzr
+/1wDqKxxFADm3FNMr+PJTO6SUHf1sRsSPRgP6A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2206,4 +2218,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2ab5a6b2-e228-4c2a-9fc1-893c8a8a8e8b" Target="#_919082cb-eea4-4eff-a816-305684a03c46"><Timestamp>2019-05-17 16:32:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9ec9c929-4aec-42be-8265-b4f192c3864f" Target="#_d237fd11-755e-4b41-97e5-d3bbf6df8072"><Timestamp>2019-05-17 16:35:03</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
