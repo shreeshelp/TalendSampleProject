@@ -8,7 +8,7 @@
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="64"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="96"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -116,7 +116,7 @@
     <routinesParameter id="_fSQbYHJxEemi7fREDiMEpA" name="TalendString"/>
     <routinesParameter id="_zI0E8HfpEemrYoxgWXpVTg" name="DateFormate"/>
   </parameters>
-  <node componentName="tREST" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="32">
+  <node componentName="tREST" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tREST_1"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="URL" value="&quot;https://freshworks-test.coupahost.com/api/invoices?exported=false&amp;status=approved&quot;"/>
@@ -136,7 +136,7 @@
       <column defaultValue="" key="false" length="0" name="ERROR_CODE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="32">
+  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tExtractJSONFields_1"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CLOSED_LIST" name="READ_BY" value="JSONPATH"/>
@@ -171,7 +171,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="32">
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_1"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
@@ -884,6 +884,18 @@
       <column defaultValue="" key="false" length="0" name="ERROR_CODE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tREST" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="-64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tREST_3"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="METHOD" value="POST"/>
+    <elementParameter field="TABLE" name="HEADERS"/>
+    <elementParameter field="MEMO" name="BODY" value="&quot;&lt;request&gt;&#13;&#10;  &lt;control&gt;&#13;&#10;    &lt;senderid&gt;BluvaultMPP&lt;/senderid&gt;&#13;&#10;    &lt;password&gt;Bluvault!2018&lt;/password&gt;&#13;&#10;    &lt;controlid&gt;&quot;++&quot;&lt;/controlid&gt;&#13;&#10;    &lt;uniqueid&gt;false&lt;/uniqueid&gt;&#13;&#10;    &lt;dtdversion&gt;3.0&lt;/dtdversion&gt;&#13;&#10;    &lt;includewhitespace&gt;false&lt;/includewhitespace&gt;&#13;&#10;  &lt;/control&gt;&#13;&#10;  &lt;operation&gt;&#13;&#10;    &lt;authentication&gt;&#13;&#10;      &lt;login&gt;&#13;&#10;        &lt;userid&gt;{{user_id}}&lt;/userid&gt;&#13;&#10;        &lt;companyid&gt;{{company_id}}{{temp_slide_in}}&lt;/companyid&gt;&#13;&#10;        &lt;password&gt;{{user_password}}&lt;/password&gt;&#13;&#10;      &lt;/login&gt;&#13;&#10;    &lt;/authentication&gt;&#13;&#10;    &lt;content&gt;&#13;&#10;      &lt;function controlid=&quot;{{$guid}}&quot;&gt;&#13;&#10;        &lt;getAPISession /&gt;&#13;&#10;      &lt;/function&gt;&#13;&#10;    &lt;/content&gt;&#13;&#10;  &lt;/operation&gt;&#13;&#10;&lt;/request&gt;&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tREST_3">
+      <column defaultValue="" key="false" length="0" name="Body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="ERROR_CODE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tREST_1" offsetLabelX="0" offsetLabelY="0" source="tREST_1" target="tExtractJSONFields_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
@@ -1010,13 +1022,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3e4cb5d7-13b6-4d48-8af2-b8f7fb8a0b64"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FDLODzBUB+JDNIjQuuxHIjCezO5OssdiMI4538Hi6WCNmdi5JLraVr67SZLCpK669YpaYLffjTxo
-BQF+WrZsvg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_05420cb6-a817-4649-9198-f026ac5d4921"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tnU1pBJ4dzZa1WhVvxOuomAAk4iu3j3yUGMaiISJ2HijUAVWdnKY0Uyt5ecg3HxUKegQphy6omY7
-eK+liHmmdw==</DigestValue></Reference></SignedInfo><SignatureValue>1A/f45lmPva9Bnh8KY3L3bDo62viqB6S17aHf+7lyhNfM/57qCnBcxZG6WoSu8KyoSS7/sFN7WF3
-54mUUKlMqhQW3QPzeXcD5+zz6/XEpbToXE0jR2AjmMPFr9PPeH9VgVSHPBd1pgKEGctzAG5J0Ocg
-3TcIWC/KssypGqyyXQlfZXDHooDhSQIY9RS1fM1oNkMmtKXpohbyDNuReJcjZvN0kM+7qQjRUV7l
-buTgeUD2/DkGQwyhntD5UzK/Hgq99YVte5+Pm6qNQKYGw/oZNCCJ4sOyH2dKhYTK4sb7Pzp55hAN
-4vlFYt/czvWLeP9EVQB/FB0OLk2G/MuqiZgChw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tREST_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_dd2d5e0b-36c0-4735-9bc9-899aa837e640"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jDU5JX6b0ss+NCVct+I2TtmgDy5LNk481qO4qYsh8noft703dmOUX3rUF1k94e4OkYlo8yq8wZkx
+xC/wvOFiLQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7c16faee-a9f9-4e6b-b744-37f5baf59645"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>RyOEx4ceM5DoUxJqzHav0SBjO5+zv8bkXQXosiR7djJ/Rp4mouTTJ9i5ymCptYRPyrvaLUCpkPjB
+dsFZEgVQIg==</DigestValue></Reference></SignedInfo><SignatureValue>NZ+3m7L3SfPe4LErBW3j9dLxZNOKPb/tJJUOEAIlawygFArY9vYbT+bOlryXMSk26diexWR6u2Wy
+1KGSjCriMNy1fBtdaiA+rmjOv9AWeWzYFkqQFYYY7u3JUxtlM5P92ChwrnVAKylquxJ7c49HZdoP
+Y9dwWK5XQu4qNDedMWeRdYB66aNEyo+8/RMP8KOfJ6MGcnvFnbX+OfI2ofpjrBvVQEf4UC/ekBnp
+AzaA/j45cjXkLLbjVdFzbUiHsF5B/K2LKrm841F14NUtocWfDmdipFCfh6qtRYH4gE0TA6YS5UeW
+TL7OibbYctKiMUWRbkErej5ojtkPvMefSzbjTA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1040,4 +1057,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_05420cb6-a817-4649-9198-f026ac5d4921" Target="#_3e4cb5d7-13b6-4d48-8af2-b8f7fb8a0b64"><Timestamp>2019-05-17 03:29:46</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7c16faee-a9f9-4e6b-b744-37f5baf59645" Target="#_dd2d5e0b-36c0-4735-9bc9-899aa837e640"><Timestamp>2019-05-17 03:37:05</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
