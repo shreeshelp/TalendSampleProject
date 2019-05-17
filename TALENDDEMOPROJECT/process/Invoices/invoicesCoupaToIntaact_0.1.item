@@ -896,50 +896,6 @@
       <column defaultValue="" key="false" length="0" name="ERROR_CODE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tREST" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="-64">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tREST_3"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="TEXT" name="URL" value="&quot;https://api.intacct.com/ia/xml/xmlgw.phtml&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="METHOD" value="POST"/>
-    <elementParameter field="TABLE" name="HEADERS">
-      <elementValue elementRef="NAME" value="&quot;Content-Type&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;application/xml&quot;"/>
-    </elementParameter>
-    <elementParameter field="MEMO" name="BODY" value="&quot;&lt;request&gt;&#13;&#10;  &lt;control&gt;&#13;&#10;    &lt;senderid&gt;BluvaultMPP&lt;/senderid&gt;&#13;&#10;    &lt;password&gt;Bluvault!2018&lt;/password&gt;&#13;&#10;    &lt;controlid&gt;&quot;+System.currentTimeMillis() / 1000L+&quot;&lt;/controlid&gt;&#13;&#10;    &lt;uniqueid&gt;false&lt;/uniqueid&gt;&#13;&#10;    &lt;dtdversion&gt;3.0&lt;/dtdversion&gt;&#13;&#10;    &lt;includewhitespace&gt;false&lt;/includewhitespace&gt;&#13;&#10;  &lt;/control&gt;&#13;&#10;  &lt;operation&gt;&#13;&#10;    &lt;authentication&gt;&#13;&#10;      &lt;login&gt;&#13;&#10;        &lt;userid&gt;xml_gateway_coupa&lt;/userid&gt;&#13;&#10;        &lt;companyid&gt;BluvaultMPP-DEV&lt;/companyid&gt;&#13;&#10;        &lt;password&gt;1Ygjc8L0L&amp;amp;x&lt;/password&gt;&#13;&#10;      &lt;/login&gt;&#13;&#10;    &lt;/authentication&gt;&#13;&#10;    &lt;content&gt;&#13;&#10;      &lt;function controlid=&quot;+routines.Generate_UUID.generateUUID() +&quot;&gt;&#13;&#10;        &lt;getAPISession /&gt;&#13;&#10;      &lt;/function&gt;&#13;&#10;    &lt;/content&gt;&#13;&#10;  &lt;/operation&gt;&#13;&#10;&lt;/request&gt;&quot;"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tREST_3">
-      <column defaultValue="" key="false" length="0" name="Body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="0" name="ERROR_CODE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="160" posY="-64">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_5"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
-    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
-    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
-    <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="Body"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ERROR_CODE"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tLogRow_5">
-      <column defaultValue="" key="false" length="0" name="Body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="0" name="ERROR_CODE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
-    </metadata>
-  </node>
   <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="-64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
     <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
@@ -1096,6 +1052,50 @@
       <column defaultValue="" key="false" length="4048" name="string" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tREST" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="-64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tREST_3"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;https://api.intacct.com/ia/xml/xmlgw.phtml&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="METHOD" value="POST"/>
+    <elementParameter field="TABLE" name="HEADERS">
+      <elementValue elementRef="NAME" value="&quot;Content-Type&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;application/xml&quot;"/>
+    </elementParameter>
+    <elementParameter field="MEMO" name="BODY" value="&quot;&lt;request&gt;&#13;&#10;  &lt;control&gt;&#13;&#10;    &lt;senderid&gt;BluvaultMPP&lt;/senderid&gt;&#13;&#10;    &lt;password&gt;Bluvault!2018&lt;/password&gt;&#13;&#10;    &lt;controlid&gt;&quot;+System.currentTimeMillis() / 1000L+&quot;&lt;/controlid&gt;&#13;&#10;    &lt;uniqueid&gt;false&lt;/uniqueid&gt;&#13;&#10;    &lt;dtdversion&gt;3.0&lt;/dtdversion&gt;&#13;&#10;    &lt;includewhitespace&gt;false&lt;/includewhitespace&gt;&#13;&#10;  &lt;/control&gt;&#13;&#10;  &lt;operation&gt;&#13;&#10;    &lt;authentication&gt;&#13;&#10;      &lt;login&gt;&#13;&#10;        &lt;userid&gt;xml_gateway_coupa&lt;/userid&gt;&#13;&#10;        &lt;companyid&gt;Guest&lt;/companyid&gt;&#13;&#10;        &lt;password&gt;Bluvault!2018&lt;/password&gt;&#13;&#10;      &lt;/login&gt;&#13;&#10;    &lt;/authentication&gt;&#13;&#10;    &lt;content&gt;&#13;&#10;      &lt;function controlid=&quot;+routines.Generate_UUID.generateUUID() +&quot;&gt;&#13;&#10;        &lt;getAPISession /&gt;&#13;&#10;      &lt;/function&gt;&#13;&#10;    &lt;/content&gt;&#13;&#10;  &lt;/operation&gt;&#13;&#10;&lt;/request&gt;&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tREST_3">
+      <column defaultValue="" key="false" length="0" name="Body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="ERROR_CODE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="160" posY="-64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_5"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Body"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ERROR_CODE"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_5">
+      <column defaultValue="" key="false" length="0" name="Body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="ERROR_CODE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tREST_1" offsetLabelX="0" offsetLabelY="0" source="tREST_1" target="tExtractJSONFields_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
@@ -1204,11 +1204,6 @@
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row7"/>
   </connection>
-  <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tREST_3" offsetLabelX="0" offsetLabelY="0" source="tREST_3" target="tLogRow_5">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row9"/>
-  </connection>
   <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tXMLMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row10"/>
@@ -1220,6 +1215,11 @@
   <connection connectorName="RESPONSE" label="row11" lineStyle="0" metaname="RESPONSE" offsetLabelX="0" offsetLabelY="0" source="tRESTClient_2" target="tLogRow_8">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row11"/>
+  </connection>
+  <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tREST_3" offsetLabelX="0" offsetLabelY="0" source="tREST_3" target="tLogRow_5">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row9"/>
   </connection>
   <note opaque="true" posX="672" posY="0" sizeHeight="97" sizeWidth="353" text="Fetch the json for invoices from coupa and store into &#13;&#10;local system.">
     <elementParameter field="RADIO" name="NOTETXT_LEFT" value="true"/>
@@ -1250,22 +1250,22 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tREST_3"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_158add5c-b2be-435c-8ceb-ea131266b35a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>9DsoZYJ9i0TRYqogWs7Fl9td3V9Cli20PYy7lavct9+PReADp0q96VDnvq9CeXUOu/srNnOMSJEI
-mLsYPawHNg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a0d809a7-dd10-44ba-a5f4-4df45b264664"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>yNHEZCquWvZQbx/PLiUgVDx8hcINeH6sqpUuk6CU5woXQqUrjpQ5R+ilj67koOUmceRAQhl7RqIg
-KKSs8ZxhpQ==</DigestValue></Reference></SignedInfo><SignatureValue>M8vZgVPTfgEI6ymowCt1ridtlkBLtVUpUgfnaVWaa6SDycZsETp/Mx2pXBUzAQBaqXMTkMeFHQPf
-+7vyIUtNZhDbl49Jj/6UN1FLDHuM9fv8Gv7BrZsGemxlrMmnG9BPQ88+oLZCW8g+QJ6M6yWltf8p
-gjaX6ew2pt/CC/tmYGXPxf6PZBLO3fIpEfAcfjLPjFZIm/UwvgaembkG3I0J6ETgscQnn4fuqWUS
-rwb5X/Qlqh6OpCWgzaPWRybJurU2nsGt8/Q7OBx9As+c2wkCzUKdy8XbaAXE8j/qxeoTkpzqJZhM
-/ASxcY82GE+QPClzxdrcWxV6pe1MWOpF4iHCyg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tREST_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_09673dc0-d177-4d78-bda1-95bced3af585"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>dBwAWfEzuGKIhpJBMOrmUUpYE+NSoQrIVFKnKrgk7fZwQFrKnuRP25sne/IwUoFw2V1l6kd4kku6
+IklYgrVz+Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_cbfe40d6-93d9-4dbc-98af-ed175fa291e1"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>QQlTSMk8iPJnixTwaf/qcmXE5Sc/sm0eEtfJnRhUBOsjV0E/itTTiYH2pk3QyXjg1orw8XWTT1DH
+Guv+b48wVg==</DigestValue></Reference></SignedInfo><SignatureValue>vTzxUsOLsywT7cCq2oDdwm8h+KE3BAFpRvlFrk9WpaIjbrhf3oZ8U7YAEyr8BibvI7sRU9JJKPRT
+oPdWiytvrgIDmfT89q98rB8zG46J3CTSRcSpldffLmN6EFYKrcnKYuTfSvct/kHlVBzHrL4dcRIG
+y5eNb8ddAWunkkK/r9Ir6iRkaDRfW5w8Sjij3nZQ5Qn80Yjzx18+J5NwbExo0crp6VVo1TK+ysbh
+tqXfTnLzI86ZZBg3IJrIwmv+YiPVCR/kulqi+NYPeJyHSm1wv2Eip7/yFc91+niTGEHSq3yzFyA5
+VY0nq6p6pw3In3bYOT3/dLzKkuAZHbNkl61CWQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1289,4 +1289,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a0d809a7-dd10-44ba-a5f4-4df45b264664" Target="#_158add5c-b2be-435c-8ceb-ea131266b35a"><Timestamp>2019-05-17 04:25:19</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_cbfe40d6-93d9-4dbc-98af-ed175fa291e1" Target="#_09673dc0-d177-4d78-bda1-95bced3af585"><Timestamp>2019-05-17 04:27:22</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
