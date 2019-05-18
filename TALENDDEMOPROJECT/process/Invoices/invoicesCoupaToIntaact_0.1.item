@@ -1279,10 +1279,10 @@
       </outputTrees>
       <varTables name="Var">
         <nodes expression="Relational.ISNULL(row28.invoice_lines_total)?0.0:row28.invoice_lines_total " incomingConnections="//@node.25/@nodeData/@connections.12" name="TotalAmount" outgoingConnections="//@node.25/@nodeData/@connections.9" type="id_Double"/>
-        <nodes expression="Relational.ISNULL(row28.invoice_lines_tax_distribution_total)?0.0:row28.invoice_lines_tax_distribution_total " incomingConnections="//@node.25/@nodeData/@connections.13" name="Var1" outgoingConnections="//@node.25/@nodeData/@connections.17" type="id_String"/>
-        <nodes expression="Relational.ISNULL(row28.invoice_lines_shipping_distribution_total)?0.0:row28.invoice_lines_shipping_distribution_total " incomingConnections="//@node.25/@nodeData/@connections.14" name="Var2" outgoingConnections="//@node.25/@nodeData/@connections.18" type="id_String"/>
-        <nodes expression="Relational.ISNULL(row28.invoice_lines_handling_distribution_total)?0.0:row28.invoice_lines_handling_distribution_total " incomingConnections="//@node.25/@nodeData/@connections.15" name="Var3" outgoingConnections="//@node.25/@nodeData/@connections.19" type="id_String"/>
-        <nodes expression="Relational.ISNULL(row28.invoice_lines_misc_distribution_total)?0.0:row28.invoice_lines_misc_distribution_total " incomingConnections="//@node.25/@nodeData/@connections.16" name="Var4" outgoingConnections="//@node.25/@nodeData/@connections.20" type="id_String"/>
+        <nodes expression="Relational.ISNULL(row28.invoice_lines_tax_distribution_total)?0.0:row28.invoice_lines_tax_distribution_total " incomingConnections="//@node.25/@nodeData/@connections.13" name="Var1" outgoingConnections="//@node.25/@nodeData/@connections.17" type="id_Double"/>
+        <nodes expression="Relational.ISNULL(row28.invoice_lines_shipping_distribution_total)?0.0:row28.invoice_lines_shipping_distribution_total " incomingConnections="//@node.25/@nodeData/@connections.14" name="Var2" outgoingConnections="//@node.25/@nodeData/@connections.18" type="id_Double"/>
+        <nodes expression="Relational.ISNULL(row28.invoice_lines_handling_distribution_total)?0.0:row28.invoice_lines_handling_distribution_total " incomingConnections="//@node.25/@nodeData/@connections.15" name="Var3" outgoingConnections="//@node.25/@nodeData/@connections.19" type="id_Double"/>
+        <nodes expression="Relational.ISNULL(row28.invoice_lines_misc_distribution_total)?0.0:row28.invoice_lines_misc_distribution_total " incomingConnections="//@node.25/@nodeData/@connections.16" name="Var4" outgoingConnections="//@node.25/@nodeData/@connections.20" type="id_Double"/>
       </varTables>
       <connections source="//@node.25/@nodeData/@inputTrees.0/@nodes.4" target="//@node.25/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.4" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.25/@nodeData/@inputTrees.0/@nodes.3" target="//@node.25/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.8/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
@@ -2181,13 +2181,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_32d4681b-86eb-4a84-af5f-7d4a653ed66c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jsp7BmmhMz6oY+TzjBjlpcKY7li9lQxoq/xBBxi9ukyr5QSFQWvL6PTiLgfwxicFhvYDu5lIkwJm
-gBlVyvgLYQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2ba903e6-19f9-4238-8e97-2217e925fb1e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>k4NE+29YfU1AvbFHBu9y6PItMJrgCFmsGY3UxO1p0UedWw7LAFagYTdrj3pSLCSfdHdnMQQ9CdUR
-SSQqMlY/MA==</DigestValue></Reference></SignedInfo><SignatureValue>J6WmADpAe6pvP/ThlSHqy5xg3bpjU3x9hO869gJikz40uIdyQ4W0hZiLCuNTewaYGbAik5i07SKE
-miRjNt02ykdp35aJ9x4iyUThTEcJ1vWM9LRmRtnXikkqOXDC2RclGZeLAQ9nIUXcIn2lLifGHxW6
-cWSxcIsaSZh4C9zBToJFxz7eXnPHeEYpflvs5ijdr9mHg2uTpABaF9ani1qU2nu9aYVRDcurtM8R
-7gwPRESKQ/cMLN4/3a3sICujbZehOP0QYC8jgTeuZSwKUU7+Ek1oZs+QQsmTT/rFtvKykl9oCct2
-P+ipy7bFFaU9aoefen3xGr6V9C6/x4NG2FlY4A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_249cca39-f644-44ce-9b72-654f6998ffb0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tjpvFVCow8NRMga2IgTs5rXsgQ2uQiV5uYw+T3380XuTt/n9F82MROznOdPhTPT9q5OoITBdia7W
+cm1BYGQPgQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_428cf747-aea6-4199-a35a-cd7e440b2124"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>u444J4AqZ5K3wtTczbqS1pls4LJLmZhDAoLQrE1qraWEVECyxIxJemSKaoVYAUuS6KPK8FGBd4Qn
+H2daJ9Z7dw==</DigestValue></Reference></SignedInfo><SignatureValue>nZThsUj8Gfryg5TDLBqB6hHDv2aolErIvIOQOo9RT0xoKd/lRNE/oWPB1mC/JKqreVsb0fv2mGmD
+OEYwDiVEmYWgbDajUuiX1ZbIMGo5gjmQbcQgMccfR3VY3Qa8Bl/0+4TiIN371D6xYQaemaKwoj2r
+tsMKuWL3XfyXohhC63mrZ6brWr/OCFybyZ6t6HOUQF/u0wHcngKoAQOlSvy4m+XJ5G9WeZP83EtD
+Bg2i6SLSx1jwy5uHCTx7iPw7mgUwJM1auP1gYVqXk0QElv/bVPj5XjxvxptdBYLPYA1vYTC1OnqT
+hB1lrk8fyzGlvOTLmZwUr30HqbvJjOMlLejgzg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2211,4 +2211,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2ba903e6-19f9-4238-8e97-2217e925fb1e" Target="#_32d4681b-86eb-4a84-af5f-7d4a653ed66c"><Timestamp>2019-05-18 06:17:00</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_428cf747-aea6-4199-a35a-cd7e440b2124" Target="#_249cca39-f644-44ce-9b72-654f6998ffb0"><Timestamp>2019-05-18 06:21:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
