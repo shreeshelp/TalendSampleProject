@@ -1035,7 +1035,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_BBVwkHZhEemJtLhMWnywhQ-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_8mwFEHlUEemNHLpcyTyEkg-tMap_1-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -1476,6 +1476,9 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="controlid"/>
       <elementValue elementRef="QUERY" value="&quot;/response/operation/result/controlid&quot;"/>
       <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ErrorMessage"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LIMIT" value=""/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
@@ -1488,10 +1491,12 @@
     <metadata connector="FLOW" name="tExtractXMLField_2">
       <column comment="" key="false" length="-1" name="result_status" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="controlid" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ErrorMessage" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="-1" name="result_status" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="controlid" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ErrorMessage" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorXMLField" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1502,7 +1507,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_BBVwkHZhEemJtLhMWnywhQ-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_8mwFEHlUEemNHLpcyTyEkg-tMap_2-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -1514,17 +1519,26 @@
     <metadata connector="FLOW" label="output_coupa_id" name="output_coupa_id">
       <column comment="" key="false" length="-1" name="COUPA_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
+    <metadata name="ErrorMEssage">
+      <column comment="" key="false" length="-1" name="ErrorMessage" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="invoice_number" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="output_coupa_id" sizeState="INTERMEDIATE">
+      <outputTables activateExpressionFilter="true" expressionFilter="row30.result_status.equals(&quot;success&quot;)" name="output_coupa_id" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row13.id " name="COUPA_ID" nullable="true" type="id_String"/>
+      </outputTables>
+      <outputTables activateExpressionFilter="true" expressionFilter="row30.result_status.equals(&quot;failure&quot;)" name="ErrorMEssage" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row30.ErrorMessage " name="ErrorMessage" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row13.invoice_number " name="invoice_number" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row30" sizeState="INTERMEDIATE">
         <mapperTableEntries name="result_status" nullable="true" type="id_String"/>
         <mapperTableEntries name="controlid" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ErrorMessage" nullable="true" type="id_String"/>
       </inputTables>
-      <inputTables activateExpressionFilter="true" expressionFilter="row30.result_status.equals(&quot;success&quot;)" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row13" sizeState="INTERMEDIATE">
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row13" sizeState="INTERMEDIATE">
         <mapperTableEntries name="invoice_number" nullable="true" type="id_String"/>
         <mapperTableEntries name="supplier_number" nullable="true" type="id_String"/>
         <mapperTableEntries name="supplier_name" nullable="true" type="id_String"/>
@@ -2009,6 +2023,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="controlid"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ErrorMessage"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row30"/>
@@ -2128,7 +2145,7 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
@@ -2153,13 +2170,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ece753b9-fbc9-4c8a-9754-4ee4733a8624"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ul+R2CbXs0Xz//MfVCJDF0nzCu11AQ9UUFZd1zmwyuSbk6vfuYU8GI5SWhL5LInJqj0MYjaBHJlG
-Dqe9OXfWsQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_44739650-bbc2-4d18-ba05-2da089784864"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>nfHXRmY9B1BjX1EAZHZa3KmAZw7RibBHtyl3uUB/7NnXuMMkuVVMLnpAmreTZhezQH9in5hIMDcC
-s+0Uy6at7w==</DigestValue></Reference></SignedInfo><SignatureValue>JWB2zDRPFob5tu2yHtV6KBCTwWdHGItMjAEyebaENTCNKQMoKjIKNxnpFqLoT2xpz4LFLgK+inNb
-TK1ZZDvdaSDzy5/yuyhNaGdrPI20c3UiaH/pHBGPREEbwA2g01o9j4MOjisYl6LCg8EJKM4ovUZv
-4AXKS0sqNf/QRAJdcR8UFSb3Oq2RTeuOvgHOa5OEcyI6OYKQYNJspTC2DzEn/T63gwtbGpjSHyia
-IJCUb5PbsC3B/qdzbsYNJxZw3XmECt643KohoFvkce5hxl2S66syLqBjy4u/AtOYPOEHHO4CqKU2
-Rv3lhMlpPPCDhJTrBVQc0iNF6mxW1yL/bS/qwQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_563f7bd4-70ba-4662-b5ea-33f04f08c15b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0uoEzLwdPJaUONp6wjc3GKCnbhmU5+PD4MOkrCYaQ7VG43KXQ7w3RlB/5MKUynRqvkaIszGfJJvk
+zzMfgs9p6g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_346da590-4136-4605-ac74-3e9f1ebe2c80"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bYnyLNSgHZ6idbZsn9tSuvYiEI5e3AqVYShLQq5lKltTSvKpWXucDIfYun6LU7bCO9YjhmmwhMEY
+fF8i3POEJw==</DigestValue></Reference></SignedInfo><SignatureValue>0lZ+Lss/DJ+Hn38NPbjH4zsBsXjbTTNCBALk+xkSqcM4lqTjudFXYVbdQL6UH8JEnTdSDy31xEFZ
+hQzl8XuiD7NP/QvB5iH7gBU1v0E/ozBYyllyurRvvtS4VJBaXStyj0fXO8enIpgqei2HYd7CO5+g
+OaKP2DfLRK5g86TU9pxPCM6BqqfVfYx3XlLIOhyvbl4WE/rVxALPGYzzK8jI6UoRbQjgm4fZD7Pa
+TGitbbxo71b+MWTk+Crz9TIRzlLQbFjP9R7pMrkypBpHCf8nOuY84dYMVX/E/XrPTXi7/XAIatkZ
+VWDQSiKyqNEWa1fIW2hp/jO2+mSoc7P9YOLvPw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2183,4 +2200,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_44739650-bbc2-4d18-ba05-2da089784864" Target="#_ece753b9-fbc9-4c8a-9754-4ee4733a8624"><Timestamp>2019-05-18 10:08:56</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_346da590-4136-4605-ac74-3e9f1ebe2c80" Target="#_563f7bd4-70ba-4662-b5ea-33f04f08c15b"><Timestamp>2019-05-18 10:13:43</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
