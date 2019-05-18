@@ -20,6 +20,7 @@
     <contextParameter comment="" name="intaactAPIserverUser" prompt="intaactAPIserverUser?" promptNeeded="false" type="id_String" value="xml_gateway_coupa"/>
     <contextParameter comment="" name="intaactAPIserverPwd" prompt="intaactAPIserverPwd?" promptNeeded="false" type="id_Password" value="sVe9+iH3axmswnmN3dpUiw=="/>
     <contextParameter comment="" name="x_coupa_api_key" prompt="x_coupa_api_key?" promptNeeded="false" type="id_String" value="a125dd79e32b510e3f3144c315a5854c21f045fd"/>
+    <contextParameter comment="" name="coupa_flag_export_api_url" prompt="coupa_flag_export_api_url?" promptNeeded="false" type="id_String" value="https://freshworks-test.coupahost.com/api/invoices/"/>
   </context>
   <context confirmationNeeded="false" name="PROD">
     <contextParameter comment="" name="locationId" prompt="locationId?" promptNeeded="false" type="id_String" value=""/>
@@ -42,6 +43,7 @@
     <contextParameter comment="" name="intaactAPIserverUser" prompt="intaactAPIserverUser?" promptNeeded="false" type="id_String" value="xml_gateway_coupa"/>
     <contextParameter comment="" name="intaactAPIserverPwd" prompt="intaactAPIserverPwd?" promptNeeded="false" type="id_Password" value="nLVuqzQEr1txLMs0ictpAQ=="/>
     <contextParameter comment="" name="x_coupa_api_key" prompt="x_coupa_api_key?" promptNeeded="false" type="id_String" value="01c36a25254135477e708b58a8e43cbe3078ea49"/>
+    <contextParameter comment="" name="coupa_flag_export_api_url" prompt="coupa_flag_export_api_url?" promptNeeded="false" type="id_String" value="https://freshworks.coupahost.com/api/invoices/"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
@@ -1571,7 +1573,7 @@
   </node>
   <node componentName="tREST" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="896">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tREST_2"/>
-    <elementParameter field="TEXT" name="URL" value="&quot;https://freshworks-test.coupahost.com/api/invoices/&quot;+((List&lt;String&gt;)globalMap.get(&quot;list&quot;)).get(((Integer)globalMap.get(&quot;tLoop_1_CURRENT_ITERATION&quot;))-1)"/>
+    <elementParameter field="TEXT" name="URL" value="context.coupa_flag_export_api_url+((List&lt;String&gt;)globalMap.get(&quot;list&quot;)).get(((Integer)globalMap.get(&quot;tLoop_1_CURRENT_ITERATION&quot;))-1)"/>
     <elementParameter field="CLOSED_LIST" name="METHOD" value="PUT"/>
     <elementParameter field="TABLE" name="HEADERS">
       <elementValue elementRef="NAME" value="&quot;Accept&quot;"/>
@@ -2153,13 +2155,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3c05f10c-a078-47a5-a310-6bf915db0d5d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Pt4VewkjcY39tbQWaKb9HS+x79P3W8W0kpJ5M3BABjhQj0rS/xdc3DekTYflQW4rz9MdJ7GJ/RzV
-Ztv1ynNmIw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_edd23644-c1ef-429a-99af-28ad6d5f3d09"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tLyAmZQXUwYkawz6o2P4sELIXqZQgEdP83fRMLTUF1c1hYkcwFimaux5e1scIc656NlhakjEO899
-k3qY+/ZkMA==</DigestValue></Reference></SignedInfo><SignatureValue>YYtlprPhmV0J/1H5tPshGYwmDN2jmvwU+shaAl0LMOai8dZy6XLcSCEkaS5ouiCFn4BMlAcnRNgS
-t3tflo+5TIalfZxvSIlmrsNmX0FiO+R9eVNyYyFEQQPPiFaEv7Jzsie3VxNsFZLjorFcCu6utdq3
-U+utGYL++gD3pPlY+DBP6/YbLEDsApoMI3pCoUNTKkGK/Kzlepve6tQ0uoRfBxXbXctwPZG6rsoo
-a29zGlkry2MVF+O3sLgQ04RkCNpRREcXy2oW2XKePI+0OEcaWj9k8Tj1p5IxPbbrcsCinAig1C4N
-l3Kdtb793X91F+qbDU5Ph0loIdiGyVSOHWD19g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f0317ab0-998a-4fd8-bdec-7a90495738e5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hanGXujVvaj0lcHNSWCipr3oI+iuRmCQHLD979cLKdt65gB0Ow8khXMImTj4pSDHU5rj7Kn79aM6
+Wr76jZmdVA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_05f13d7a-05cb-4233-9463-2438c1d7fc99"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7tpKroqtBtJ/mDxZQ0mGYxu9x88MNi+kDe8ARWh8MFLawt8TIVd8ktkcfJgK8jWmKze/3l1cntEo
+fTYu5LUy7w==</DigestValue></Reference></SignedInfo><SignatureValue>RIe4SWHP1CxoeRIjYryEdDC4cCWI3jwmfNxXsjGNqyDgr6ZGSxa2WrFWkLd1FHXtwrWverfjXb9V
+IsBQY/ben8ohT/1U+f2zgPB1Z/NAaVidm9fcRClPYU11I5PXkwULKTdPMLZsXOM4PO1L7B53/h0v
+8HZwwQJg4Tf0YDC0hn5FaQ8yxMIpJDhcYznwoLVS6t4CgG/z+b0j0WQe3VMY9A9ZCeuxIBlGwSa0
+fwucDs+3VT85oU383SYHMJtkXpQjUMyi1qm1812kUHjG0VzqAc4VT9VDIS9PrkZ5fPhlSk3+9N8h
+9zXcrR4n8gfMTMjUv5CzQS8LJsRly1VXvMa/rw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2183,4 +2185,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_edd23644-c1ef-429a-99af-28ad6d5f3d09" Target="#_3c05f10c-a078-47a5-a310-6bf915db0d5d"><Timestamp>2019-05-18 16:11:22</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_05f13d7a-05cb-4233-9463-2438c1d7fc99" Target="#_f0317ab0-998a-4fd8-bdec-7a90495738e5"><Timestamp>2019-05-18 16:13:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
