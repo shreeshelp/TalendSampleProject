@@ -958,6 +958,8 @@
       <column comment="" key="false" length="-1" name="AccountNo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="LocationId" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="DepartmentID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="project_code_external_ref_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="item_code_external_ref_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="320" posY="480">
@@ -998,9 +1000,11 @@
       <column comment="" key="false" length="-1" name="AccountNo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="LocationId" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="DepartmentID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="project_code_external_ref_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="item_code_external_ref_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="createBillsoutput" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row4.invoice_number " name="invoice_number" nullable="true" type="id_String"/>
@@ -1026,6 +1030,8 @@
         <mapperTableEntries expression="row4.AccountNo " name="AccountNo" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row4.LocationId " name="LocationId" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row4.DepartmentID " name="DepartmentID" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.project_code_external_ref_code " name="project_code_external_ref_code" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.item_code_external_ref_code " name="item_code_external_ref_code" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row4" sizeState="INTERMEDIATE">
         <mapperTableEntries name="invoice_number" nullable="true" type="id_String"/>
@@ -1050,6 +1056,8 @@
         <mapperTableEntries name="AccountNo" nullable="true" type="id_String"/>
         <mapperTableEntries name="LocationId" nullable="true" type="id_String"/>
         <mapperTableEntries name="DepartmentID" nullable="true" type="id_String"/>
+        <mapperTableEntries name="project_code_external_ref_code" nullable="true" type="id_String"/>
+        <mapperTableEntries name="item_code_external_ref_code" nullable="true" type="id_String"/>
       </inputTables>
       <inputTables activateCondensedTool="true" innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="ALL_MATCHES" name="row27" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row4.invoice_number " name="invoice_number" nullable="true" type="id_String"/>
@@ -1103,6 +1111,8 @@
         <nodes name="AccountNo" outgoingConnections="//@node.22/@nodeData/@connections.12" type="id_String" xpath="createBillsoutput/AccountNo"/>
         <nodes name="LocationId" outgoingConnections="//@node.22/@nodeData/@connections.14" type="id_String" xpath="createBillsoutput/LocationId"/>
         <nodes name="DepartmentID" outgoingConnections="//@node.22/@nodeData/@connections.15" type="id_String" xpath="createBillsoutput/DepartmentID"/>
+        <nodes name="project_code_external_ref_code" outgoingConnections="//@node.22/@nodeData/@connections.23" type="id_String" xpath="createBillsoutput/project_code_external_ref_code"/>
+        <nodes name="item_code_external_ref_code" outgoingConnections="//@node.22/@nodeData/@connections.24" type="id_String" xpath="createBillsoutput/item_code_external_ref_code"/>
       </inputTrees>
       <outputTrees name="CreateIntacctInvoices">
         <nodes expression="" name="body" pattern="" type="id_Document" xpath="CreateIntacctInvoices/body">
@@ -1140,6 +1150,8 @@
                           <children expression="createBillsoutput.LocationId" incomingConnections="//@node.22/@nodeData/@connections.14" name="LOCATIONID" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/LOCATIONID" xsi:type="TalendXMLMap:OutputTreeNode"/>
                           <children expression="createBillsoutput.DepartmentID" incomingConnections="//@node.22/@nodeData/@connections.15" name="DEPARTMENTID" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/DEPARTMENTID" xsi:type="TalendXMLMap:OutputTreeNode"/>
                           <children expression="createBillsoutput.supplier_number" incomingConnections="//@node.22/@nodeData/@connections.16" name="VENDOR_ID" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/VENDOR_ID" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                          <children expression="createBillsoutput.project_code_external_ref_code" incomingConnections="//@node.22/@nodeData/@connections.23" name="PROJECTID" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/PROJECTID" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                          <children expression="createBillsoutput.item_code_external_ref_code" incomingConnections="//@node.22/@nodeData/@connections.24" name="ITEMID" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/ITEMID" xsi:type="TalendXMLMap:OutputTreeNode"/>
                         </children>
                       </children>
                       <children expression="createBillsoutput.id" incomingConnections="//@node.22/@nodeData/@connections.17" name="COUPA_ID" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/COUPA_ID" xsi:type="TalendXMLMap:OutputTreeNode"/>
@@ -1181,6 +1193,8 @@
       <connections source="//@node.22/@nodeData/@inputTrees.0/@nodes.16" target="//@node.22/@nodeData/@varTables.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.22/@nodeData/@inputTrees.0/@nodes.17" target="//@node.22/@nodeData/@varTables.0/@nodes.3" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.22/@nodeData/@inputTrees.0/@nodes.18" target="//@node.22/@nodeData/@varTables.0/@nodes.4" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.22/@nodeData/@inputTrees.0/@nodes.23" target="//@node.22/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.8/@children.0/@children.6" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.22/@nodeData/@inputTrees.0/@nodes.24" target="//@node.22/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.8/@children.0/@children.7" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="480">
@@ -1889,6 +1903,12 @@
       <elementValue elementRef="TRACE_COLUMN" value="DepartmentID"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="project_code_external_ref_code"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="item_code_external_ref_code"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
@@ -1908,6 +1928,12 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="DepartmentID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="project_code_external_ref_code"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="item_code_external_ref_code"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
@@ -2125,13 +2151,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_916063b6-2255-4042-b06a-2fe6478c9a50"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>R2EPU8uGnsE5I7aZRio5TbxUR52s6xWJX34RyIwcGZ7j9KqTz9STiuUhUmrOnvKx5H7HcI3vvz5B
-y/VXigFByw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e9ccf671-fcc0-46d4-85f2-97b623037e4b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qqoZO0gbHeXbpg6gN6knnL5PSswg8MVSrakg5slKzfq7owNKGe5x5jqWh1g6LjNIqfkoRJPStVah
-y+H/pe9G4g==</DigestValue></Reference></SignedInfo><SignatureValue>OMNzlJmwnp44xgwePRVeyeV/ceYw6iQAC4cSJpAhU8s0smWQPNMr/vGpgDgtewezZCU2298bUPs2
-r7bDMrax0zaeE2LzKexHRMXpgmz9a9ucmLCGoGlmZZkeZCHUkBOEtB6JHlhMzz1t8o5hP2t7kutW
-KIYrv26vlzWfJEUfZkleFl12I66Zy2Yik7p3a7uAmUlzhlX8pfYbK7BbPPiJ5W2pDtfjqhLvQPmP
-MO8TdSDUnSpQe4B93B/CwJgAIz9zI4PW37qBYoJbh3kxJqQe/vDRgfdKbJ6nptRz52jKudq2Bdoo
-MeQrk9su9x/aSW/XMkUTEgxPRygq1+3WVq4/0w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a1ccc598-b0ee-4c8d-8bcc-05a0b812a587"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>yAvINzO+vwAJteH/4eFNgHx9kP23n0qX3DQvFaUZeqWOQQv5pRN5xARqD4p2UdW/c42qj9hLu7BV
+u4ThXjLuEQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ce93763a-005c-4439-9f65-c76fcdc38e68"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gnW/mJNDkOeUYFE9sQzXubKPidLrnUOBUt+c8cVitjYPlAorsuR5ciELNM+So3buoxZ0YeJkYw4F
+fWuEyJjB7g==</DigestValue></Reference></SignedInfo><SignatureValue>bklUypgQe//AIdQbIBG1RHY4MtUX3S5TaO65mpLlttCZuXkc4PrmMT0wAOVJEKe3tUqAWpPRDxkz
+5/5ugZMFUptZvhYGApimEiOgXgu5WFPQ5q03IR/jI+rfeb5+6xC8wWe06AalsyTBbQEchNr4CsO9
++W6H6B5F2OVOANOfr/SMwKul0RhcAEd8TDR62WfNwGczHcxsM0p4bzqiv1v7sDUJop//Hpq47IHD
+XK9zqk498VOLNiXRDigtog9oBptAT6EbB7FRrEVOlSfogZ/30DTNUR5Sifcw8Vd5C/L3OVqU1dVK
+pXqM34jsYnFzA7LVvdju/PjPSBE3RmdzjXjawQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2155,4 +2181,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e9ccf671-fcc0-46d4-85f2-97b623037e4b" Target="#_916063b6-2255-4042-b06a-2fe6478c9a50"><Timestamp>2019-05-18 16:03:56</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ce93763a-005c-4439-9f65-c76fcdc38e68" Target="#_a1ccc598-b0ee-4c8d-8bcc-05a0b812a587"><Timestamp>2019-05-18 16:07:39</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
