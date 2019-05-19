@@ -305,12 +305,12 @@
   </node>
   <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="0">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tExtractJSONFields_2"/>
-    <elementParameter field="CLOSED_LIST" name="READ_BY" value="JSONPATH"/>
-    <elementParameter field="CLOSED_LIST" name="JSON_PATH_VERSION" value="2_1_0"/>
+    <elementParameter field="CLOSED_LIST" name="READ_BY" value="XPATH"/>
+    <elementParameter field="CLOSED_LIST" name="JSON_PATH_VERSION" show="false" value="2_1_0"/>
     <elementParameter field="PREV_COLUMN_LIST" name="JSONFIELD" value="assetNO"/>
-    <elementParameter field="TEXT" name="LOOP_QUERY" show="false" value="&quot;/bills/bill/line&quot;"/>
-    <elementParameter field="TEXT" name="JSON_LOOP_QUERY" value="&quot;$&quot;"/>
-    <elementParameter field="TABLE" name="MAPPING" show="false">
+    <elementParameter field="TEXT" name="LOOP_QUERY" value="&quot;/assets/&quot;"/>
+    <elementParameter field="TEXT" name="JSON_LOOP_QUERY" show="false" value="&quot;$&quot;"/>
+    <elementParameter field="TABLE" name="MAPPING">
       <elementValue elementRef="SCHEMA_COLUMN" value="employeeId"/>
       <elementValue elementRef="QUERY" value=""/>
       <elementValue elementRef="NODECHECK" value="false"/>
@@ -324,19 +324,19 @@
       <elementValue elementRef="NODECHECK" value="false"/>
       <elementValue elementRef="ISARRAY" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="employeeId1"/>
-      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="QUERY" value="&quot;employeeId&quot;"/>
       <elementValue elementRef="NODECHECK" value="false"/>
       <elementValue elementRef="ISARRAY" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="employeeName1"/>
-      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="QUERY" value="&quot;employeeName&quot;"/>
       <elementValue elementRef="NODECHECK" value="false"/>
       <elementValue elementRef="ISARRAY" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="employeePhone1"/>
-      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="QUERY" value="&quot;employeePhone&quot;"/>
       <elementValue elementRef="NODECHECK" value="false"/>
       <elementValue elementRef="ISARRAY" value="false"/>
     </elementParameter>
-    <elementParameter field="TABLE" name="MAPPING_4_JSONPATH">
+    <elementParameter field="TABLE" name="MAPPING_4_JSONPATH" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="employeeId"/>
       <elementValue elementRef="QUERY" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="employeeName"/>
@@ -353,8 +353,8 @@
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="DESTINATION" show="false" value="tExtractJSONFields_1"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;UTF-8&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="UTF-8"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
     <elementParameter field="CHECK" name="SPLIT_LIST" show="false" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tExtractJSONFields_2">
@@ -461,13 +461,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3940dfcc-1759-4dc7-9f15-2e4ca95151c2"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rm0CMs8DQtVN8maeiwdgG5q1uENVP1tMoCkpn7+yxcqYvlxqSlHE/kAFW6Q0SLckCCkvE9XgU2fX
-OlDCGc66wg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_913a6f45-666f-49cf-8303-5ad837a1cf9c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Gu6+DIqxJI0k7B6v0Q5uBZ8j3TB2xX+nVFQIWG5GvAJRnib6uTUg/e9bYMPs9NcRAo+EnevPdXPs
-j4FZy+pcow==</DigestValue></Reference></SignedInfo><SignatureValue>WILlug5Hn8v1+BPz8EerHcO6doyhZgmnFbxDXaNF4Qsm+uqHrCrtydHX0voMsvyorRRwSjmw6u53
-7fjwirk7VAMf6K2wxV2wu+yrWyrJhY82/vxLm/abh081zjO7VkQeMskdH3qxHINxp+jmHcPIKHBt
-y/YrkbgC7+XzWcr9YUHEyemaGk4E/qUuuTT7O7AWnQginS+e5OnIqvq+FiFIbs1HlkZARwlchMDo
-7ZjHrw7AUJDKZOvxQKP2Q70xTh/gHWifXjJDD6aWK32yu8/m20Ydwv01INLbbqonD2pqZJ+1O4B7
-9/CczRs29Fb4ppHWeCCU4oINm0r5FE1fA9EVPQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_eca12bdb-22c5-481b-bee7-6de7ea79b09c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3N3dAO9jO1h1xwU55AN2bTxZwvdrz3AIPlPWEgVBQyDkcDwrLKir6A8r6NqkcgfSvtk9Vx7y9YPt
+edchRArUEQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_79d35ed9-ad9f-496e-b269-81441440c724"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>B+bSPqiJJxs0UURZshhde4RQLl84cDdtiODl37/d+4TTRU4/e7O61TzheJ7B3yzFelInsbt15kCB
+V6659lMkEw==</DigestValue></Reference></SignedInfo><SignatureValue>301sWZA8MHCf1KpiKZCoC6Kj7XZLjibVWveksi9cEaPpBPyE+xS2kyesVUxaOoA4OiucSrwTOlPY
+cMQKcd+r2lfDlPqQcTaYm4lJcMUnZ8VAaN/8xI7qrj8DK2TuxIKAYlUt65UoTNGdCF2PwJ5CITMv
+ZcdRhR4gTXnb8KENtd/5PxRc19a+igIIMpMeOB8Daf7Hmn+M0iwwNEJar1aTSFXKaqHhGnfvsbKz
+URWQKZJFoxGKYdOMuWf5wRRj+Xvu8Svb8d6bT3MVSHxXLbe2IhuzFKxlNl2UaaBAxg+CoQe76BtW
+Q5iLi4oi8pBGTAkblVSzxEh03lESqC9KPpTBCw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -491,4 +491,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_913a6f45-666f-49cf-8303-5ad837a1cf9c" Target="#_3940dfcc-1759-4dc7-9f15-2e4ca95151c2"><Timestamp>2019-05-19 12:19:02</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_79d35ed9-ad9f-496e-b269-81441440c724" Target="#_eca12bdb-22c5-481b-bee7-6de7ea79b09c"><Timestamp>2019-05-19 12:20:15</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
