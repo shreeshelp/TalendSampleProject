@@ -21,7 +21,7 @@
     <module>jobs/process/Invoices/invoicescoupatointaact_0.2</module>
     <module>jobs/process/Demo/invoicescoupatointaact_copy1_0.2</module>
     <module>jobs/process/Invoices/prod_freshwork_invoicescoupatointaact_0.2</module>
-    <module>jobs/process/Invoices/HoustonZoo/prod_freshwork_invoicescoupatointaact_copy_0.2</module>
+    <module>jobs/process/Invoices/HoustonZoo/houstonzoo_invoicescoupatointaact_copy_0.2</module>
   </modules>
   <properties>
     <talend.project.name>TALENDDEMOPROJECT</talend.project.name>
