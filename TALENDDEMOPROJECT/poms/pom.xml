@@ -21,13 +21,14 @@
     <module>jobs/process/Invoices/invoicescoupatointaact_0.2</module>
     <module>jobs/process/Demo/invoicescoupatointaact_copy1_0.2</module>
     <module>jobs/process/Invoices/prod_freshwork_invoicescoupatointaact_0.2</module>
+    <module>jobs/process/Invoices/HoustonZoo/prod_freshwork_invoicescoupatointaact_copy_0.2</module>
   </modules>
   <properties>
     <talend.project.name>TALENDDEMOPROJECT</talend.project.name>
     <encoding>UTF-8</encoding>
     <talend.version>7.1.1</talend.version>
-    <talend.docker.tag>${project.version}</talend.docker.tag>
     <maven.deploy.skip>true</maven.deploy.skip>
+    <talend.docker.tag>${project.version}</talend.docker.tag>
     <talend.docker.name>${talend.project.name.lowercase}/${talend.job.folder}%a</talend.docker.name>
   </properties>
   <build>
