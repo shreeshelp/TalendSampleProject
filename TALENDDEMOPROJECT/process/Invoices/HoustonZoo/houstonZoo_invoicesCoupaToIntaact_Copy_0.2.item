@@ -621,7 +621,7 @@
       <elementValue elementRef="NODECHECK" value="false"/>
       <elementValue elementRef="ISARRAY" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="invoice_lines_total"/>
-      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="QUERY" value="&quot;account/amount&quot;"/>
       <elementValue elementRef="NODECHECK" value="false"/>
       <elementValue elementRef="ISARRAY" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="invoice_lines_invoice_lines_account_segment_3"/>
@@ -630,10 +630,6 @@
       <elementValue elementRef="ISARRAY" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="invoice_lines_account_segment_2"/>
       <elementValue elementRef="QUERY" value="&quot;account/segment-2&quot;"/>
-      <elementValue elementRef="NODECHECK" value="false"/>
-      <elementValue elementRef="ISARRAY" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="invoice_lines_custom_fields_project_code_external_ref_num"/>
-      <elementValue elementRef="QUERY" value=""/>
       <elementValue elementRef="NODECHECK" value="false"/>
       <elementValue elementRef="ISARRAY" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="invoice_lines_tax_distribution_total"/>
@@ -678,8 +674,6 @@
       <elementValue elementRef="QUERY" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="invoice_lines_account_segment_2"/>
       <elementValue elementRef="QUERY" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="invoice_lines_custom_fields_project_code_external_ref_num"/>
-      <elementValue elementRef="QUERY" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="invoice_lines_tax_distribution_total"/>
       <elementValue elementRef="QUERY" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="invoice_lines_shipping_distribution_total"/>
@@ -709,7 +703,6 @@
       <column comment="" key="false" length="-1" name="invoice_lines_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_invoice_lines_account_segment_3" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_account_segment_2" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="invoice_lines_custom_fields_project_code_external_ref_num" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_tax_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_shipping_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_handling_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
@@ -725,7 +718,6 @@
       <column comment="" key="false" length="-1" name="invoice_lines_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_invoice_lines_account_segment_3" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_account_segment_2" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="invoice_lines_custom_fields_project_code_external_ref_num" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_tax_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_shipping_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_handling_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
@@ -2526,13 +2518,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_299f9cc1-a441-4390-b402-673d824cd460"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>G4jXlI1XDZru2kS+IVJTN+kJESM2m1oeYkJduiHXdGhuZSdAtL82FDMvBJzPVbnBRiWxY7D9cSl2
-e7m5Ur+BNw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7b172af7-2957-4426-b65f-ae09a392dee6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OFy8q52sb/BZbfaYx+yspNyxVhqlE5rb5ihylJwM7M9GSvs02TFIgAowlwsdRMprwYwI44QwUoqa
-XPlmxAO8/w==</DigestValue></Reference></SignedInfo><SignatureValue>L6+y42441RAoXB2Pnj7x48kIUrglmm+sNVD+7XZ0k8O1+WcYulWNEW5RdGx1GEupzBn4B9wV6g8K
-GXJhrS2ycYnr393b8mty518Vgl0GbBEZPrT3Wl/Ciwgrk4hubSr25es9cQYWNmfV89U74xxrGHRN
-QP1W3BLimwFy8ndvInPJUoU7/uqxRtuZ6sSl6d+S8joE4dvUhm3CF6YXE1jh/ZW1zhbaTFznweap
-J1WsckI2o7RVcSz6GGYyP5MkuanzVMA1urOtcuZTwje5WHNcUk2Rvn0o2PlNylKsa2ULepLWLbpA
-REWC5mGe4KgGznuGIIYP4oy3ZHCZandjZ1zkeQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a5471e1a-b617-480c-8f5a-c196593954d2"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Fr3soKT4XqUkLpIIl6AACpWML+AZNWN0aPWknaUjV/MuaU98FVd39ihYZLPyGBf4qxoaYMatDk9w
+rcIOsEQYCg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f76fef6a-2bca-4efe-a8f3-faf5d4e99ea2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>c+WneiHTHL2kB8sEOErBovro15QeESrgDId5jIOi0M7B/n04aFxjsD0yIO+2jnJ5qlT3TKQCl3EM
+KTNWwJ4Ydg==</DigestValue></Reference></SignedInfo><SignatureValue>ZAdPz0pzbpM0BY/3rMO5Hv05/UbWQRJZ2CIRxCx+SfcO8dFTYNh5yVEKYLXyAY8AGouGzjWB4XKz
+nkuTt7K8dNkaJ25hQEy3LDrv3c5vMC/IU3yVvZX6DYxDkN4/ShZO/bBskP/cu8n+aMzHCOBJ2aMz
+u1Nbn5k92HBcvSIx60FNyh26FErlyvLu3MlBrME6yGyMy7A57WPDSwWQdLfZrXo4jqlfDjOj4M7f
+2xpzyk9m/LiK38bv7DAqH5bVp/dLqYe5ZbCiBxF0Vktv5oE1czfE50f6U3DqUDxgpI+BS4Hnq5og
+aiQj4+18hbakPPg5/gvDCT2LA5KWbGCODKKqnQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2556,4 +2548,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7b172af7-2957-4426-b65f-ae09a392dee6" Target="#_299f9cc1-a441-4390-b402-673d824cd460"><Timestamp>2019-05-19 14:18:57</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f76fef6a-2bca-4efe-a8f3-faf5d4e99ea2" Target="#_a5471e1a-b617-480c-8f5a-c196593954d2"><Timestamp>2019-05-19 14:24:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
