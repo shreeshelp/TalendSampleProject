@@ -1929,6 +1929,29 @@
       <column comment="" key="false" length="-1" name="body" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
+      <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row32">
+        <nodes name="invoice_number" outgoingConnections="//@node.38/@nodeData/@connections.9" type="id_String" xpath="row32/invoice_number"/>
+        <nodes name="supplier_number" outgoingConnections="//@node.38/@nodeData/@connections.8 //@node.38/@nodeData/@connections.17" type="id_String" xpath="row32/supplier_number"/>
+        <nodes name="supplier_name" type="id_String" xpath="row32/supplier_name"/>
+        <nodes name="invoice_lines_description" outgoingConnections="//@node.38/@nodeData/@connections.14" type="id_String" xpath="row32/invoice_lines_description"/>
+        <nodes name="invoice_date" outgoingConnections="//@node.38/@nodeData/@connections.6" type="id_String" xpath="row32/invoice_date"/>
+        <nodes name="custom_fields_gl_posting_date" outgoingConnections="//@node.38/@nodeData/@connections.7" type="id_String" xpath="row32/custom_fields_gl_posting_date"/>
+        <nodes name="currency_code" outgoingConnections="//@node.38/@nodeData/@connections.11 //@node.38/@nodeData/@connections.12" type="id_String" xpath="row32/currency_code"/>
+        <nodes name="invoice_lines_account_segment_4" type="id_String" xpath="row32/invoice_lines_account_segment_4"/>
+        <nodes name="invoice_lines_total" outgoingConnections="//@node.38/@nodeData/@connections.19" type="id_Double" xpath="row32/invoice_lines_total"/>
+        <nodes name="invoice_lines_invoice_lines_account_segment_3" type="id_String" xpath="row32/invoice_lines_invoice_lines_account_segment_3"/>
+        <nodes name="invoice_lines_account_segment_2" type="id_String" xpath="row32/invoice_lines_account_segment_2"/>
+        <nodes name="id" outgoingConnections="//@node.38/@nodeData/@connections.18" type="id_String" xpath="row32/id"/>
+        <nodes name="payment_term_code" outgoingConnections="//@node.38/@nodeData/@connections.10" type="id_String" xpath="row32/payment_term_code"/>
+        <nodes name="invoice_lines_tax_distribution_total" outgoingConnections="//@node.38/@nodeData/@connections.20" type="id_Double" xpath="row32/invoice_lines_tax_distribution_total"/>
+        <nodes name="invoice_lines_shipping_distribution_total" outgoingConnections="//@node.38/@nodeData/@connections.21" type="id_Double" xpath="row32/invoice_lines_shipping_distribution_total"/>
+        <nodes name="invoice_lines_handling_distribution_total" outgoingConnections="//@node.38/@nodeData/@connections.22" type="id_Double" xpath="row32/invoice_lines_handling_distribution_total"/>
+        <nodes name="invoice_lines_misc_distribution_total" outgoingConnections="//@node.38/@nodeData/@connections.23" type="id_Double" xpath="row32/invoice_lines_misc_distribution_total"/>
+        <nodes name="controlid" outgoingConnections="//@node.38/@nodeData/@connections.5" type="id_String" xpath="row32/controlid"/>
+        <nodes name="AccountNo" outgoingConnections="//@node.38/@nodeData/@connections.13" type="id_String" xpath="row32/AccountNo"/>
+        <nodes name="LocationId" outgoingConnections="//@node.38/@nodeData/@connections.15" type="id_String" xpath="row32/LocationId"/>
+        <nodes name="DepartmentID" outgoingConnections="//@node.38/@nodeData/@connections.16" type="id_String" xpath="row32/DepartmentID"/>
+      </inputTrees>
       <outputTrees name="CreateIntacctInvoices">
         <nodes expression="" name="body" pattern="" type="id_Document" xpath="CreateIntacctInvoices/body">
           <children main="true" name="request" type="id_String" xpath="CreateIntacctInvoices.body:/request" xsi:type="TalendXMLMap:OutputTreeNode">
@@ -1946,30 +1969,28 @@
               </children>
               <children main="true" name="content" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content" xsi:type="TalendXMLMap:OutputTreeNode">
                 <children main="true" name="function" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function" xsi:type="TalendXMLMap:OutputTreeNode">
-                  <children expression="createBillsoutput.controlid " name="controlid" nodeType="ATTRIBUT" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/@controlid" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="row32.controlid " incomingConnections="//@node.38/@nodeData/@connections.5" name="controlid" nodeType="ATTRIBUT" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/@controlid" xsi:type="TalendXMLMap:OutputTreeNode"/>
                   <children main="true" name="create" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create" xsi:type="TalendXMLMap:OutputTreeNode">
                     <children expression="" main="true" name="APBILL" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL" xsi:type="TalendXMLMap:OutputTreeNode">
-                      <children expression="routines.DateFormate.dateFomate(createBillsoutput.invoice_date) " name="WHENCREATED" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/WHENCREATED" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                      <children expression="routines.DateFormate.dateFomate(createBillsoutput.custom_fields_gl_posting_date) " name="WHENPOSTED" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/WHENPOSTED" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                      <children expression="createBillsoutput.supplier_number" name="VENDORID" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/VENDORID" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                      <children aggregate="true" expression="createBillsoutput.invoice_number " name="RECORDID" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/RECORDID" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                      <children expression="createBillsoutput.HeaderDescription" name="DESCRIPTION" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/DESCRIPTION" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                      <children expression="createBillsoutput.payment_term_code.substring(0,1)+createBillsoutput.payment_term_code.substring(1,createBillsoutput.payment_term_code.length()).toLowerCase() " name="TERMNAME" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/TERMNAME" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                      <children expression="createBillsoutput.currency_code" name="CURRENCY" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/CURRENCY" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                      <children expression="createBillsoutput.currency_code" name="BASECURR" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/BASECURR" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression="routines.DateFormate.dateFomate(row32.invoice_date) " incomingConnections="//@node.38/@nodeData/@connections.6" name="WHENCREATED" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/WHENCREATED" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression="routines.DateFormate.dateFomate(row32.custom_fields_gl_posting_date) " incomingConnections="//@node.38/@nodeData/@connections.7" name="WHENPOSTED" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/WHENPOSTED" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression="row32.supplier_number " incomingConnections="//@node.38/@nodeData/@connections.8" name="VENDORID" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/VENDORID" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children aggregate="true" expression="row32.invoice_number " incomingConnections="//@node.38/@nodeData/@connections.9" name="RECORDID" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/RECORDID" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression="row32.HeaderDescription" name="DESCRIPTION" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/DESCRIPTION" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression="row32.payment_term_code.substring(0,1)+row32.payment_term_code.substring(1,row32.payment_term_code.length()).toLowerCase() " incomingConnections="//@node.38/@nodeData/@connections.10" name="TERMNAME" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/TERMNAME" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression="row32.currency_code" incomingConnections="//@node.38/@nodeData/@connections.11" name="CURRENCY" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/CURRENCY" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression="row32.currency_code" incomingConnections="//@node.38/@nodeData/@connections.12" name="BASECURR" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/BASECURR" xsi:type="TalendXMLMap:OutputTreeNode"/>
                       <children main="true" name="APBILLITEMS" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/APBILLITEMS" xsi:type="TalendXMLMap:OutputTreeNode">
                         <children expression="" loop="true" main="true" name="APBILLITEM" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM" xsi:type="TalendXMLMap:OutputTreeNode">
-                          <children expression="createBillsoutput.AccountNo" name="ACCOUNTNO" type="id_Float" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/ACCOUNTNO" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                          <children expression="row32.AccountNo" incomingConnections="//@node.38/@nodeData/@connections.13" name="ACCOUNTNO" type="id_Float" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/ACCOUNTNO" xsi:type="TalendXMLMap:OutputTreeNode"/>
                           <children expression="String.valueOf(Var.TotalAmount + Var.Var1+Var.Var2+Var.Var3+Var.Var4) " incomingConnections="//@node.38/@nodeData/@connections.0 //@node.38/@nodeData/@connections.1 //@node.38/@nodeData/@connections.2 //@node.38/@nodeData/@connections.3 //@node.38/@nodeData/@connections.4" name="TRX_AMOUNT" type="id_Float" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/TRX_AMOUNT" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                          <children expression="createBillsoutput.invoice_lines_description" name="ENTRYDESCRIPTION" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/ENTRYDESCRIPTION" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                          <children expression="createBillsoutput.LocationId" name="LOCATIONID" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/LOCATIONID" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                          <children expression="createBillsoutput.DepartmentID" name="DEPARTMENTID" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/DEPARTMENTID" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                          <children expression="createBillsoutput.supplier_number" name="VENDOR_ID" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/VENDOR_ID" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                          <children expression="createBillsoutput.project_code_external_ref_code" name="PROJECTID" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/PROJECTID" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                          <children expression="createBillsoutput.item_code_external_ref_code" name="ITEMID" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/ITEMID" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                          <children expression="row32.invoice_lines_description" incomingConnections="//@node.38/@nodeData/@connections.14" name="ENTRYDESCRIPTION" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/ENTRYDESCRIPTION" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                          <children expression="row32.LocationId" incomingConnections="//@node.38/@nodeData/@connections.15" name="LOCATIONID" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/LOCATIONID" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                          <children expression="row32.DepartmentID" incomingConnections="//@node.38/@nodeData/@connections.16" name="DEPARTMENTID" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/DEPARTMENTID" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                          <children expression="row32.supplier_number" incomingConnections="//@node.38/@nodeData/@connections.17" name="VENDOR_ID" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/APBILLITEMS/APBILLITEM/VENDOR_ID" xsi:type="TalendXMLMap:OutputTreeNode"/>
                         </children>
                       </children>
-                      <children expression="createBillsoutput.id" name="COUPA_ID" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/COUPA_ID" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression="row32.id" incomingConnections="//@node.38/@nodeData/@connections.18" name="COUPA_ID" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/COUPA_ID" xsi:type="TalendXMLMap:OutputTreeNode"/>
                     </children>
                   </children>
                 </children>
@@ -1979,17 +2000,36 @@
         </nodes>
       </outputTrees>
       <varTables name="Var">
-        <nodes expression="Relational.ISNULL(createBillsoutput.invoice_lines_total)?0.0:createBillsoutput.invoice_lines_total " name="TotalAmount" outgoingConnections="//@node.38/@nodeData/@connections.0" type="id_Double"/>
-        <nodes expression="Relational.ISNULL(createBillsoutput.invoice_lines_tax_distribution_total)?0.0:createBillsoutput.invoice_lines_tax_distribution_total " name="Var1" outgoingConnections="//@node.38/@nodeData/@connections.1" type="id_Double"/>
-        <nodes expression="Relational.ISNULL(createBillsoutput.invoice_lines_shipping_distribution_total)?0.0:createBillsoutput.invoice_lines_shipping_distribution_total " name="Var2" outgoingConnections="//@node.38/@nodeData/@connections.2" type="id_Double"/>
-        <nodes expression="Relational.ISNULL(createBillsoutput.invoice_lines_handling_distribution_total)?0.0:createBillsoutput.invoice_lines_handling_distribution_total " name="Var3" outgoingConnections="//@node.38/@nodeData/@connections.3" type="id_Double"/>
-        <nodes expression="Relational.ISNULL(createBillsoutput.invoice_lines_misc_distribution_total)?0.0:createBillsoutput.invoice_lines_misc_distribution_total " name="Var4" outgoingConnections="//@node.38/@nodeData/@connections.4" type="id_Double"/>
+        <nodes expression="Relational.ISNULL(row32.invoice_lines_total)?0.0:row32.invoice_lines_total " incomingConnections="//@node.38/@nodeData/@connections.19" name="TotalAmount" outgoingConnections="//@node.38/@nodeData/@connections.0" type="id_Double"/>
+        <nodes expression="Relational.ISNULL(row32.invoice_lines_tax_distribution_total)?0.0:row32.invoice_lines_tax_distribution_total " incomingConnections="//@node.38/@nodeData/@connections.20" name="Var1" outgoingConnections="//@node.38/@nodeData/@connections.1" type="id_Double"/>
+        <nodes expression="Relational.ISNULL(row32.invoice_lines_shipping_distribution_total)?0.0:row32.invoice_lines_shipping_distribution_total " incomingConnections="//@node.38/@nodeData/@connections.21" name="Var2" outgoingConnections="//@node.38/@nodeData/@connections.2" type="id_Double"/>
+        <nodes expression="Relational.ISNULL(row32.invoice_lines_handling_distribution_total)?0.0:row32.invoice_lines_handling_distribution_total " incomingConnections="//@node.38/@nodeData/@connections.22" name="Var3" outgoingConnections="//@node.38/@nodeData/@connections.3" type="id_Double"/>
+        <nodes expression="Relational.ISNULL(row32.invoice_lines_misc_distribution_total)?0.0:row32.invoice_lines_misc_distribution_total " incomingConnections="//@node.38/@nodeData/@connections.23" name="Var4" outgoingConnections="//@node.38/@nodeData/@connections.4" type="id_Double"/>
       </varTables>
       <connections source="//@node.38/@nodeData/@varTables.0/@nodes.0" target="//@node.38/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.8/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.38/@nodeData/@varTables.0/@nodes.1" target="//@node.38/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.8/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.38/@nodeData/@varTables.0/@nodes.2" target="//@node.38/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.8/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.38/@nodeData/@varTables.0/@nodes.3" target="//@node.38/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.8/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.38/@nodeData/@varTables.0/@nodes.4" target="//@node.38/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.8/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.38/@nodeData/@inputTrees.0/@nodes.17" target="//@node.38/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.38/@nodeData/@inputTrees.0/@nodes.4" target="//@node.38/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.38/@nodeData/@inputTrees.0/@nodes.5" target="//@node.38/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.38/@nodeData/@inputTrees.0/@nodes.1" target="//@node.38/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.38/@nodeData/@inputTrees.0/@nodes.0" target="//@node.38/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.3" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.38/@nodeData/@inputTrees.0/@nodes.12" target="//@node.38/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.5" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.38/@nodeData/@inputTrees.0/@nodes.6" target="//@node.38/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.6" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.38/@nodeData/@inputTrees.0/@nodes.6" target="//@node.38/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.7" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.38/@nodeData/@inputTrees.0/@nodes.18" target="//@node.38/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.8/@children.0/@children.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.38/@nodeData/@inputTrees.0/@nodes.3" target="//@node.38/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.8/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.38/@nodeData/@inputTrees.0/@nodes.19" target="//@node.38/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.8/@children.0/@children.3" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.38/@nodeData/@inputTrees.0/@nodes.20" target="//@node.38/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.8/@children.0/@children.4" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.38/@nodeData/@inputTrees.0/@nodes.1" target="//@node.38/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.8/@children.0/@children.5" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.38/@nodeData/@inputTrees.0/@nodes.11" target="//@node.38/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0/@children.1/@children.0/@children.9" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.38/@nodeData/@inputTrees.0/@nodes.8" target="//@node.38/@nodeData/@varTables.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.38/@nodeData/@inputTrees.0/@nodes.13" target="//@node.38/@nodeData/@varTables.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.38/@nodeData/@inputTrees.0/@nodes.14" target="//@node.38/@nodeData/@varTables.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.38/@nodeData/@inputTrees.0/@nodes.15" target="//@node.38/@nodeData/@varTables.0/@nodes.3" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.38/@nodeData/@inputTrees.0/@nodes.16" target="//@node.38/@nodeData/@varTables.0/@nodes.4" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="768">
@@ -2980,13 +3020,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ab0634f5-53fc-4483-afe6-928c58b03e4a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>grYBfSmjIx3WM26dKd3pIMkZaguPm7BZ2FLrmrLUWPeL7CGwsCutSk2QosOxt18hue/OlvG4SbJp
-2sq2AtUzbA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_469bf375-01b2-4b48-a67c-562027ed4c91"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7/vf+iANU4ECuVxhIVaSa23vndLZBcJ30vQtxvXRimPsV71yVP+2aORVIznp0EIbmy54VGtzW1TP
-BqZVbHphrA==</DigestValue></Reference></SignedInfo><SignatureValue>lEkDO53UyFA1YQbSJK3v7XtnwivvrSR/ejmmr0izfIhW+0bmkhg0j03bVuajZ0fQyBEuykFBr6XK
-e4dCNB6dyHlpElDN+1sSj7j6gNMBjuSvhGGF3lKlAVhaJ633R5VqirrPKbT/Qd3yn8fnxY3OHPhn
-bTprCIAd4uN0Q4JbAXhF0mlsmFoSXfrzYVzjbtQMNQlwZn6dmyBXMNQlAakZNCAOt+JXEOrzlj5U
-DrXaXi7qGs22pMHtrw4rVH/KvhstQ8x1TnA/GXR5CaEwYdZ3ZZ20Ml0MEmRy3HxJem17Xh3ERpXC
-5dz2fRLUBOSUIPy/Bsm8YzK5FrxSto8JXLVpWA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_16cb2b7a-589c-4fd8-8c8c-beebdfe50360"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fniN63panziPpMvaLiaOaYFBrK+pLIu/9JYP0EwZfyjxeAJh2aExZ3Esy2NNlVRiFVYt7F8+vOcf
+a6+k3Z1uXg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a58dfdb0-8548-4915-8914-d22c03f32812"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>M8OpAyq2U9hj4QKcwsCNHNoc2rmrbtxDbRc99qT3W6LRG1fVtjQ6dj8PVVPN7qdbVqgiV7wBeWH+
+iAa4FZZ0fw==</DigestValue></Reference></SignedInfo><SignatureValue>Ju+fEqwH3xYbhTgcXAkfAVT6/fXGickIz4aYaFfwWHrAQrk8U1YOe0txyk2Q7fOQA1e1FxG1ldwq
+rXwwuvVqywRkMTuIwb5zlm2YOhtGSHwz8pv1vAPq4RQop7jfL2/1w5O9qOIjBjJuXZfZukidPhl3
+me+NsFJMW0O7GOK6s3nAAN8rs1hV6qkBnWmMrvQfdLNjw9izvcPhGaiNTiKuDJdG3IwnT2wTGFid
+LUa1xAliZI9cxboQF4nrUVTCCCL/q5DT1USX3mRAyaGPYrmwDonyvVXZhFm9q7HapyFb3M4znnxj
+zCTpxVRiKr81EDJW4bMr9i6Vo8EGSoFohlNYZA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -3010,4 +3050,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_469bf375-01b2-4b48-a67c-562027ed4c91" Target="#_ab0634f5-53fc-4483-afe6-928c58b03e4a"><Timestamp>2019-05-20 17:04:04</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a58dfdb0-8548-4915-8914-d22c03f32812" Target="#_16cb2b7a-589c-4fd8-8c8c-beebdfe50360"><Timestamp>2019-05-20 17:09:34</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
