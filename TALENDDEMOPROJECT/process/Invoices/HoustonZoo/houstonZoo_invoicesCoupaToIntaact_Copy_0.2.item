@@ -1053,8 +1053,8 @@
         <nodes expression="" name="body" type="id_Document" xpath="generateSeesionkey/body">
           <children loop="true" main="true" name="request" type="id_String" xpath="generateSeesionkey.body:/request" xsi:type="TalendXMLMap:OutputTreeNode">
             <children name="control" type="id_String" xpath="generateSeesionkey.body:/request/control" xsi:type="TalendXMLMap:OutputTreeNode">
-              <children expression="context.senderId" name="senderid" type="id_String" xpath="generateSeesionkey.body:/request/control/senderid" xsi:type="TalendXMLMap:OutputTreeNode"/>
-              <children expression="context.senderPwd" name="password" type="id_String" xpath="generateSeesionkey.body:/request/control/password" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="&quot;BluvaultMPP&quot;" name="senderid" type="id_String" xpath="generateSeesionkey.body:/request/control/senderid" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="&quot;Bluvault!2019$$&quot;" name="password" type="id_String" xpath="generateSeesionkey.body:/request/control/password" xsi:type="TalendXMLMap:OutputTreeNode"/>
               <children expression="System.currentTimeMillis() / 1000L" name="controlid" type="id_String" xpath="generateSeesionkey.body:/request/control/controlid" xsi:type="TalendXMLMap:OutputTreeNode"/>
               <children expression="&quot;false&quot;" name="uniqueid" type="id_Boolean" xpath="generateSeesionkey.body:/request/control/uniqueid" xsi:type="TalendXMLMap:OutputTreeNode"/>
               <children expression="&quot;3.0&quot;" name="dtdversion" type="id_Float" xpath="generateSeesionkey.body:/request/control/dtdversion" xsi:type="TalendXMLMap:OutputTreeNode"/>
@@ -1063,9 +1063,9 @@
             <children name="operation" type="id_String" xpath="generateSeesionkey.body:/request/operation" xsi:type="TalendXMLMap:OutputTreeNode">
               <children name="authentication" type="id_String" xpath="generateSeesionkey.body:/request/operation/authentication" xsi:type="TalendXMLMap:OutputTreeNode">
                 <children name="login" type="id_String" xpath="generateSeesionkey.body:/request/operation/authentication/login" xsi:type="TalendXMLMap:OutputTreeNode">
-                  <children expression="context.CoupaLogin" name="userid" type="id_String" xpath="generateSeesionkey.body:/request/operation/authentication/login/userid" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                  <children expression="context.CompanyId" name="companyid" type="id_String" xpath="generateSeesionkey.body:/request/operation/authentication/login/companyid" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                  <children expression="context.CoupaPWD" name="password" type="id_String" xpath="generateSeesionkey.body:/request/operation/authentication/login/password" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="&quot;xml_gateway_coupa&quot;" name="userid" type="id_String" xpath="generateSeesionkey.body:/request/operation/authentication/login/userid" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="&quot;HOUSTONZOO-imp&quot;" name="companyid" type="id_String" xpath="generateSeesionkey.body:/request/operation/authentication/login/companyid" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="&quot;SyG1l5pX1&amp;J&quot;" name="password" type="id_String" xpath="generateSeesionkey.body:/request/operation/authentication/login/password" xsi:type="TalendXMLMap:OutputTreeNode"/>
                 </children>
               </children>
               <children name="content" type="id_String" xpath="generateSeesionkey.body:/request/operation/content" xsi:type="TalendXMLMap:OutputTreeNode">
@@ -2575,13 +2575,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_69f69c0b-ee92-4d92-9e0d-0a06e67ca4db"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>IlNmcrDT59Mf7PnUo6+m+9hyT2IKbqEU7dZn14kmMJrtuxtoLirP9k1WU+Nma1WnPeNVHDgEE3zS
-/RAKoccU7w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fb04ca60-3fbb-41c3-b565-cb71c5ecd605"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2/T363zc5I8/W5sKDjFFCzWpXuTEFdLFGjt41LcWc6QETFMBo8adH6KOJB18aiYV9wtP3OaYrJl6
-UWFRe8StHA==</DigestValue></Reference></SignedInfo><SignatureValue>Kb63kffSZeia3S9cGde6wdohPffW0lgaH/NcQYI3+CS2y9gsYTZ1/zQAkMKjPaYU2WHf/kZjlquC
-O139cxKLT5JadnM92SJ7R20H2TH+7bX8ujlZUDUTE2n0qOW9+r9iO4j8XFklkr3YA7jAI1s65wl+
-KsuYoWDAvaTVkgJoDE0OpsWrWaxmOqWNvxvxAm42g2f/4yLSH9262VLvIJvabCROUkV3uKwyu26H
-AsDnr9qm258XEojKx8qL9SuDBWYFhtuqLyfz50FhyT7+wWaLPVgcppUOPQOh8Ydk4dOqQ8YJj3ff
-DIuJx1+cV0suxKt+Us0OhBQ7jbjG0KZBaz/WpQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_14bbf722-d9d9-4706-b1d2-ca44b24ed7c4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZCZ1E8AL9ff+NWi8VRqAjV6Sqtou9XwMV3z6AcLW3AXFFLew49e1qZyWhR0aqKNw+4cKXYxKYMwA
+z/2XTXBRzg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c86d734c-d2df-4c7d-a240-4557efe9d3a0"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>O8EtZQa0wl88+R6o9Xd5E15IJBK9CeDUDhMVWVOfnErlONnEgTqMGiqIdqO4mRGpOTdjvqnEUSPi
+sDt30I0vrw==</DigestValue></Reference></SignedInfo><SignatureValue>f1A3+66TYtjUJByTh7OxazennHlHuYhes3mf3gf+lkjUSEdegY7ovuJsV7Qizr4CuS0PWGVsVXFC
+b4+DdOZg9InrI6N5+ksjyVvmbD0ftwYv8jJyq22b3rrp3AxEDedSHI2W/1aq8PK4JC01uBrH0a3x
+byp4AWeL67VGvLJ0nTILMbBEPa/tChRa+WPgTYlfzW5aEw5tzt0j1gt+xJ4uFPELurgsFiN8yMCk
+sHUtMrfEdYTizl5rfZL0zoXbB+0BoQXfnYAxXS2t4N7xMlp+3W61mRysFDmoXULH0fKkv3r1A3xF
+PeEr1HajDxNI4m/oj+kslCWtx3yHAtHWnu8TeQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2605,4 +2605,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fb04ca60-3fbb-41c3-b565-cb71c5ecd605" Target="#_69f69c0b-ee92-4d92-9e0d-0a06e67ca4db"><Timestamp>2019-05-20 06:30:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c86d734c-d2df-4c7d-a240-4557efe9d3a0" Target="#_14bbf722-d9d9-4706-b1d2-ca44b24ed7c4"><Timestamp>2019-05-20 06:33:12</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
