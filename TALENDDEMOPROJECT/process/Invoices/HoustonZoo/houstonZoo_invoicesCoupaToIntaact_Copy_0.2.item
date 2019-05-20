@@ -1208,8 +1208,6 @@
       <column comment="" key="false" length="-1" name="AccountNo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="LocationId" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="DepartmentID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="project_code_external_ref_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="item_code_external_ref_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" name="createBillAllocationLinesOut">
       <column comment="" key="false" length="-1" name="invoice_number" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1234,8 +1232,6 @@
       <column comment="" key="false" length="-1" name="AccountNo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="LocationId" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="DepartmentID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="project_code_external_ref_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="item_code_external_ref_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_header_id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
@@ -1264,8 +1260,6 @@
         <mapperTableEntries expression="row4.AccountNo " name="AccountNo" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row4.LocationId " name="LocationId" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row4.DepartmentID " name="DepartmentID" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row4.project_code_external_ref_code " name="project_code_external_ref_code" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row4.item_code_external_ref_code " name="item_code_external_ref_code" nullable="true" type="id_String"/>
       </outputTables>
       <outputTables activateCondensedTool="true" name="createBillAllocationLinesOut" reject="true" rejectInnerJoin="true" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row4.invoice_number " name="invoice_number" nullable="true" type="id_String"/>
@@ -1290,8 +1284,6 @@
         <mapperTableEntries expression="row4.AccountNo " name="AccountNo" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row4.LocationId " name="LocationId" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row4.DepartmentID " name="DepartmentID" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row4.project_code_external_ref_code " name="project_code_external_ref_code" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row4.item_code_external_ref_code " name="item_code_external_ref_code" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row4.invoice_lines_header_id " name="invoice_lines_header_id" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row4" sizeState="INTERMEDIATE">
@@ -1425,10 +1417,6 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="DepartmentID"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="project_code_external_ref_code"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="item_code_external_ref_code"/>
-      <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
@@ -1456,8 +1444,6 @@
       <column comment="" key="false" length="-1" name="AccountNo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="LocationId" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="DepartmentID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="project_code_external_ref_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="item_code_external_ref_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="608">
@@ -1518,10 +1504,6 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="DepartmentID"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="project_code_external_ref_code"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="item_code_external_ref_code"/>
-      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="invoice_lines_header_id"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
@@ -1551,8 +1533,6 @@
       <column comment="" key="false" length="-1" name="AccountNo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="LocationId" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="DepartmentID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="project_code_external_ref_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="item_code_external_ref_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_header_id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
@@ -2867,13 +2847,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4a439595-3e26-410e-97ef-f32b5b23bb59"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>l38yKCj7qggLw3p5e+VSc6Khj7buTRc3dYyFSoy7wrSgTpSCXfiy0QwrnTONq2r1fynkLzTML6a/
-UocDb09GGg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_52e5da08-5524-446d-820b-bcd702ff4c2e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lyV4OWFaTEEbuC8LXvcsoGTsZHdAQjwqkdkIwzuC8HohYK47ieNkxgOew1cs3I6lYEA7NDPMfURq
-nigieNPEtA==</DigestValue></Reference></SignedInfo><SignatureValue>YVdh/2mNdWE23eXxR+ILQkZbqJ9R3QRlOK/LDMwxnySV/AKR5Ya9uNbIPwppLgm2Dg5T0Nk4VBd4
-JDEg6E9mAaFn5DaidhnHnrn0db9xhjuD30vZrbHOHcWNsOkJ3lh69MXU6nMQLoF5uTfrMbMQaUfT
-iNtfif2P2B7hSAZDLDMPA/7x6O9p5gnF3wO2SJbZp9zz2RZwJi3elw7L3HsfXcX+OwMTqFuG7l5N
-NEeP3g4QN/f1mXCaJ+nlZAav0yJzvw6Yvx5ZTU4dVfIT+uL1ZvDsSieuYldSK8W3b0Dxwzoi8ZvV
-lWx/a7rfVflwaXAlUJ4Bcitdgi5Va8Iwczo17Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_51739981-a6a7-4590-8b01-4cb8579f2c2d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0cf9KvNWh4Pigc2uc9Rcgn1aCD2J34qDG9uoN9OfBeSwDo234MZm9voD8zAA2Mur58mdrJeziG3g
+EOWLh75TTQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3e96eea8-c717-42c5-be59-0003b186311e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7fFbJyNDg7ThJ3HbrbaE3g5Xj9nzChKav+wRdrqaN2+fmIHT32VvuOm0eszo2Y6mcIIJWXY68Ljr
+ah9fAZxcSQ==</DigestValue></Reference></SignedInfo><SignatureValue>hwgfj9PoKJ0wxB91P2NXCIu84iav+gv3I0OIDAuH6mtqUCatiwNBiqjY4O1M4qTA8zUyWv62Rtuq
+UK8JIkvpB7nuVpZxVL11Ps8W4HUEiD3klDI6UrLRc2r1iZuFao2bMYhGrmt5RiUlJXyis3TZWerK
+yQ2EcOoRV7oL6z8SPSBBY46b5WI+wlMoXbnGaJaLN41FXuYOT91MDZK52BwCzxsTTwLHqXxsv9QH
+91IRwagRYJfcNodhWyjjYrohLLIAAoU277Kr0Py4+AInHP9iYRqVxFOcmrqbwIrJR3CnVuPUD1UL
+ATJ+9boFPyzcVFpDvarpsAuABTcCz1Eaw9mKXw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2897,4 +2877,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_52e5da08-5524-446d-820b-bcd702ff4c2e" Target="#_4a439595-3e26-410e-97ef-f32b5b23bb59"><Timestamp>2019-05-20 16:17:35</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3e96eea8-c717-42c5-be59-0003b186311e" Target="#_51739981-a6a7-4590-8b01-4cb8579f2c2d"><Timestamp>2019-05-20 16:24:09</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
