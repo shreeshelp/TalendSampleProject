@@ -1974,7 +1974,7 @@
                   <children main="true" name="create" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create" xsi:type="TalendXMLMap:OutputTreeNode">
                     <children expression="" main="true" name="APBILL" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL" xsi:type="TalendXMLMap:OutputTreeNode">
                       <children expression="routines.DateFormate.dateFomate(row32.invoice_date) " incomingConnections="//@node.38/@nodeData/@connections.6" name="WHENCREATED" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/WHENCREATED" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                      <children expression="routines.DateFormate.dateFomate(row32.custom_fields_gl_posting_date) " incomingConnections="//@node.38/@nodeData/@connections.7" name="WHENPOSTED" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/WHENPOSTED" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression="Relational.ISNULL(row32.custom_fields_gl_posting_date)?null:&#13;&#10;routines.DateFormate.dateFomate(row32.custom_fields_gl_posting_date) " incomingConnections="//@node.38/@nodeData/@connections.7" name="WHENPOSTED" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/WHENPOSTED" xsi:type="TalendXMLMap:OutputTreeNode"/>
                       <children expression="row32.supplier_number " incomingConnections="//@node.38/@nodeData/@connections.8" name="VENDORID" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/VENDORID" xsi:type="TalendXMLMap:OutputTreeNode"/>
                       <children aggregate="true" expression="row32.invoice_number " incomingConnections="//@node.38/@nodeData/@connections.9" name="RECORDID" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/RECORDID" xsi:type="TalendXMLMap:OutputTreeNode"/>
                       <children expression="row32.invoice_lines_description " incomingConnections="//@node.38/@nodeData/@connections.24" name="DESCRIPTION" type="id_String" xpath="CreateIntacctInvoices.body:/request/operation/content/function/create/APBILL/DESCRIPTION" xsi:type="TalendXMLMap:OutputTreeNode"/>
@@ -3036,13 +3036,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_964b3974-7777-42a3-9418-e891098141d6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tWBHExYNVa/6031ECismawox7Ow4MnjFR7f6bbZdElyQTmwBUOAlbBiE/qtEuwOV6QEacW/pNRzI
-Vbb1QuVdvA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_dc77f42f-1893-4479-a487-d680abfc74be"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>WXkiYEB17lQQoIEngdyn1SJVo1ADYceMNLLJQ9syhJ4tyqSWAkko2cLkrXZAsDBNctNQQdksZA1P
-SCFpPhLk2g==</DigestValue></Reference></SignedInfo><SignatureValue>zHZbWZzsEcEI80wxWy2J7qfbQUow1/hxqYtX6StyNuB0ybL0NowOYhKGuWOaHAB4/fOUwYa3T9uC
-0Q1ZFUucY5+AySHdCgvNlO9NI68SV7GfFX2gQKKbIIhKg4HwgkhjqWFW8yikaXHOM38W33rA7gij
-Zbu8MBefRi4mRpP+Scnq8FNxw7AHQZ5iLsIKgMBlHxkHLgKuMhslSdR9XsrdGMLfNgcQzA1Y4j0j
-XTIG33M+jCr6E7VsRDqPpcDl8GV+mY8siiabYl5528W5NT4YewMhuBlz9kjxZqebCstsxyuumLHH
-0x3Rc5Dv0z1PPQYrtWA6E90WoAq0baDN+68Qdw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f71a4755-8935-4974-960c-48dca2cd6d54"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KJU1Fnde/eo7CLnpfourZc8rhCc9a8OoDtGjQOcFFDVgohU0gsaT+ZRgxH83sakZBrdWF6GjDK53
+dnlv3qsOdA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b29836c4-7488-4a55-a1ff-1788b535da60"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7NIZs/Bf8kyJrFfBLvyhH9IIrBNbaqlDnpsgxt1ZA40v7O0xtNk/bmznULOldsdYBO3Kl01U9fjH
+/jGAVs+1xw==</DigestValue></Reference></SignedInfo><SignatureValue>zZWfdQKC7cSOFHSLnSMvXgpEIjslQJdkPUnHnosoN64n4x5nnD2slSyAPstZ1xSyg7s4gFkZJ5Zu
+84pvOyVUwq5jdIkZRUzfhgFOR7ITJ+/9ZJleKHc8QYkPq3PjV1s2TA5Ia4G7QoTHKMRaGy0iXAUp
+PT9Ipne8NSHIa+uQohvVAOolaFMlce/LcsQYm/ocMfHUlGQO8VUzUL+aO4xTcTYw2RDADuTzJw1b
+M/cqLP0ji6lSuiPHhDFguNyUU4W790L2+B2s1gS7OODtcBHmAj8H3CFemMNDw7dmHE58lzvlfS6m
+euu/w9WVKlQJvrJYzdXNhNWR0wOPV/1A4kuV+A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -3066,4 +3066,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_dc77f42f-1893-4479-a487-d680abfc74be" Target="#_964b3974-7777-42a3-9418-e891098141d6"><Timestamp>2019-05-20 17:11:15</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b29836c4-7488-4a55-a1ff-1788b535da60" Target="#_f71a4755-8935-4974-960c-48dca2cd6d54"><Timestamp>2019-05-20 17:12:39</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
