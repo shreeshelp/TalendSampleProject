@@ -10,15 +10,15 @@
     <contextParameter comment="" name="intaactUserId" prompt="intaactUserId?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="intaactuserpwd" prompt="intaactuserpwd?" promptNeeded="false" type="id_Password" value=""/>
     <contextParameter comment="" name="senderId" prompt="senderId?" promptNeeded="false" type="id_String" value="BluvaultMPP"/>
-    <contextParameter comment="" name="senderPwd" prompt="senderPwd?" promptNeeded="false" type="id_Password" value="uQzdALvr3IoWQyzmiwS0Lw=="/>
+    <contextParameter comment="" name="senderPwd" prompt="senderPwd?" promptNeeded="false" type="id_Password" value="uQzdALvr3IoCPGklhuHC7A=="/>
     <contextParameter comment="" name="sessiongenerationapi" prompt="sessiongenerationapi?" promptNeeded="false" type="id_String" value="https://api.intacct.com/ia/xml/xmlgw.phtml"/>
-    <contextParameter comment="" name="CoupaLogin" prompt="CoupaLogin?" promptNeeded="false" type="id_String" value="coupa"/>
-    <contextParameter comment="" name="CoupaPWD" prompt="CoupaPWD?" promptNeeded="false" type="id_Password" value="uQzdALvr3IoWQyzmiwS0Lw=="/>
-    <contextParameter comment="" name="CompanyId" prompt="CompanyId?" promptNeeded="false" type="id_String" value="HOUSTONZOO-sandbox"/>
+    <contextParameter comment="" name="CoupaLogin" prompt="CoupaLogin?" promptNeeded="false" type="id_String" value="xml_gateway_coupa"/>
+    <contextParameter comment="" name="CoupaPWD" prompt="CoupaPWD?" promptNeeded="false" type="id_Password" value="HzLjYaNdevMKWmTO5iMIZw=="/>
+    <contextParameter comment="" name="CompanyId" prompt="CompanyId?" promptNeeded="false" type="id_String" value="HOUSTONZOO-imp"/>
     <contextParameter comment="" name="endpointURL" prompt="endpointURL?" promptNeeded="false" type="id_String" value="https://api.intacct.com/ia/xml/xmlgw.phtml"/>
     <contextParameter comment="" name="frshworkAPIToretrivejson" prompt="frshworkAPIToretrivejson?" promptNeeded="false" type="id_String" value="https://freshworks-test.coupahost.com/api/invoices?exported=false&amp;status=approved"/>
     <contextParameter comment="" name="intaactAPIserverUser" prompt="intaactAPIserverUser?" promptNeeded="false" type="id_String" value="xml_gateway_coupa"/>
-    <contextParameter comment="" name="intaactAPIserverPwd" prompt="intaactAPIserverPwd?" promptNeeded="false" type="id_Password" value="IA1eauvaTGoR8wYXp72Q5Q=="/>
+    <contextParameter comment="" name="intaactAPIserverPwd" prompt="intaactAPIserverPwd?" promptNeeded="false" type="id_Password" value="HzLjYaNdevMKWmTO5iMIZw=="/>
     <contextParameter comment="" name="x_coupa_api_key" prompt="x_coupa_api_key?" promptNeeded="false" type="id_String" value="d0522d6c1147395c57023daa9c65b45897020be9"/>
     <contextParameter comment="" name="coupa_flag_export_api_url" prompt="coupa_flag_export_api_url?" promptNeeded="false" type="id_String" value="https://freshworks-test.coupahost.com/api/invoices/"/>
   </context>
@@ -248,6 +248,7 @@
   </node>
   <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/S3703040/Desktop/ETON/HZ/HZ invJosn layout.json&quot;"/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
@@ -297,6 +298,7 @@
   </node>
   <node componentName="tReplicate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tReplicate_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tReplicate_1">
       <column comment="" key="false" length="-1" name="invoiceJsonString" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -304,6 +306,7 @@
   </node>
   <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tExtractJSONFields_4"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CLOSED_LIST" name="READ_BY" value="XPATH"/>
     <elementParameter field="CLOSED_LIST" name="JSON_PATH_VERSION" show="false" value="2_1_0"/>
     <elementParameter field="PREV_COLUMN_LIST" name="JSONFIELD" value="invoiceJsonString"/>
@@ -506,6 +509,7 @@
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_6"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -602,6 +606,7 @@
   </node>
   <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tExtractJSONFields_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CLOSED_LIST" name="READ_BY" value="XPATH"/>
     <elementParameter field="CLOSED_LIST" name="JSON_PATH_VERSION" show="false" value="2_1_0"/>
     <elementParameter field="PREV_COLUMN_LIST" name="JSONFIELD" value="invoiceJsonString"/>
@@ -732,6 +737,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#13;&#10;output_row.invoice_number = input_row.invoice_number;&#13;&#10;output_row.supplier_number = input_row.supplier_number;&#13;&#10;output_row.supplier_name = input_row.supplier_name;&#13;&#10;output_row.invoice_lines_description = input_row.invoice_lines_description;&#13;&#10;output_row.invoice_date = input_row.invoice_date;&#13;&#10;output_row.custom_fields_gl_posting_date = input_row.custom_fields_gl_posting_date;&#13;&#10;output_row.currency_code = input_row.currency_code;&#13;&#10;output_row.invoice_lines_account_segment_4 = input_row.invoice_lines_account_segment_4;&#13;&#10;output_row.invoice_lines_total = input_row.invoice_lines_total;&#13;&#10;output_row.invoice_lines_invoice_lines_account_segment_3 = input_row.invoice_lines_invoice_lines_account_segment_3;&#13;&#10;output_row.invoice_lines_account_segment_2 = input_row.invoice_lines_account_segment_2;&#13;&#10;output_row.invoice_lines_custom_fields_project_code_external_ref_num = input_row.invoice_lines_custom_fields_project_code_external_ref_num;&#13;&#10;output_row.id = input_row.id;&#13;&#10;output_row.payment_term_code = input_row.payment_term_code;&#13;&#10;&#10;&#10;//output_row.account_code = input_row.account_code;&#13;&#10;&#10;if(input_row.account_code!=null){&#10;String ss[]=input_row.account_code.split(&quot;-&quot;);&#10;output_row.LocationId=ss[0];&#10;output_row.DepartmentID=ss[1];&#10;output_row.AccountNo=ss[ss.length-1];&#10;}else{&#10;input_row.account_code = &quot;&quot;;&#10;}&#10;//System.out.println(&quot;Account no: &quot;+ context.AccountNo);&#10;//System.out.println(&quot;Dept id : &quot;+context.DepartmentId);&#10;//System.out.println(&quot;Locationid: &quot;+context.locationId);&#10;&#10;&#10;output_row.invoice_lines_tax_distribution_total = input_row.invoice_lines_tax_distribution_total;&#13;&#10;output_row.invoice_lines_shipping_distribution_total = input_row.invoice_lines_shipping_distribution_total;&#13;&#10;output_row.invoice_lines_handling_distribution_total = input_row.invoice_lines_handling_distribution_total;&#13;&#10;output_row.invoice_lines_misc_distribution_total = input_row.invoice_lines_misc_distribution_total;&#10;output_row.project_code_external_ref_code = input_row.project_code_external_ref_code;&#10;output_row.item_code_external_ref_code = input_row.item_code_external_ref_code;&#10;&#10;context.Coupa_Id=input_row.id;&#13;&#10;&#10;output_row.controlid = routines.Generate_UUID.generateUUID();&#10;&#10;//output_row.account_allocations=input_row.account_allocations;&#10;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -764,6 +770,7 @@
   </node>
   <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashOutput_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="DATA_WRITE_MODEL" value="MEMORY"/>
@@ -802,6 +809,7 @@
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -895,6 +903,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_4"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#13;&#10;output_row.invoice_number = input_row.invoice_number;&#13;&#10;output_row.invoice_lines_description = input_row.invoice_lines_description;&#13;&#10;output_row.invoice_lines_account_segment_4 = input_row.invoice_lines_account_segment_4;&#13;&#10;output_row.invoice_lines_total = input_row.invoice_lines_total;&#13;&#10;output_row.invoice_lines_invoice_lines_account_segment_3 = input_row.invoice_lines_invoice_lines_account_segment_3;&#13;&#10;output_row.invoice_lines_account_segment_2 = input_row.invoice_lines_account_segment_2;&#13;&#10;//output_row.invoice_lines_custom_fields_project_code_external_ref_num = input_row.invoice_lines_custom_fields_project_code_external_ref_num;&#13;&#10;output_row.invoice_lines_tax_distribution_total = input_row.invoice_lines_tax_distribution_total;&#13;&#10;output_row.invoice_lines_shipping_distribution_total = input_row.invoice_lines_shipping_distribution_total;&#13;&#10;output_row.invoice_lines_handling_distribution_total = input_row.invoice_lines_handling_distribution_total;&#13;&#10;output_row.invoice_lines_misc_distribution_total = input_row.invoice_lines_misc_distribution_total;&#10;&#13;&#10;if(input_row.account_code!=null){&#10;String ss[]=input_row.account_code.split(&quot;-&quot;);&#10;output_row.LocationId=ss[0];&#10;output_row.DepartmentID=ss[1];&#10;output_row.AccountNo=ss[3];&#10;}else{&#10;input_row.account_code = &quot;&quot;;&#10;}&#13;&#10;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -917,6 +926,7 @@
   </node>
   <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashOutput_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="DATA_WRITE_MODEL" value="MEMORY"/>
@@ -945,6 +955,7 @@
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_5"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -1295,7 +1306,7 @@
       <column comment="" key="false" length="-1" name="item_code_external_ref_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="createBillsoutput" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row4.invoice_number " name="invoice_number" nullable="true" type="id_String"/>
@@ -2022,14 +2033,14 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSendMail_2"/>
   </node>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tREST_1" offsetLabelX="0" offsetLabelY="0" source="tREST_1" target="tFileInputDelimited_1">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
-  </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tREST_1" offsetLabelX="0" offsetLabelY="0" source="tREST_1" target="tExtractJSONFields_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tREST_1" offsetLabelX="0" offsetLabelY="0" source="tREST_1" target="tFileInputDelimited_1">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tExtractJSONFields_1" offsetLabelX="0" offsetLabelY="0" source="tExtractJSONFields_1" target="tFileOutputDelimited_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -2038,6 +2049,7 @@
   </connection>
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tReplicate_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tHashInput_1">
@@ -2046,10 +2058,12 @@
   </connection>
   <connection connectorName="FLOW" label="row22" lineStyle="0" metaname="tReplicate_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tReplicate_1" target="tExtractJSONFields_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row22"/>
   </connection>
   <connection connectorName="FLOW" label="row23" lineStyle="0" metaname="tReplicate_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tReplicate_1" target="tExtractJSONFields_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row23"/>
   </connection>
   <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tExtractJSONFields_4" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tExtractJSONFields_4" target="tJavaRow_1">
@@ -2080,10 +2094,12 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
   </connection>
   <connection connectorName="REJECT" label="row14" lineStyle="0" metaname="REJECT" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tExtractJSONFields_4" target="tLogRow_6">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row14"/>
   </connection>
   <connection connectorName="FLOW" label="row20" lineStyle="0" metaname="tExtractJSONFields_2" offsetLabelX="0" offsetLabelY="0" source="tExtractJSONFields_2" target="tJavaRow_4">
@@ -2099,6 +2115,7 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row20"/>
   </connection>
   <connection connectorName="FLOW" label="row16" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="21" offsetLabelY="5" source="tJavaRow_1" target="tHashOutput_1">
@@ -2144,10 +2161,12 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row16"/>
   </connection>
   <connection connectorName="FLOW" label="row24" lineStyle="0" metaname="tHashOutput_1" offsetLabelX="0" offsetLabelY="0" source="tHashOutput_1" target="tLogRow_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row24"/>
   </connection>
   <connection connectorName="FLOW" label="row25" lineStyle="0" metaname="tJavaRow_4" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_4" target="tHashOutput_2">
@@ -2163,6 +2182,7 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row25"/>
   </connection>
   <connection connectorName="FLOW" label="row26" lineStyle="0" metaname="tHashOutput_2" offsetLabelX="0" offsetLabelY="0" source="tHashOutput_2" target="tLogRow_5">
@@ -2199,6 +2219,7 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row26"/>
   </connection>
   <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tXMLMap_2">
@@ -2229,6 +2250,10 @@
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tFixedFlowInput_1">
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tHashInput_1" offsetLabelX="0" offsetLabelY="0" source="tHashInput_1" target="tHashInput_3">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
   </connection>
   <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tHashInput_1" offsetLabelX="0" offsetLabelY="0" source="tHashInput_1" target="tMap_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -2309,10 +2334,6 @@
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tHashInput_1" offsetLabelX="0" offsetLabelY="0" source="tHashInput_1" target="tHashInput_3">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
-  </connection>
   <connection connectorName="FLOW" label="createBillsoutput" lineStyle="0" metaname="createBillsoutput" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tXMLMap_5">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="controlid"/>
@@ -2366,15 +2387,15 @@
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row29"/>
   </connection>
-  <connection connectorName="RESPONSE" label="row6" lineStyle="0" metaname="RESPONSE" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tRESTClient_1" target="tLogRow_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
-  </connection>
-  <connection connectorName="FAULT" label="row8" lineStyle="0" metaname="FAULT" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tRESTClient_1" target="tLogRow_4">
+  <connection connectorName="FAULT" label="row8" lineStyle="0" metaname="FAULT" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tRESTClient_1" target="tLogRow_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row8"/>
+  </connection>
+  <connection connectorName="RESPONSE" label="row6" lineStyle="0" metaname="RESPONSE" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tRESTClient_1" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
   </connection>
   <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tExtractXMLField_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -2394,15 +2415,15 @@
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row30"/>
   </connection>
-  <connection connectorName="FLOW" label="output_coupa_id" lineStyle="0" metaname="output_coupa_id" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_2" target="tHashOutput_4">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="output_coupa_id"/>
-  </connection>
-  <connection connectorName="FLOW" label="ErrorOutput" lineStyle="0" metaname="ErrorOutput" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_2" target="tJavaRow_3">
+  <connection connectorName="FLOW" label="ErrorOutput" lineStyle="0" metaname="ErrorOutput" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_2" target="tJavaRow_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ErrorOutput"/>
+  </connection>
+  <connection connectorName="FLOW" label="output_coupa_id" lineStyle="0" metaname="output_coupa_id" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_2" target="tHashOutput_4">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="output_coupa_id"/>
   </connection>
   <connection connectorName="FLOW" label="row13" lineStyle="8" metaname="tHashInput_4" offsetLabelX="0" offsetLabelY="0" source="tHashInput_4" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -2423,6 +2444,10 @@
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="((List&lt;String&gt;)globalMap.get(&quot;ErrorList&quot;)).size()&gt;0"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If1"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tHashInput_3" offsetLabelX="0" offsetLabelY="0" source="tHashInput_3" target="tLoop_1">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk4"/>
   </connection>
   <connection connectorName="FLOW" label="row21" lineStyle="0" metaname="tHashInput_3" offsetLabelX="0" offsetLabelY="0" source="tHashInput_3" target="tUniqRow_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -2487,10 +2512,6 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row21"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tHashInput_3" offsetLabelX="0" offsetLabelY="0" source="tHashInput_3" target="tLoop_1">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk4"/>
   </connection>
   <connection connectorName="UNIQUE" label="row18" lineStyle="0" metaname="UNIQUE" offsetLabelX="0" offsetLabelY="0" source="tUniqRow_1" target="tJavaFlex_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -2567,13 +2588,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7e64a44d-b206-4d8c-9e80-a88aad2b2676"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1LgwGdQBHiWZA0etgaR5wJ/KIWjpu8t6VF82Cdj2Nqr33RV9+hsYU3R8H4D9sJSasC462XFGPbRq
-6kSC2+p8hg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c5147b3f-8650-4fdf-95e5-02bfc7ce3aad"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>axF5ltFu7pJEus3uP9j08xXWPUXii0Sr7IRhiIAXnAhB7DotygAAHhS6NgBOoMuloRkkTleE9FsY
-+KYuy5Y/bA==</DigestValue></Reference></SignedInfo><SignatureValue>0nMhGvfk4qnV0QrPsQwz6YXv48PiUGm9t3uR48k3Hh7Tt18YrUprx7L+c7U/rM7Xyvt0jIT9midV
-XB8JCTyWE0TQJM1wDoy+jvpNri7dzzFoQZtbzdRu1VGq3H5avtE/gsIssnfnjLfulR11SeK6iSuc
-U8XUt+cT7NMhtp3+rHMfsLmNwdXnaovI3u4biPbGRCVvftA7n200Wk/hL7R2yt3fH/yFm+SM7t/4
-x20mUqd6rKZ/3dIX+aJd/ee6I68pYvGJg2pyhowQIRBK96zqXndCtYHhRR7pY3P6iUrNH9AEJhMp
-r4o7O+DI+zxkAyLmwPCjXqCBrLAttTWZefp/OQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b02bc7bf-bec1-4094-b6e2-fb140cec6be1"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>e8Sn59KRdlGoGBYxSmhUiokLcGH/cLbNziHEgLErW6bXlXoU72Jbi8cl233h9xchyioqRYOwlUJC
+AP+IOxboMw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d9a96aa8-9c68-4cfa-808f-4cb12162c4c0"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>UKR0LCUAa5v0lwclkT64+7rlvdO5djZaXpcqtXF+3N6aqPXFI9aWmoBP+3lnv5BWQjnBZrer4bk3
+I9LnfnWVqw==</DigestValue></Reference></SignedInfo><SignatureValue>1DM0XDToyZDCpH1RNjSGpvpm+LZbaHOVMNkkWl/XXkDn2ACZ8oYmjM2hZS2g9W6Pw7bfOGgD9s7D
+bUeeyAZfYX27POo5D1IXqXUYFUoEkJAffZc5xAWiXhzBOW9bSSScRexUmUcQVMub36v2A8A7qBXC
+ssVF9BzXac6We75pxDmt/hTle6MMuTL0kgaDaD5OEMKXtayQwwbvShbnXOtRrMGUYX7l5c7QCycO
+AXvVCacLEfnyajtNj33yJdQZbOtaL0vyyJm6sUYFgFzBkA+nO7yYZegYT8raF7U1kqF3PTD8qNJb
++XNzFTTxIcmCPUq/reFOAXiSW2QiRZ+YnKOEJw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2597,4 +2618,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c5147b3f-8650-4fdf-95e5-02bfc7ce3aad" Target="#_7e64a44d-b206-4d8c-9e80-a88aad2b2676"><Timestamp>2019-05-19 14:27:48</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d9a96aa8-9c68-4cfa-808f-4cb12162c4c0" Target="#_b02bc7bf-bec1-4094-b6e2-fb140cec6be1"><Timestamp>2019-05-20 06:13:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
