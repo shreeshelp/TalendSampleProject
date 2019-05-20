@@ -1195,7 +1195,6 @@
       <column comment="" key="false" length="-1" name="invoice_lines_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_invoice_lines_account_segment_3" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_account_segment_2" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="invoice_lines_custom_fields_project_code_external_ref_num" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="payment_term_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_tax_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
@@ -1247,7 +1246,6 @@
         <mapperTableEntries expression="row27.invoice_lines_total " name="invoice_lines_total" nullable="true" type="id_Double"/>
         <mapperTableEntries expression="row27.invoice_lines_invoice_lines_account_segment_3 " name="invoice_lines_invoice_lines_account_segment_3" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row27.invoice_lines_account_segment_2 " name="invoice_lines_account_segment_2" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row27.invoice_lines_custom_fields_project_code_external_ref_num " name="invoice_lines_custom_fields_project_code_external_ref_num" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row4.id " name="id" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row4.payment_term_code " name="payment_term_code" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row27.invoice_lines_tax_distribution_total " name="invoice_lines_tax_distribution_total" nullable="true" type="id_Double"/>
@@ -1391,8 +1389,6 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="invoice_lines_account_segment_2"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="invoice_lines_custom_fields_project_code_external_ref_num"/>
-      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="payment_term_code"/>
@@ -1429,7 +1425,6 @@
       <column comment="" key="false" length="-1" name="invoice_lines_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_invoice_lines_account_segment_3" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_account_segment_2" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="invoice_lines_custom_fields_project_code_external_ref_num" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="payment_term_code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoice_lines_tax_distribution_total" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
@@ -2843,13 +2838,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_766d612f-66e9-4a9b-b344-83bdf31fc718"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8ydFydmIpZX1y2Jrx9u/GVATuC6gLfTR2tYgaqyvq1AKgP3ql2U22TrYf0Aruemx8dDIbzWq8EhW
-KU+bd6AmkQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_68d8b101-b381-4a90-a5f8-49c59cb3891a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0zRvS8Ua0jLk4ncr3p1mrd64Qyx6rZis1fxzeL1hWcjecuEyqmjVKNtKfbQ2pmzrj4TyFCrhreAP
-Ii18ITs1qA==</DigestValue></Reference></SignedInfo><SignatureValue>qJcVSDsQXusBLeeKpehKtq8FNDMggaHMQ7hV8ZnFcf4AQK4fU42uJuoWbsVgm9LsPG4dJ/062zya
-/seLfVxHsWXGcv4fJwCi0Xuwa+GCyBkVGhQKl4EHi0v7ftUR0B5I4ODWL74PLTnD72ESPwFaC97v
-72hNLALj6BbHPh5nP99strqgtCfjJLfXnhpkIzDCrEtvocvEeSjOpDi448zzzS70og1EDNFhh0gL
-1qOldZLrJmSLO+eqSAk6QO5zd2tyzUhRlEAl/F2rwcBEdCLTTgykulEUcaSR9y/O4jJzen680yuE
-fEG8JThZY0UUGu9icIhhanGWHvqvTlh/0Y6ZSQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a89ecedf-0ad1-44ec-9c34-61471a7b2a88"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hCco29VcBLcvSH6a9Thx7T7Hg0d2X8KQiODMZyuYwksqilYhhFladIGqj2kNStYEdnMJmWPNHHGZ
+NJt/oQ00Pg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e6cbcfcb-5cd6-4681-9af6-b279442f3af9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qOnBPkFVRdbJkK5cs9V4x+Nm7wBEAEojgl4EnEEclmioshH3HBPqZhVDVowIbWQRwzWo45YOGkES
+BNuxypqxeA==</DigestValue></Reference></SignedInfo><SignatureValue>DZ6ZgIQyHdF8jivFow3mq12u6b8Nut+EdlWvwpWjKzCcV4dZqTE8TiHOS6UmmRAiZqYnxqXLzwiS
+I9wWUexp2W5U8FkZuVjH0Va+hEGV1cO+EHQbMbnRj35pm6e34mrc5Xoy4QEGJGocK0wFF3Yuhtb2
+1is3ir3Fj08IJT/I/bl/rqRVsVXX5mqc3qxSzYE3l3WrVBfmbfyV9pIyfyCarIUH3b3t+UeTdhVv
+eB2voBJm8uL77G8sLsdfsxMg6mnamUTDDkJjSA49nNS8W17Js/gr2Ruq8h2tuvJ4PSTfqy16Pgvp
+ylO3+EyvNwPR42Rq9tSd91xgPPxJxKoDf0KLSg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2873,4 +2868,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_68d8b101-b381-4a90-a5f8-49c59cb3891a" Target="#_766d612f-66e9-4a9b-b344-83bdf31fc718"><Timestamp>2019-05-20 16:26:09</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e6cbcfcb-5cd6-4681-9af6-b279442f3af9" Target="#_a89ecedf-0ad1-44ec-9c34-61471a7b2a88"><Timestamp>2019-05-20 16:27:03</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
