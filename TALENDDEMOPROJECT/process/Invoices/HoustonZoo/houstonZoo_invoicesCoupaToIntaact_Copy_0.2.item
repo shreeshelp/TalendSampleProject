@@ -21,6 +21,10 @@
     <contextParameter comment="" name="intaactAPIserverPwd" prompt="intaactAPIserverPwd?" promptNeeded="false" type="id_Password" value="HzLjYaNdevMKWmTO5iMIZw=="/>
     <contextParameter comment="" name="x_coupa_api_key" prompt="x_coupa_api_key?" promptNeeded="false" type="id_String" value="d0522d6c1147395c57023daa9c65b45897020be9"/>
     <contextParameter comment="" name="coupa_flag_export_api_url" prompt="coupa_flag_export_api_url?" promptNeeded="false" type="id_String" value="https://freshworks-test.coupahost.com/api/invoices/"/>
+    <contextParameter comment="" name="emailSender" prompt="emailSender?" promptNeeded="false" type="id_String" value="integrationerrors@etontechnologies.com"/>
+    <contextParameter comment="" name="emailReciever" prompt="emailReciever?" promptNeeded="false" type="id_String" value="support@bluvaultsolutions.com"/>
+    <contextParameter comment="" name="SMTP" prompt="SMTP?" promptNeeded="false" type="id_String" value="mail.etontechnologies.com"/>
+    <contextParameter comment="" name="PORT" prompt="PORT?" promptNeeded="false" type="id_Integer" value="465"/>
   </context>
   <context confirmationNeeded="false" name="PROD">
     <contextParameter comment="" name="locationId" prompt="locationId?" promptNeeded="false" type="id_String" value=""/>
@@ -44,6 +48,10 @@
     <contextParameter comment="" name="intaactAPIserverPwd" prompt="intaactAPIserverPwd?" promptNeeded="false" type="id_Password" value="nLVuqzQEr1txLMs0ictpAQ=="/>
     <contextParameter comment="" name="x_coupa_api_key" prompt="x_coupa_api_key?" promptNeeded="false" type="id_String" value="01c36a25254135477e708b58a8e43cbe3078ea49"/>
     <contextParameter comment="" name="coupa_flag_export_api_url" prompt="coupa_flag_export_api_url?" promptNeeded="false" type="id_String" value="https://freshworks.coupahost.com/api/invoices/"/>
+    <contextParameter comment="" name="emailSender" prompt="emailSender?" promptNeeded="false" type="id_String" value="integrationerrors@etontechnologies.com"/>
+    <contextParameter comment="" name="emailReciever" prompt="emailReciever?" promptNeeded="false" type="id_String" value="support@bluvaultsolutions.com"/>
+    <contextParameter comment="" name="SMTP" prompt="SMTP?" promptNeeded="false" type="id_String" value="mail.etontechnologies.com"/>
+    <contextParameter comment="" name="PORT" prompt="PORT?" promptNeeded="false" type="id_Integer" value="465"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
@@ -2618,13 +2626,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_02644edd-4d59-4ca3-89cf-1350a2fea1e7"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ErtkTE0Hw4uIrh2MDMingtZqZ01Bb9ofKAzA+/y75SsGrHh4Y7VXOAwX/DTuorDL7rsfSfzpkofN
-1j6xOdlRRQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f80ec66c-b3bd-4654-9d4c-3272067c7532"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YF6lpUVpyUiPs8wDOlqFdGfMLzw/gh491axauNfhCFtYG4LGzHJpsWyMwKXQ3Lft01uahjxEHt7W
-vXI+4Fe7SA==</DigestValue></Reference></SignedInfo><SignatureValue>PBK6YU8eU7iPXvM42C+lkQ6/01c1J6Un33aVJkkVKe42SFuHuLkkVuTEpuRHHOwnHk83ijyeKVP4
-/euFAxvjFPVxLR9n44AEzHfHdce0UstFFojJv2BRhjGLLg7zwzBspAzBV+ULbbZQ5nniKP6fE2uI
-w3KNRnuw0W9lLdLBihbMTL5Q9/d8DmHbz3COb12UOi9pm+VWURH2RoytJUZepDQeFDL6z8Ael5LB
-nZFu7UqaTJEFP0Cc1ZMdpYR6z0Y5KYYJrNkxyuBd/RFakF+jz8L0HG70hxoWWj7uSSZkTDmksaxW
-Z2JMpR+DgEd9VGnUc/b9drhcTeKb084i/hQDaw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_12f2c88e-0213-4c0d-abd4-a609109c4b5c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>h84bqiGe5vdgAEm5ClxMC4neC7AvbENLfhjDyjEj0rIR44LTSwOUbsuQvuethKoU9z/KZsYDdr3/
+9vdeAAS8Zw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e5d2dcf3-6a67-4950-91f4-a16d86e3ca48"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Eu8cTRA4SQiEh1+G9dUAnC80PbIycsNncshWvF5WiXqhfJAwHM7F1BgzN0PBU07LVXlyGmqmQZxZ
+lwVEoJ1KUQ==</DigestValue></Reference></SignedInfo><SignatureValue>PSKJffbpuRW7K8TvF0Lr3WFQNanRu41fo3IDn3mENa4x56wjivb9b0DMCTUrrsvfR8HVyZMTj7DS
+h2qZuENg4yfq1Ffy2YjuK3K/Z7vmYEQbeKpxZ7iebNGbhTRcS0dJvS1LCZrt/3HS+QPA0wVTCaUU
+7AN2ABXEp0d2VRm9SZ/xArl429Nr1p3Ow8klbqlkllx5jj1g0+4OrPQ3dzi8jfZMO0Iirked55VX
+Mg10dL7o6r8jT9yjVLLTkN/9qWrmdzcRJrYYbxbYlEtdafU+sLO6Acuq0kYHzSXhYG6Bf2KdYLGZ
+4l/yzMkCHvj2ngT6HZ7/bL2y/m4FDhiztt0l0Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2648,4 +2656,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f80ec66c-b3bd-4654-9d4c-3272067c7532" Target="#_02644edd-4d59-4ca3-89cf-1350a2fea1e7"><Timestamp>2019-05-21 07:37:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e5d2dcf3-6a67-4950-91f4-a16d86e3ca48" Target="#_12f2c88e-0213-4c0d-abd4-a609109c4b5c"><Timestamp>2019-05-21 07:41:22</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
