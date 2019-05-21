@@ -25,6 +25,7 @@
     <contextParameter comment="" name="emailReciever" prompt="emailReciever?" promptNeeded="false" type="id_String" value="support@bluvaultsolutions.com"/>
     <contextParameter comment="" name="SMTP" prompt="SMTP?" promptNeeded="false" type="id_String" value="mail.etontechnologies.com"/>
     <contextParameter comment="" name="PORT" prompt="PORT?" promptNeeded="false" type="id_Integer" value="465"/>
+    <contextParameter comment="" name="emailRecieverTeam" prompt="emailRecieverTeam?" promptNeeded="false" type="id_String" value="manish@bluvaultsolutions.com;mahadeva@bluvaultsolutions.com;shreeshel.pancholi@etontechnologies.com"/>
   </context>
   <context confirmationNeeded="false" name="PROD">
     <contextParameter comment="" name="locationId" prompt="locationId?" promptNeeded="false" type="id_String" value=""/>
@@ -52,6 +53,7 @@
     <contextParameter comment="" name="emailReciever" prompt="emailReciever?" promptNeeded="false" type="id_String" value="support@bluvaultsolutions.com"/>
     <contextParameter comment="" name="SMTP" prompt="SMTP?" promptNeeded="false" type="id_String" value="mail.etontechnologies.com"/>
     <contextParameter comment="" name="PORT" prompt="PORT?" promptNeeded="false" type="id_Integer" value="465"/>
+    <contextParameter comment="" name="emailRecieverTeam" prompt="emailRecieverTeam?" promptNeeded="false" type="id_String" value="manish@bluvaultsolutions.com;mahadeva@bluvaultsolutions.com;shreeshel.pancholi@etontechnologies.com"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
@@ -1524,8 +1526,8 @@
   <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="7" offsetLabelY="-4" posX="1504" posY="1024">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSendMail_2"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="TEXT" name="TO" value="&quot;manish@bluvaultsolutions.com;mahadeva@bluvaultsolutions.com;shreeshel.pancholi@etontechnologies.com&quot;"/>
-    <elementParameter field="TEXT" name="FROM" value="&quot;integrationerrors@etontechnologies.com&quot;"/>
+    <elementParameter field="TEXT" name="TO" value="context.emailRecieverTeam"/>
+    <elementParameter field="TEXT" name="FROM" value="context.emailSender"/>
     <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
     <elementParameter field="TEXT" name="PERSONAL_NAME" show="false" value="&quot;sender&quot;"/>
     <elementParameter field="TEXT" name="CC" value=""/>
@@ -1535,13 +1537,13 @@
     <elementParameter field="CHECK" name="CHECK_ATTACHMENT" value="false"/>
     <elementParameter field="TABLE" name="ATTACHMENTS"/>
     <elementParameter field="TABLE" name="HEADERS"/>
-    <elementParameter field="TEXT" name="SMTP_HOST" value="&quot;mail.etontechnologies.com&quot;"/>
-    <elementParameter field="TEXT" name="SMTP_PORT" value="465"/>
+    <elementParameter field="TEXT" name="SMTP_HOST" value="context.SMTP"/>
+    <elementParameter field="TEXT" name="SMTP_PORT" value="context.PORT"/>
     <elementParameter field="CHECK" name="SSL" value="true"/>
     <elementParameter field="CHECK" name="STARTTLS" value="false"/>
     <elementParameter field="CLOSED_LIST" name="IMPORTANCE" value="Normal"/>
     <elementParameter field="CHECK" name="NEED_AUTH" value="true"/>
-    <elementParameter field="TEXT" name="AUTH_USERNAME" value="&quot;integrationerrors@etontechnologies.com&quot;"/>
+    <elementParameter field="TEXT" name="AUTH_USERNAME" value="context.emailSender"/>
     <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="xpCw4bBTneYQJ8Us+0keWA=="/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="CLOSED_LIST" name="TEXT_SUBTYPE" value="plain"/>
@@ -2626,13 +2628,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_79d39167-5d83-4205-952e-334b048cb536"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>S8qMe8ZaXjZkCslG/ldun6nvTH2x3lx3duQHdkNrizeNdfWOiV3imftqOnytWlnzwA6cTB0+W3dH
-97HLC8NtPQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f9fb506e-e065-42ab-a706-fa755edf5d58"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>9z11+d20nobFdAgTdjg1/mjVSlGdN1c7y5nvco7jgpid5a6sL15L88em3mqAa2BxtwVBh6/JNoDi
-qI8BpgAiYg==</DigestValue></Reference></SignedInfo><SignatureValue>VuTQiE+yTUBYmZ1zG7QjNlp0RyVtscTqjQ6u0XjPUiG13n3iVT4y4oQzYznXcrxDTZBbBq/MhyGL
-7BlEvvdpCbIL8d+bAd9LH+6fugFF2wdv/YJqIATf/QPPieVZwIt9mtz3l5t9g/7SimARen/zUxFy
-cflT07dEAnW40g7jyY1gPfOoqoqh2YOt1EesREv5SXUv5h1rUeI8DtD3qRbMPYCpQ6SXKwQtnyqN
-vnj35EV7WDXsLylI5jOAD5hajV1G8MWS1d1bMrhPlYG6i6XLEwtH1JdyK7NXQA+/o5T/HI8jd9ta
-TK4E00yjXTBQPyMtKkUMda7e5ibsYWbvqT6SOQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_440a717f-6123-4994-b8df-f70ae21d614f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1yPBJilNVMah5nOd5ebn1nsKkPDPlQ1+BsM8KfwyuCuZ4EJuhf+tN1h0BD3Tjo9qu7DKr4hZoLY5
+gJK2KsA0Zw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6b68c9c9-f72b-4554-86ac-f3f639742448"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NOvdgbRxKbcOyx+t794bVyvoFuDcoTROCz3gRMayYhdn1d73ZkWNozOHZUSJ/T329rE/YMj6OrwD
+PYCJzctqdw==</DigestValue></Reference></SignedInfo><SignatureValue>OBkuaPspvCt0W4YwLSeWyQpxolZ/1HNVfh/mkX3/h0o9xd1VYNsR8yOJRItl1kCE5zEdj3orB0op
+5omll5usYvRwT5S2+2aL/XMBkWdQWMKV2cy6bYvz8MzUBnyYiSH21W5yUOE6g1sL1xcuWim+Z4yL
+cxkEFdgoqvrdvs74ZTWC+DLEYbiFlf5pcLMzji82+aGB1qTEdyxbozH3NwMMb9o4vqqx82x3aDti
+k2KoM+P3ICO3C4YoP/uaYrXR/qB43nJsh258IM4DYYixADMX3PkTOaePEf+SOS7TP2l1tedQmLYs
+7r7eyHIND0zroilMaKb/CxEkANTdDgZy22g+Mg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2656,4 +2658,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f9fb506e-e065-42ab-a706-fa755edf5d58" Target="#_79d39167-5d83-4205-952e-334b048cb536"><Timestamp>2019-05-21 07:43:06</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6b68c9c9-f72b-4554-86ac-f3f639742448" Target="#_440a717f-6123-4994-b8df-f70ae21d614f"><Timestamp>2019-05-21 07:45:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
